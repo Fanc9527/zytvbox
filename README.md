@@ -20,6 +20,12 @@ https://gh.three2all.com/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
 
 2：https://gh.three2all.com/
 
+3:https://github.ednovas.xyz/
+
+4:https://github.moeyy.xyz/
+
+5:https://gh.llkk.cc/
+
 # 一些插件
 
 [GitHub 中文化插件 ](https://greasyfork.org/zh-CN/scripts/435208)
