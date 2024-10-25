@@ -23,5 +23,8 @@ https://greasyfork.org/zh-CN/scripts/435208
 Github 增强-高速下载
 https://greasyfork.org/zh-CN/scripts/412245
 # 接口来源
- 
- ​[​测试接口1​]​(​https://github.com/suxuang/myIPTV)
+
+感谢各位大佬提供的源，排名不分先后
+
+ [myIPTV](https://github.com/suxuang/myIPTV)
+ ​[​TVBox_warehouse](https://github.com/PizazzGY/TVBox_warehouse)​
