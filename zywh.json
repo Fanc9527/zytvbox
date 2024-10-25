@@ -62,14 +62,10 @@
             "ext": "./zy_js/老白故事[听].js"
         },
 	{
-            "key": "58[听]",
-            "name": "58[听](drpy_t3)",
+            "key": "58",
+            "name": "58",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
             "ext": "./zy_js/58.js"
         },
         
