@@ -8,6 +8,8 @@
 如使用，默认视为同意
 
 使用所产生的一切后果自负
+# 订阅接口
+https://gh.three2all.com/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
 # Github 加速
 1：https://mirror.ghproxy.com/
 
