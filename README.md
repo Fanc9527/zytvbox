@@ -24,7 +24,8 @@ Github 增强-高速下载
 https://greasyfork.org/zh-CN/scripts/412245
 # 接口来源
 
-感谢各位大佬提供的源，排名不分先后
+感谢各位大佬提供的源
 
  [myIPTV](https://github.com/suxuang/myIPTV)
+ –
  ​[​TVBox_warehouse](https://github.com/PizazzGY/TVBox_warehouse)​
