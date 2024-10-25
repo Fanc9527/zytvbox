@@ -35,3 +35,5 @@ https://gh.three2all.com/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
  [myIPTV](https://github.com/suxuang/myIPTV)
  ♦ 
  ​[​TVBox_warehouse](https://github.com/PizazzGY/TVBox_warehouse)​
+ ♦ 
+[♟](https://gitlab.com/duomv/dzhipy/-/raw/main/index.json)
