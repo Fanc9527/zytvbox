@@ -17,14 +17,11 @@ https://gh.three2all.com/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
 
 # 一些插件
 
-GitHub 中文化插件 
-https://greasyfork.org/zh-CN/scripts/435208
+[GitHub 中文化插件 ](https://greasyfork.org/zh-CN/scripts/435208)
 
-Github 增强-高速下载
-https://greasyfork.org/zh-CN/scripts/412245
+[Github 增强-高速下载](https://greasyfork.org/zh-CN/scripts/412245)
 
-GitHub 加速 (Releases)
-https://greasyfork.org/zh-CN/scripts/427230
+[GitHub 加速 (Releases)](https://greasyfork.org/zh-CN/scripts/427230)
 
 # 接口来源
 
