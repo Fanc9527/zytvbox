@@ -611,11 +611,10 @@ p{
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
         {
-            "name": "典藏",
+            "name": "直播2",
             "type": 0,
-            "url": "https://github.ednovas.xyz/https://github.com/suxuang/myIPTV/blob/main/ipv6.m3u",
-            "playerType": 1,
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+            "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+            "playerType": 1
         },
         {
             "name": "直播3",
