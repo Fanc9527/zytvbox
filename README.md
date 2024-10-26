@@ -13,7 +13,11 @@
 
 自用多仓，随缘更新
 
-https://gh.three2all.com/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
+https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zydc.json
+
+精选单线，随缘更新
+
+https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zywh.json
 
 # Github 加速
 1：https://mirror.ghproxy.com/
