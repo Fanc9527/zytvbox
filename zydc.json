@@ -1,29 +1,15 @@
 {
     "urls": [
 	{
-            "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/影视/api.json",
-            "name": "影视合集[调用]"
-        },
-        {
-            "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/动漫/api.json",
-            "name": "动漫合集[调用]"
+            "url": "https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zywh.json",
+            "name": "精选合集[自维]"
         },
         {
             "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/文艺/api.json",
             "name": "畅听合集[调用]"
         },
 	{
-            "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/磁力/api.json",
-            "name": "磁力合集[调用]"
-        },
-	{
-            "url": "https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zywh.json",
-            "name": "补充盘听[自维]"
-
-        },
-	    	{
-            "url": "https://mirror.ghproxy.com/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
-            "name": "电视直播[调用]"
+            "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
+            "name": "潇洒合集[调用]"
         }
-    ]
-}
+	
