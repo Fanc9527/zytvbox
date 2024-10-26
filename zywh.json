@@ -624,5 +624,8 @@
             "url": "https://tv.iill.top/m3u/Gather",
             "playerType": 1
         }
+    ] 
+"ads": [
+        "static-mozai.4gtv.tv"
     ]
 }
