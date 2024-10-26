@@ -606,9 +606,9 @@
        //**=========直播=========**//
     "lives": [
         {
-            "name": "典藏版(部分刚需IPV6)",
+            "name": "直播1",
             "type": 0,
-            "url": "https://github.com/suxuang/myIPTV/blob/main/ipv6.m3u",
+            "url": "./zbtv.txt",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
