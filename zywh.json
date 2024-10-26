@@ -1,4 +1,4 @@
-{
+p{
     "spider": "./zy_jar/spider.jar;md5;a81afc9c6a39cbd3de57dd8fca9031e3",
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
@@ -604,16 +604,16 @@
        //**=========直播=========**//
     "lives": [
         {
-            "name": "直播1",
+            "name": "潇洒",
             "type": 0,
             "url": "https://github.ednovas.xyz/https://github.com/PizazzGY/TVBox_warehouse/blob/main/live.txt",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
         {
-            "name": "直播2",
+            "name": "典藏",
             "type": 0,
-            "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+            "url": "https://github.ednovas.xyz/https://github.com/suxuang/myIPTV/blob/main/ipv6.m3u",
             "playerType": 1
         },
         {
