@@ -743,13 +743,14 @@
             "type": 0,
             "url": "https://github.ednovas.xyz/https://github.com/suxuang/myIPTV/blob/main/ipv6.m3u",
             "playerType": 1,
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+            "epg": ""
         },
         {
             "name": "直播3",
             "type": 0,
             "url": "https://tv.iill.top/m3u/Gather",
-            "playerType": 1
+            "playerType": 1,
+            "epg": "https://epg.112114.eu.org/?ch={name}&date={date}"
         }
     ],
     "flags": [
