@@ -42,6 +42,50 @@
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/魔力高清.js"
         },
+                {
+            "key": "瓜子",
+            "name": "瓜子｜影视",
+            "type": 3,
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "playerType": "1",
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/瓜子.js"
+        },
+                {
+            "key": "星辰[优]_js",
+            "name": "‍星辰｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/星辰[优].js"
+        },
+                {
+            "key": "素白白[优]_js",
+            "name": "素白白｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/素白白[优].js"
+        },
+                {
+            "key": "可可影视[优]_js",
+            "name": "可可｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/可可影视[优].js"
+        },
         {
             "key": "hipy_js_老白故事[听]",
             "name": "老白｜听书",
@@ -65,11 +109,14 @@
             "ext": "./zy_js/六月听书[听].js"
         },
         {
-            "key": "天堂短剧",
-            "name": "天堂｜短剧",
+            "key": "js_蓝莓短剧",
+            "name": "蓝莓｜短剧",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/天堂短剧.js"
+            "api": "./api/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "./zy_js/蓝莓短剧.js"
         },
         {
             "key": "爱你短剧",
@@ -92,14 +139,14 @@
             "ext": "./zy_json/河马短剧.json"
         },
         {
-            "key": "短剧屋",
-            "name": "短剧屋｜短剧",
+            "key": "js_星芽短剧",
+            "name": "星芽｜短剧",
             "type": 3,
-            "api": "csp_XYQHiker",
+            "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
-            "ext": "./zy_json/短剧屋.json"
+            "ext": "./zy_js/星芽短剧.js"
         },
         {
             "key": "NT动漫",
