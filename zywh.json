@@ -42,7 +42,7 @@
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/魔力高清.js"
         },
-                {
+        {
             "key": "瓜子",
             "name": "瓜子｜影视",
             "type": 3,
@@ -53,7 +53,7 @@
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/瓜子.js"
         },
-                {
+        {
             "key": "星辰[优]_js",
             "name": "‍星辰｜影视",
             "type": 3,
@@ -64,7 +64,7 @@
             "order_num": 0,
             "ext": "./zy_js/星辰[优].js"
         },
-                {
+        {
             "key": "素白白[优]_js",
             "name": "素白白｜影视",
             "type": 3,
@@ -75,7 +75,7 @@
             "order_num": 0,
             "ext": "./zy_js/素白白[优].js"
         },
-                {
+        {
             "key": "可可影视[优]_js",
             "name": "可可｜影视",
             "type": 3,
@@ -112,7 +112,7 @@
             "key": "js_蓝莓短剧",
             "name": "蓝莓｜短剧",
             "type": 3,
-            "api": "./api/drpy2.min.js",
+            "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
