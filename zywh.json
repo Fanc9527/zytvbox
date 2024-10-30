@@ -4,7 +4,7 @@
     "sites": [
         {
             "key": "hipy_js_木偶哥哥[盘]",
-            "name": "♶木偶[网盘]",
+            "name": "₄木偶[网盘]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -15,7 +15,7 @@
         },
         {
             "key": "hipy_js_玩偶哥哥[盘]",
-            "name": "♶玩偶[网盘]",
+            "name": "₄玩偶[网盘]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -26,7 +26,7 @@
         },
         {
             "key": "hipy_js_至臻[盘]",
-            "name": "♶至臻[网盘]",
+            "name": "₄至臻[网盘]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -37,14 +37,14 @@
         },
         {
             "key": "魔力高清",
-            "name": "♴魔力[影视]",
+            "name": "₂魔力[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/魔力高清.js"
         },
         {
             "key": "瓜子",
-            "name": "♴瓜子[影视]",
+            "name": "₂瓜子[影视]",
             "type": 3,
             "searchable": 1,
             "quickSearch": 1,
@@ -55,7 +55,7 @@
         },
         {
             "key": "星辰[优]_js",
-            "name": "‍♴星辰[影视]",
+            "name": "‍₂星辰[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -66,7 +66,7 @@
         },
         {
             "key": "素白白[优]_js",
-            "name": "♴素白白[影视]",
+            "name": "₂素白白[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -77,7 +77,7 @@
         },
         {
             "key": "可可影视[优]_js",
-            "name": "♴可可[影视]",
+            "name": "₂可可[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -88,7 +88,7 @@
         },
         {
             "key": "hipy_js_北川影视",
-            "name": "♴北川[影视]",
+            "name": "₂北川[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -99,7 +99,7 @@
         },
         {
             "key": "hipy_js_网飞猫[优]",
-            "name": "♴网飞猫[影视]",
+            "name": "₂网飞猫[影视]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -110,7 +110,7 @@
         },
         {
             "key": "hipy_js_老白故事[听]",
-            "name": "♹老白[听书]",
+            "name": "₇老白[听书]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -121,7 +121,7 @@
         },
         {
             "key": "hipy_js_六月听书[听]",
-            "name": "♹六月[听书]",
+            "name": "₇六月[听书]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -132,7 +132,7 @@
         },
         {
             "key": "hipy_js_博看听书[听]",
-            "name": "♹博看[听书]",
+            "name": "₇博看[听书]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -143,7 +143,7 @@
         },
         {
             "key": "hipy_js_番茄小说[书]",
-            "name": "♺番茄[小说]",
+            "name": "₈番茄[小说]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -154,7 +154,7 @@
         },
         {
             "key": "hipy_js_7猫小说[书]",
-            "name": "♺7猫[小说]",
+            "name": "₈7猫[小说]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -165,7 +165,7 @@
         },
         {
             "key": "js_蓝莓短剧",
-            "name": "♵蓝莓[短剧]",
+            "name": "₃蓝莓[短剧]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -175,7 +175,7 @@
         },
         {
             "key": "爱你短剧",
-            "name": "♵爱你[短剧]",
+            "name": "₃爱你[短剧]",
             "type": 3,
             "api": "csp_XYQHiker",
             "searchable": 1,
@@ -185,7 +185,7 @@
         },
         {
             "key": "河马短剧",
-            "name": "♵河马[短剧]",
+            "name": "₃河马[短剧]",
             "type": 3,
             "api": "csp_XYQHiker",
             "searchable": 1,
@@ -195,7 +195,7 @@
         },
         {
             "key": "js_星芽短剧",
-            "name": "♵星芽[短剧]",
+            "name": "₃星芽[短剧]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -205,35 +205,35 @@
         },
         {
             "key": "NT动漫",
-            "name": "♳NT[动漫]",
+            "name": "₁NT[动漫]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/NT动漫.js"
         },
         {
             "key": "动漫巴士",
-            "name": "♳巴士[动漫]",
+            "name": "₁巴士[动漫]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/动漫巴士.js"
         },
         {
             "key": "樱花动漫",
-            "name": "♳樱花[动漫]",
+            "name": "₁樱花[动漫]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/樱花动漫.js"
         },
         {
             "key": "大米动漫",
-            "name": "♳大米[动漫]",
+            "name": "₁大米[动漫]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/大米动漫.js"
         },
         {
             "key": "高清MP4",
-            "name": "♸高清MP4[磁力]",
+            "name": "₆高清MP4[磁力]",
             "type": 3,
             "api": "csp_XYQHiker",
             "searchable": 1,
@@ -243,56 +243,56 @@
         },
         {
             "key": "磁力熊",
-            "name": "♸磁力熊[磁力]",
+            "name": "₆磁力熊[磁力]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/磁力熊.js"
         },
         {
             "key": "腾讯视频",
-            "name": "♷腾讯[视频]",
+            "name": "₅腾讯[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/腾讯视频.js"
         },
         {
             "key": "优酷视频",
-            "name": "♷优酷[视频]",
+            "name": "₅优酷[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/优酷视频.js"
         },
         {
             "key": "芒果视频",
-            "name": "♷芒果[视频]",
+            "name": "₅芒果[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/芒果视频.js"
         },
         {
             "key": "搜狗视频",
-            "name": "♷搜狗[视频]",
+            "name": "₅搜狗[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/搜狗视频.js"
         },
         {
             "key": "哔哩视频",
-            "name": "♷哔哩[视频]",
+            "name": "₅哔哩[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/哔哩视频.js"
         },
         {
             "key": "爱奇艺",
-            "name": "♷爱奇艺[视频]",
+            "name": "₅爱奇艺[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/爱奇艺.js"
         },
         {
             "key": "三六零",
-            "name": "♷三六零[视频]",
+            "name": "₅三六零[视频]",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/三六零.js"
