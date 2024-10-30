@@ -184,16 +184,6 @@
             "ext": "./zy_json/爱你短剧.json"
         },
         {
-            "key": "河马短剧",
-            "name": "₃河马[短剧]",
-            "type": 3,
-            "api": "csp_XYQHiker",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "./zy_json/河马短剧.json"
-        },
-        {
             "key": "js_星芽短剧",
             "name": "₃星芽[短剧]",
             "type": 3,
