@@ -5,13 +5,15 @@ import './node-rsa.js';
 import './pako.min.js';
 // import JSEncrypt from './jsencrypt.js'; // 会导致壳子崩溃的
 import 模板 from './模板.js'
-import {gbkTool} from './gbk.js'
+import {
+    gbkTool
+} from './gbk.js'
 import './json5.js'
 // 下面是尝试对jinja2库进行更换
 import './jinja.js'
 
 const _jinja2 = cheerio.jinja2;
-cheerio.jinja2 = function (template, obj) {
+cheerio.jinja2 = function(template, obj) {
     try {
         return jinja.render(template, obj);
     } catch (e) {
@@ -23,6 +25,9 @@ cheerio.jinja2 = function (template, obj) {
 // import "https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/crypto-js.js";
 // import 模板 from"https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/模板.js";
 // import {gbkTool} from 'https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/gbk.js'
+
+let vercode = typeof(pdfl) === 'function' ? 'drpy2.1' : 'drpy2';
+const VERSION = vercode + ' 3.9.51beta5 20241014';
 
 function init_test() {
     // console.log(typeof(JSON5));
@@ -158,7 +163,10 @@ NodeRsa
     let encryptedWithPublic = NODERSA.encryptRSAWithPublicKey(data, pkcs1_public, {
         // PublicFormat: "pkcs1-public-pem",
         outputEncoding: "base64",
-        options: {environment: "browser", encryptionScheme: 'pkcs1_oaep'},
+        options: {
+            environment: "browser",
+            encryptionScheme: 'pkcs1_oaep'
+        },
     });
     console.log("公钥加密");
     console.log(encryptedWithPublic);
@@ -167,22 +175,33 @@ NodeRsa
     let decryptedWithPrivate = NODERSA.decryptRSAWithPrivateKey(encryptedWithPublic, pkcs1_private, {
         // PublicFormat: "pkcs1-private",
         // outEncoding: "hex"
-        options: {environment: "browser", encryptionScheme: 'pkcs1_oaep'},
+        options: {
+            environment: "browser",
+            encryptionScheme: 'pkcs1_oaep'
+        },
     });
     console.log("私钥解密");
     console.log(decryptedWithPrivate);
 
 
-// https://www.btool.cn/rsa-sign
+    // https://www.btool.cn/rsa-sign
     let pkcs1_sha256_sign = NODERSA.sign("1", pkcs1_private, {
         outputEncoding: "base64",
-        options: {environment: "browser", encryptionScheme: 'pkcs1', signingScheme: "pkcs1-sha256"},
+        options: {
+            environment: "browser",
+            encryptionScheme: 'pkcs1',
+            signingScheme: "pkcs1-sha256"
+        },
     });
     console.log("pkcs1_sha256_sign");
     console.log(pkcs1_sha256_sign);
 
     let pkcs1_sha256_sign_verify = NODERSA.verify("1", "Oulx2QrgeipKYBtqEDqFb2s/+ndk2cGQxO4CkhU7iBM1vyNmmvqubpsmeoUuN3waGrYZLknSEdwBkfv0tUMpFQ==", pkcs1_private, {
-        options: {environment: "browser", encryptionScheme: 'pkcs1', signingScheme: "pkcs1-sha256"},
+        options: {
+            environment: "browser",
+            encryptionScheme: 'pkcs1',
+            signingScheme: "pkcs1-sha256"
+        },
     });
     console.log("pkcs1_sha256_sign_verify");
     console.log(pkcs1_sha256_sign_verify);
@@ -198,7 +217,8 @@ Dd9YszqzmODjQUddZKHmvc638VW+azc0EwIDAQAB
 `, {
         outputEncoding: "base64",
         options: {
-            environment: "browser", encryptionScheme: {
+            environment: "browser",
+            encryptionScheme: {
                 scheme: "pkcs1_oaep",
                 hash: "sha256",
             },
@@ -237,15 +257,22 @@ m7mp8il0kaftHdSxTbspG3tZ2fjIiFIZkLEOmRpd7ogWumgOajzUdA==
 -----END RSA PRIVATE KEY-----`, {
         // PublicFormat: "pkcs1-private",
         // outEncoding: "hex"
-        options: {environment: "browser", encryptionScheme: 'pkcs1_oaep'},
+        options: {
+            environment: "browser",
+            encryptionScheme: 'pkcs1_oaep'
+        },
     });
     console.log('decryptedWithPrivate');
     console.log(decryptedWithPrivate);
 
 
     (() => {
-        let key = new NODERSA.NodeRSA({b: 1024});
-        key.setOptions({encryptionScheme: 'pkcs1'})
+        let key = new NODERSA.NodeRSA({
+            b: 1024
+        });
+        key.setOptions({
+            encryptionScheme: 'pkcs1'
+        })
         let text = `你好drpy node-ras`;
         let encrypted = key.encrypt(text, 'base64');
         console.log('encrypted: ', encrypted);
@@ -261,7 +288,7 @@ m7mp8il0kaftHdSxTbspG3tZ2fjIiFIZkLEOmRpd7ogWumgOajzUdA==
  * 执行预处理代码
  */
 function pre() {
-    if (typeof (rule.预处理) === 'string' && rule.预处理 && rule.预处理.trim()) {
+    if (typeof(rule.预处理) === 'string' && rule.预处理 && rule.预处理.trim()) {
         let code = rule.预处理.trim();
         console.log("执行预处理代码:" + code);
         if (code.startsWith('js:')) {
@@ -278,8 +305,6 @@ function pre() {
 }
 
 let rule = {};
-let vercode = typeof (pdfl) === 'function' ? 'drpy2.1' : 'drpy2';
-const VERSION = vercode + ' 3.9.51beta2 20240711';
 /** 已知问题记录
  * 1.影魔的jinjia2引擎不支持 {{fl}}对象直接渲染 (有能力解决的话尽量解决下，支持对象直接渲染字符串转义,如果加了|safe就不转义)[影魔牛逼，最新的文件发现这问题已经解决了]
  * Array.prototype.append = Array.prototype.push; 这种js执行后有毛病,for in 循环列表会把属性给打印出来 (这个大毛病需要重点排除一下)
@@ -313,10 +338,10 @@ const RULE_CK = 'cookie'; // 源cookie的key值
 // const KEY = typeof(key)!=='undefined'&&key?key:'drpy_' + (rule.title || rule.host); // 源的唯一标识
 const CATE_EXCLUDE = '首页|留言|APP|下载|资讯|新闻|动态';
 const TAB_EXCLUDE = '猜你|喜欢|下载|剧情|榜|评论';
-const OCR_RETRY = 3;//ocr验证重试次数
+const OCR_RETRY = 3; //ocr验证重试次数
 // const OCR_API = 'http://drpy.nokia.press:8028/ocr/drpy/text';//ocr在线识别接口
-const OCR_API = 'https://api.nn.ci/ocr/b64/text';//ocr在线识别接口
-if (typeof (MY_URL) === 'undefined') {
+const OCR_API = 'https://api.nn.ci/ocr/b64/text'; //ocr在线识别接口
+if (typeof(MY_URL) === 'undefined') {
     var MY_URL; // 全局注入变量,pd函数需要
 }
 var HOST;
@@ -335,8 +360,8 @@ var _pd;
 const DOM_CHECK_ATTR = /(url|src|href|-original|-src|-play|-url|style)$/;
 // 过滤特殊链接,不走urlJoin
 const SPECIAL_URL = /^(ftp|magnet|thunder|ws):/;
-const NOADD_INDEX = /:eq|:lt|:gt|:first|:last|^body$|^#/;  // 不自动加eq下标索引
-const URLJOIN_ATTR = /(url|src|href|-original|-src|-play|-url|style)$|^(data-|url-|src-)/;  // 需要自动urljoin的属性
+const NOADD_INDEX = /:eq|:lt|:gt|:first|:last|^body$|^#/; // 不自动加eq下标索引
+const URLJOIN_ATTR = /(url|src|href|-original|-src|-play|-url|style)$|^(data-|url-|src-)/; // 需要自动urljoin的属性
 const SELECT_REGEX = /:eq|:lt|:gt|#/g;
 const SELECT_REGEX_A = /:eq|:lt|:gt/g;
 
@@ -427,11 +452,14 @@ function window_b64() {
  es6py扩展
  */
 if (typeof atob !== 'function' || typeof btoa !== 'function') {
-    var {atob, btoa} = window_b64();
+    var {
+        atob,
+        btoa
+    } = window_b64();
 }
 
 if (typeof Object.assign !== 'function') {
-    Object.assign = function () {
+    Object.assign = function() {
         let target = arguments[0];
         for (let i = 1; i < arguments.length; i++) {
             let source = arguments[i];
@@ -445,7 +473,7 @@ if (typeof Object.assign !== 'function') {
     };
 }
 if (!String.prototype.includes) {
-    String.prototype.includes = function (search, start) {
+    String.prototype.includes = function(search, start) {
         if (typeof start !== 'number') {
             start = 0;
         }
@@ -460,51 +488,51 @@ if (!String.prototype.includes) {
 
 if (!Array.prototype.includes) {
     Object.defineProperty(Array.prototype, 'includes', {
-        value: function (searchElement, fromIndex) {
+        value: function(searchElement, fromIndex) {
 
-            if (this == null) {//this是空或者未定义，抛出错误
+            if (this == null) { //this是空或者未定义，抛出错误
                 throw new TypeError('"this" is null or not defined');
             }
 
-            var o = Object(this);//将this转变成对象
-            var len = o.length >>> 0;//无符号右移0位，获取对象length属性，如果未定义就会变成0
+            var o = Object(this); //将this转变成对象
+            var len = o.length >>> 0; //无符号右移0位，获取对象length属性，如果未定义就会变成0
 
-            if (len === 0) {//length为0直接返回false未找到目标值
+            if (len === 0) { //length为0直接返回false未找到目标值
                 return false;
             }
 
-            var n = fromIndex | 0;//查找起始索引
-            var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);//计算正确起始索引，因为有可能是负值
+            var n = fromIndex | 0; //查找起始索引
+            var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0); //计算正确起始索引，因为有可能是负值
 
-            while (k < len) {//从起始索引处开始循环
-                if (o[k] === searchElement) {//如果某一位置与寻找目标相等，返回true，找到了
+            while (k < len) { //从起始索引处开始循环
+                if (o[k] === searchElement) { //如果某一位置与寻找目标相等，返回true，找到了
                     return true;
                 }
                 k++;
             }
-            return false;//未找到，返回false
+            return false; //未找到，返回false
         },
         enumerable: false
     });
 }
 if (typeof String.prototype.startsWith !== 'function') {
-    String.prototype.startsWith = function (prefix) {
+    String.prototype.startsWith = function(prefix) {
         return this.slice(0, prefix.length) === prefix;
     };
 }
 if (typeof String.prototype.endsWith !== 'function') {
-    String.prototype.endsWith = function (suffix) {
+    String.prototype.endsWith = function(suffix) {
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
 }
 Object.defineProperty(Object.prototype, 'myValues', {
-    value: function (obj) {
+    value: function(obj) {
         if (obj == null) {
             throw new TypeError("Cannot convert undefined or null to object");
         }
         var res = []
         for (var k in obj) {
-            if (obj.hasOwnProperty(k)) {//需判断是否是本身的属性
+            if (obj.hasOwnProperty(k)) { //需判断是否是本身的属性
                 res.push(obj[k]);
             }
         }
@@ -514,13 +542,13 @@ Object.defineProperty(Object.prototype, 'myValues', {
 });
 if (typeof Object.prototype.values !== 'function') {
     Object.defineProperty(Object.prototype, 'values', {
-        value: function (obj) {
+        value: function(obj) {
             if (obj == null) {
                 throw new TypeError("Cannot convert undefined or null to object");
             }
             var res = []
             for (var k in obj) {
-                if (obj.hasOwnProperty(k)) {//需判断是否是本身的属性
+                if (obj.hasOwnProperty(k)) { //需判断是否是本身的属性
                     res.push(obj[k]);
                 }
             }
@@ -531,7 +559,7 @@ if (typeof Object.prototype.values !== 'function') {
 }
 if (typeof Array.prototype.join !== 'function') {
     Object.defineProperty(Array.prototype, 'join', {
-        value: function (emoji) {
+        value: function(emoji) {
             // emoji = emoji||',';
             emoji = emoji || '';
             let self = this;
@@ -558,7 +586,7 @@ if (typeof Array.prototype.join !== 'function') {
 }
 if (typeof Array.prototype.toReversed !== 'function') {
     Object.defineProperty(Array.prototype, 'toReversed', {
-        value: function () {
+        value: function() {
             const clonedList = this.slice();
             // 倒序新数组
             const reversedList = clonedList.reverse();
@@ -577,7 +605,7 @@ Object.defineProperty(String.prototype, 'strip', {
     enumerable: false
 });
 Object.defineProperty(String.prototype, 'rstrip', {
-    value: function (chars) {
+    value: function(chars) {
         let regex = new RegExp(chars + "$");
         return this.replace(regex, "");
     },
@@ -608,7 +636,7 @@ function setResult(d) {
     }
     VODS = [];
     // print(d);
-    d.forEach(function (it) {
+    d.forEach(function(it) {
         let obj = {
             vod_id: it.url || '',
             vod_name: it.title || '',
@@ -646,7 +674,7 @@ function setResult2(res) {
 }
 
 function setHomeResult(res) {
-    if (!res || typeof (res) !== 'object') {
+    if (!res || typeof(res) !== 'object') {
         return []
     }
     return setResult(res.list);
@@ -658,7 +686,7 @@ function rc(js) {
         var a = CryptoJS.enc.Utf8.parse("625222f9149e961d");
         var t = CryptoJS.enc.Utf8.parse("5efdtf6060e2o330");
         return {
-            De: function (word) {
+            De: function(word) {
                 word = CryptoJS.enc.Hex.parse(word)
                 return CryptoJS.AES.decrypt(CryptoJS.enc.Base64.stringify(word), a, {
                     iv: t,
@@ -666,7 +694,7 @@ function rc(js) {
                     padding: CryptoJS.pad.Pkcs7
                 }).toString(CryptoJS.enc.Utf8)
             },
-            En: function (word) {
+            En: function(word) {
                 // print(a);
                 // print(word);
                 var Encrypted = CryptoJS.AES.encrypt(word, a, {
@@ -687,8 +715,11 @@ function maoss(jxurl, ref, key) {
     fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
     eval(getCryptoJS());
     try {
-        var getVideoInfo = function (text) {
-            return CryptoJS.AES.decrypt(text, key, {iv: iv, padding: CryptoJS.pad.Pkcs7}).toString(CryptoJS.enc.Utf8);
+        var getVideoInfo = function(text) {
+            return CryptoJS.AES.decrypt(text, key, {
+                iv: iv,
+                padding: CryptoJS.pad.Pkcs7
+            }).toString(CryptoJS.enc.Utf8);
         };
         var token_key = key == undefined ? 'dvyYRQlnPRCMdQSe' : key;
         if (ref) {
@@ -747,7 +778,7 @@ function urlencode(str) {
  * @returns {string}
  */
 function encodeUrl(str) {
-    if (typeof (encodeURI) == 'function') {
+    if (typeof(encodeURI) == 'function') {
         return encodeURI(str)
     } else {
         str = (str + '').toString();
@@ -829,7 +860,7 @@ function gzip(str) {
  */
 function ungzip(b64Data) {
     let strData = atob(b64Data);
-    const charData = strData.split('').map(function (x) {
+    const charData = strData.split('').map(function(x) {
         return x.charCodeAt(0);
     });
     const binData = new Uint8Array(charData);
@@ -874,9 +905,9 @@ function getCryptoJS() {
 
 // 封装的RSA加解密类
 const RSA = {
-    decode: function (data, key, option) {
+    decode: function(data, key, option) {
         option = option || {};
-        if (typeof (JSEncrypt) === 'function') {
+        if (typeof(JSEncrypt) === 'function') {
             let chunkSize = option.chunkSize || 117; // 默认分段长度为117
             let privateKey = this.getPrivateKey(key); // 获取私钥
             const decryptor = new JSEncrypt(); //创建解密对象实例
@@ -889,9 +920,9 @@ const RSA = {
             return false
         }
     },
-    encode: function (data, key, option) {
+    encode: function(data, key, option) {
         option = option || {};
-        if (typeof (JSEncrypt) === 'function') {
+        if (typeof(JSEncrypt) === 'function') {
             let chunkSize = option.chunkSize || 117; // 默认分段长度为117
             let publicKey = this.getPublicKey(key); // 获取公钥
             const encryptor = new JSEncrypt();
@@ -938,7 +969,7 @@ const RSA = {
  * @returns {string|*}
  */
 function getProxyUrl() {
-    if (typeof (getProxy) === 'function') {//判断壳子里有getProxy函数就执行取返回结果。否则取默认的本地
+    if (typeof(getProxy) === 'function') { //判断壳子里有getProxy函数就执行取返回结果。否则取默认的本地
         return getProxy(true)
     } else {
         return 'http://127.0.0.1:9978/proxy?do=js'
@@ -1018,7 +1049,9 @@ function fixAdM3u8(m3u8_text, m3u8_url, ad_remove) {
  */
 function fixAdM3u8Ai(m3u8_url, headers) {
     let ts = new Date().getTime();
-    let option = headers ? {headers: headers} : {};
+    let option = headers ? {
+        headers: headers
+    } : {};
 
     function b(s1, s2) {
         let i = 0;
@@ -1041,7 +1074,7 @@ function fixAdM3u8Ai(m3u8_url, headers) {
     m3u8 = m3u8.trim().split('\n').map(it => it.startsWith('#') ? it : urljoin(m3u8_url, it)).join('\n');
     //log('m3u8处理后:============:' + m3u8);
     // 获取嵌套m3u8地址
-    m3u8 = m3u8.replace(/\n\n/ig, '\n');//删除多余的换行符
+    m3u8 = m3u8.replace(/\n\n/ig, '\n'); //删除多余的换行符
     let last_url = m3u8.split('\n').slice(-1)[0];
     if (last_url.length < 5) {
         last_url = m3u8.split('\n').slice(-2)[0];
@@ -1058,7 +1091,7 @@ function fixAdM3u8Ai(m3u8_url, headers) {
     //找出第一条播放地址
     //let firststr = ss.find(x => !x.startsWith('#'));
     let firststr = '';
-    let maxl = 0;//最大相同字符
+    let maxl = 0; //最大相同字符
     let kk = 0;
     let kkk = 2;
     let secondstr = '';
@@ -1083,7 +1116,7 @@ function fixAdM3u8Ai(m3u8_url, headers) {
     if (kkk > 30) firststr = secondstr;
     let firststrlen = firststr.length;
     //log('字符串长度：' + firststrlen);
-    let ml = Math.round(ss.length / 2).toString().length;//取数据的长度的位数
+    let ml = Math.round(ss.length / 2).toString().length; //取数据的长度的位数
     //log('数据条数的长度：' + ml);
     //找出最后一条播放地址
     let maxc = 0;
@@ -1144,15 +1177,13 @@ function forceOrder(lists, key, option) {
         try {
             first = first[key];
             second = second[key];
-        } catch (e) {
-        }
+        } catch (e) {}
     }
-    if (option && typeof (option) === 'function') {
+    if (option && typeof(option) === 'function') {
         try {
             first = option(first);
             second = option(second);
-        } catch (e) {
-        }
+        } catch (e) {}
     }
     first += '';
     second += '';
@@ -1167,10 +1198,10 @@ function forceOrder(lists, key, option) {
     return lists
 }
 
-let VODS = [];// 一级或者搜索需要的数据列表
-let VOD = {};// 二级的单个数据
-let TABS = [];// 二级的自定义线路列表 如: TABS=['道长在线','道长在线2']
-let LISTS = [];// 二级的自定义选集播放列表 如: LISTS=[['第1集$http://1.mp4','第2集$http://2.mp4'],['第3集$http://1.mp4','第4集$http://2.mp4']]
+let VODS = []; // 一级或者搜索需要的数据列表
+let VOD = {}; // 二级的单个数据
+let TABS = []; // 二级的自定义线路列表 如: TABS=['道长在线','道长在线2']
+let LISTS = []; // 二级的自定义选集播放列表 如: LISTS=[['第1集$http://1.mp4','第2集$http://2.mp4'],['第3集$http://1.mp4','第4集$http://2.mp4']]
 
 /**
  * 获取链接的query请求转为js的object字典对象
@@ -1249,7 +1280,7 @@ const defaultParser = {
 function pdfh2(html, parse) {
     let html2 = html;
     try {
-        if (typeof (html) !== 'string') {
+        if (typeof(html) !== 'string') {
             html2 = html.rr(html.ele).toString();
         }
     } catch (e) {
@@ -1262,8 +1293,7 @@ function pdfh2(html, parse) {
             result = result.match(/url\((.*?)\)/)[1];
             // 2023/07/28新增 style取内部链接自动去除首尾单双引号
             result = result.replace(/^['|"](.*)['|"]$/, "$1");
-        } catch (e) {
-        }
+        } catch (e) {}
     }
     return result
 }
@@ -1277,7 +1307,7 @@ function pdfh2(html, parse) {
 function pdfa2(html, parse) {
     let html2 = html;
     try {
-        if (typeof (html) !== 'string') {
+        if (typeof(html) !== 'string') {
             html2 = html.rr(html.ele).toString();
         }
     } catch (e) {
@@ -1295,7 +1325,7 @@ function pdfa2(html, parse) {
  */
 function pd2(html, parse, uri) {
     let ret = pdfh2(html, parse);
-    if (typeof (uri) === 'undefined' || !uri) {
+    if (typeof(uri) === 'undefined' || !uri) {
         uri = '';
     }
     if (DOM_CHECK_ATTR.test(parse) && !SPECIAL_URL.test(ret)) {
@@ -1321,7 +1351,7 @@ const parseTags = {
             if (!parse || !parse.trim()) {
                 return '';
             }
-            if (typeof (html) === 'string') {
+            if (typeof(html) === 'string') {
                 // print('jsonpath:pdfh字符串转dict');
                 html = JSON.parse(html);
             }
@@ -1337,7 +1367,7 @@ const parseTags = {
                 } else {
                     ret = ret || ''
                 }
-                if (ret && typeof (ret) !== 'string') {
+                if (ret && typeof(ret) !== 'string') {
                     ret = ret.toString();
                 }
                 if (ret) {
@@ -1350,7 +1380,7 @@ const parseTags = {
             if (!parse || !parse.trim()) {
                 return '';
             }
-            if (typeof (html) === 'string') {
+            if (typeof(html) === 'string') {
                 // print('jsonpath:pdfa字符串转dict');
                 html = JSON.parse(html);
             }
@@ -1401,7 +1431,7 @@ const parseTags = {
             return defaultParser.pd(html, parse, base_url);
         },
     },
-    getParse(p0) {//非js开头的情况自动获取解析标签
+    getParse(p0) { //非js开头的情况自动获取解析标签
         if (p0.startsWith('jsp:')) {
             return this.jsp
         } else if (p0.startsWith('json:')) {
@@ -1448,12 +1478,10 @@ function dealJson(html) {
         if (!((html.startsWith('{') && html.endsWith('}')) || (html.startsWith('[') && html.endsWith(']')))) {
             html = '{' + html.match(/.*?\{(.*)\}/m)[1] + '}';
         }
-    } catch (e) {
-    }
+    } catch (e) {}
     try {
         html = JSON.parse(html);
-    } catch (e) {
-    }
+    } catch (e) {}
     // console.log(typeof(html));
     return html;
 }
@@ -1464,7 +1492,7 @@ function dealJson(html) {
  */
 var OcrApi = {
     api: OCR_API,
-    classification: function (img) { // img是byte类型,这里不方便搞啊
+    classification: function(img) { // img是byte类型,这里不方便搞啊
         let code = '';
         try {
             // let html = request(this.api,{data:{img:img},headers:{'User-Agent':PC_UA},'method':'POST'},true);
@@ -1473,9 +1501,19 @@ var OcrApi = {
             log('通过drpy_ocr验证码接口过验证...');
             let html = '';
             if (this.api.endsWith('drpy/text')) {
-                html = request(this.api, {data: {img: img}, headers: {'User-Agent': PC_UA}, 'method': 'POST'}, true);
+                html = request(this.api, {
+                    data: {
+                        img: img
+                    },
+                    headers: {
+                        'User-Agent': PC_UA
+                    },
+                    'method': 'POST'
+                }, true);
             } else {
-                html = post(this.api, {body: img});
+                html = post(this.api, {
+                    body: img
+                });
             }
             code = html || '';
         } catch (e) {
@@ -1499,7 +1537,10 @@ function verifyCode(url) {
             // let obj = {headers:headers,timeout:timeout};
             let yzm_url = `${host}/index.php/verify/index.html`;
             console.log(`验证码链接:${yzm_url}`);
-            let hhtml = request(yzm_url, {withHeaders: true, toBase64: true}, true);
+            let hhtml = request(yzm_url, {
+                withHeaders: true,
+                toBase64: true
+            }, true);
             let json = JSON.parse(hhtml);
             if (!cookie) {
                 // print(json);
@@ -1515,7 +1556,12 @@ function verifyCode(url) {
             console.log(`第${cnt + 1}次验证码识别结果:${code}`);
             let submit_url = `${host}/index.php/ajax/verify_check?type=search&verify=${code}`;
             console.log(submit_url);
-            let html = request(submit_url, {headers: {Cookie: cookie}, 'method': 'POST'});
+            let html = request(submit_url, {
+                headers: {
+                    Cookie: cookie
+                },
+                'method': 'POST'
+            });
             // console.log(html);
             html = JSON.parse(html);
             if (html.msg === 'ok') {
@@ -1578,8 +1624,7 @@ function getHome(url) {
     url = tmp[0] + '//' + tmp[1].split('/')[0];
     try {
         url = decodeURIComponent(url);
-    } catch (e) {
-    }
+    } catch (e) {}
     return url
 }
 
@@ -1627,6 +1672,46 @@ function keysToLowerCase(obj) {
     }, {});
 }
 
+//字符串To对象
+function parseQueryString(query) {
+    const params = {};
+    query.split('&').forEach(function(part) {
+        // 使用正则表达式匹配键和值，直到遇到第一个等号为止
+        const regex = /^(.*?)=(.*)/;
+        const match = part.match(regex);
+        if (match) {
+            const key = decodeURIComponent(match[1]);
+            const value = decodeURIComponent(match[2]);
+            params[key] = value;
+        }
+    });
+    return params;
+}
+
+//URL需要转码字符串
+function encodeIfContainsSpecialChars(value) {
+    // 定义在URL中需要编码的特殊字符
+    const specialChars = ":/?#[]@!$'()*+,;=%";
+    // 检查值中是否包含特殊字符
+    if (specialChars.split('').some(char => value.includes(char))) {
+        // 如果包含，则使用encodeURIComponent进行编码
+        return encodeURIComponent(value);
+    }
+    // 如果不包含特殊字符，返回原值
+    return value;
+}
+
+//对象To字符串
+function objectToQueryString(obj) {
+    const encoded = [];
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            encoded.push(encodeURIComponent(key) + '=' + encodeIfContainsSpecialChars(obj[key]));
+        }
+    }
+    return encoded.join('&');
+}
+
 /**
  * 海阔网页请求函数完整封装
  * @param url 请求链接
@@ -1636,7 +1721,7 @@ function keysToLowerCase(obj) {
  */
 function request(url, obj, ocr_flag) {
     ocr_flag = ocr_flag || false;
-    if (typeof (obj) === 'undefined' || !obj || obj === {}) {
+    if (typeof(obj) === 'undefined' || !obj || obj === {}) {
         if (!fetch_params || !fetch_params.headers) {
             let headers = {
                 'User-Agent': MOBILE_UA,
@@ -1659,7 +1744,7 @@ function request(url, obj, ocr_flag) {
         if (!keys.includes('user-agent')) {
             headers['User-Agent'] = MOBILE_UA;
             // fetch_params 里存在ua则优先，否则才默认手机UA
-            if (typeof (fetch_params) === 'object' && fetch_params && fetch_params.headers) {
+            if (typeof(fetch_params) === 'object' && fetch_params && fetch_params.headers) {
                 let fetch_headers = keysToLowerCase(fetch_params.headers);
                 if (fetch_headers['user-agent']) {
                     headers['User-Agent'] = fetch_headers['user-agent'];
@@ -1676,7 +1761,7 @@ function request(url, obj, ocr_flag) {
             obj.headers["Content-Type"] = 'text/html; charset=' + rule.encoding;
         }
     }
-    if (typeof (obj.body) != 'undefined' && obj.body && typeof (obj.body) === 'string') {
+    if (typeof(obj.body) != 'undefined' && obj.body && typeof(obj.body) === 'string') {
         // let data = {};
         // obj.body.split('&').forEach(it=>{
         //     data[it.split('=')[0]] = it.split('=')[1]
@@ -1688,7 +1773,7 @@ function request(url, obj, ocr_flag) {
         if (!obj.headers.hasOwnProperty('Content-Type') && !obj.headers.hasOwnProperty('content-type')) { // 手动指定了就不管
             obj.headers["Content-Type"] = 'application/x-www-form-urlencoded; charset=' + rule.encoding;
         }
-    } else if (typeof (obj.body) != 'undefined' && obj.body && typeof (obj.body) === 'object') {
+    } else if (typeof(obj.body) != 'undefined' && obj.body && typeof(obj.body) === 'object') {
         obj.data = obj.body;
         delete obj.body
     }
@@ -1702,6 +1787,17 @@ function request(url, obj, ocr_flag) {
     if (obj.redirect === false) {
         obj.redirect = 0;
     }
+    if (obj.headers.hasOwnProperty('Content-Type') || obj.headers.hasOwnProperty('content-type')) {
+        if (obj.headers["Content-Type"].includes("application/x-www-form-urlencoded")) {
+            log("body");
+            //console.log(JSON.stringify(obj));
+            if (typeof obj.body == "string") {
+                let temp_obj = parseQueryString(obj.body);
+                //obj.body = objectToQueryString(temp_obj);
+            }
+        }
+    }
+
     console.log(JSON.stringify(obj.headers));
     // console.log('request:'+url+' obj:'+JSON.stringify(obj));
     console.log('request:' + url + `|method:${obj.method || 'GET'}|body:${obj.body || ''}`);
@@ -1759,18 +1855,18 @@ function reqCookie(url, obj, all_cookie) {
 }
 
 fetch = request;
-print = function (data) {
+print = function(data) {
     data = data || '';
-    if (typeof (data) == 'object' && Object.keys(data).length > 0) {
+    if (typeof(data) == 'object' && Object.keys(data).length > 0) {
         try {
             data = JSON.stringify(data);
             console.log(data);
         } catch (e) {
             // console.log('print:'+e.message);
-            console.log(typeof (data) + ':' + data.length);
+            console.log(typeof(data) + ':' + data.length);
             return
         }
-    } else if (typeof (data) == 'object' && Object.keys(data).length < 1) {
+    } else if (typeof(data) == 'object' && Object.keys(data).length < 1) {
         console.log('null object');
     } else {
         console.log(data);
@@ -1830,7 +1926,9 @@ function getHtml(url) {
             obj.headers['Cookie'] = cookie;
             log('历史有大写过期的cookie,更新过验证后的cookie');
         } else if (!obj.headers) {
-            obj.headers = {Cookie: cookie};
+            obj.headers = {
+                Cookie: cookie
+            };
             log('历史无headers,更新过验证后的含cookie的headers');
         }
     }
@@ -1979,7 +2077,7 @@ function homeVodParse(homeVodObj) {
         p = rule.一级;
         homeVodObj.double = false;
     }
-    if (!p || typeof (p) !== 'string') {
+    if (!p || typeof(p) !== 'string') {
         return '{}'
     }
     p = p.trim();
@@ -2032,13 +2130,11 @@ function homeVodParse(homeVodObj) {
                             let img = '';
                             try {
                                 img = _pd(item2, p3);
-                            } catch (e) {
-                            }
+                            } catch (e) {}
                             let desc = '';
                             try {
                                 desc = _pdfh(item2, p4);
-                            } catch (e) {
-                            }
+                            } catch (e) {}
                             let links = [];
                             for (let _p5 of p5.split('+')) {
                                 let link = !homeVodObj.detailUrl ? _pd(item2, _p5, MY_URL) : _pdfh(item2, _p5);
@@ -2087,13 +2183,11 @@ function homeVodParse(homeVodObj) {
                         let img = '';
                         try {
                             img = _pd(item, p2, MY_URL);
-                        } catch (e) {
-                        }
+                        } catch (e) {}
                         let desc = '';
                         try {
                             desc = _pdfh(item, p3);
-                        } catch (e) {
-                        }
+                        } catch (e) {}
                         let links = [];
                         for (let _p5 of p4.split('+')) {
                             let link = !homeVodObj.detailUrl ? _pd(item, _p5, MY_URL) : _pdfh(item, _p5);
@@ -2177,7 +2271,7 @@ function homeVodParse(homeVodObj) {
 function categoryParse(cateObj) {
     fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
     let p = cateObj.一级;
-    if (!p || typeof (p) !== 'string') {
+    if (!p || typeof(p) !== 'string') {
         return '{}'
     }
     let d = [];
@@ -2202,11 +2296,11 @@ function categoryParse(cateObj) {
         // console.log('filter:'+cateObj.filter);
         let fl = cateObj.filter ? cateObj.extend : {};
         // 自动合并 不同分类对应的默认筛选
-        if (rule.filter_def && typeof (rule.filter_def) === 'object') {
+        if (rule.filter_def && typeof(rule.filter_def) === 'object') {
             try {
                 if (Object.keys(rule.filter_def).length > 0 && rule.filter_def.hasOwnProperty(cateObj.tid)) {
                     let self_fl_def = rule.filter_def[cateObj.tid];
-                    if (self_fl_def && typeof (self_fl_def) === 'object') {
+                    if (self_fl_def && typeof(self_fl_def) === 'object') {
                         // 引用传递转值传递,避免污染self变量
                         let fl_def = JSON.parse(JSON.stringify(self_fl_def));
                         fl = Object.assign(fl_def, fl);
@@ -2217,7 +2311,10 @@ function categoryParse(cateObj) {
             }
         }
         let new_url;
-        new_url = cheerio.jinja2(url, {fl: fl, fyclass: cateObj.tid});
+        new_url = cheerio.jinja2(url, {
+            fl: fl,
+            fyclass: cateObj.tid
+        });
         // console.log('jinjia2执行后的new_url类型为:'+typeof(new_url));
         url = new_url;
     }
@@ -2324,7 +2421,7 @@ function categoryParse(cateObj) {
         print(d.slice(0, 2));
     }
     let pagecount = 0;
-    if (rule.pagecount && typeof (rule.pagecount) === 'object' && rule.pagecount.hasOwnProperty(MY_CATE)) {
+    if (rule.pagecount && typeof(rule.pagecount) === 'object' && rule.pagecount.hasOwnProperty(MY_CATE)) {
         print(`MY_CATE:${MY_CATE},pagecount:${JSON.stringify(rule.pagecount)}`);
         pagecount = parseInt(rule.pagecount[MY_CATE]);
     }
@@ -2335,7 +2432,10 @@ function categoryParse(cateObj) {
             vod_remarks: '不要点,会崩的',
             vod_pic: 'https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/404.jpg'
         }],
-        total: 1, pagecount: 1, page: 1, limit: 1
+        total: 1,
+        pagecount: 1,
+        page: 1,
+        limit: 1
     };
     let vod = d.length < 1 ? JSON.stringify(nodata) : JSON.stringify({
         'page': parseInt(cateObj.pg),
@@ -2360,7 +2460,7 @@ function searchParse(searchObj) {
         return '{}'
     }
     let p = searchObj.搜索 === '*' && rule.一级 ? rule.一级 : searchObj.搜索;
-    if (!p || typeof (p) !== 'string') {
+    if (!p || typeof(p) !== 'string') {
         return '{}'
     }
     p = p.trim();
@@ -2426,7 +2526,9 @@ function searchParse(searchObj) {
                 // });
                 // html = post(rurl,{body:new_dict});
                 let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
-                let postData = {body: params};
+                let postData = {
+                    body: params
+                };
                 Object.assign(_fetch_params, postData);
                 html = post(rurl, _fetch_params);
             } else if (req_method === 'postjson') {
@@ -2440,7 +2542,9 @@ function searchParse(searchObj) {
                     params = '{}'
                 }
                 let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
-                let postData = {body: params};
+                let postData = {
+                    body: params
+                };
                 Object.assign(_fetch_params, postData);
                 html = post(rurl, _fetch_params);
             } else {
@@ -2601,14 +2705,14 @@ function detailParse(detailObj) {
         vod.vod_actor = '没有二级,只有一级链接直接嗅探播放';
         vod.vod_content = MY_URL;
         vod.vod_play_url = '嗅探播放$' + MY_URL.split('@@')[0];
-    } else if (typeof (p) === 'string' && p.trim().startsWith('js:')) {
+    } else if (typeof(p) === 'string' && p.trim().startsWith('js:')) {
         const TYPE = 'detail';
         var input = MY_URL;
         var play_url = '';
         eval(p.trim().replace('js:', ''));
         vod = VOD;
         console.log(JSON.stringify(vod));
-    } else if (p && typeof (p) === 'object') {
+    } else if (p && typeof(p) === 'object') {
         let tt1 = (new Date()).getTime();
         if (!html) {
             html = getHtml(MY_URL);
@@ -2659,15 +2763,13 @@ function detailParse(detailObj) {
             try {
                 let p1 = p.content.split(';');
                 vod.vod_content = _pdfh(html, p1[0]).replace(/\n|\t/g, '').trim();
-            } catch (e) {
-            }
+            } catch (e) {}
         }
         if (p.img) {
             try {
                 let p1 = p.img.split(';');
                 vod.vod_pic = _pd(html, p1[0], MY_URL);
-            } catch (e) {
-            }
+            } catch (e) {}
         }
 
         let vod_play_from = '$$$';
@@ -2677,7 +2779,7 @@ function detailParse(detailObj) {
             html = eval(p.重定向.replace('js:', ''));
         }
 
-// console.log(2);
+        // console.log(2);
         if (p.tabs) {
             if (p.tabs.startsWith('js:')) {
                 print('开始执行tabs代码:' + p.tabs);
@@ -2718,7 +2820,7 @@ function detailParse(detailObj) {
         }
         vod.vod_play_from = playFrom.join(vod_play_from);
 
-// console.log(3);
+        // console.log(3);
         let vod_play_url = '$$$';
         let vod_tab_list = [];
         if (p.lists) {
@@ -2762,7 +2864,7 @@ function detailParse(detailObj) {
                     let new_vod_list = [];
                     let tt1 = (new Date()).getTime();
                     // print('pdfl:'+typeof (pdfl));
-                    if (typeof (pdfl) === 'function') {
+                    if (typeof(pdfl) === 'function') {
                         new_vod_list = pdfl(html, p1, list_text, list_url, MY_URL);
                         if (list_url_prefix) {
                             new_vod_list = new_vod_list.map(it => it.split('$')[0] + '$' + list_url_prefix + it.split('$').slice(1).join('$'));
@@ -2871,7 +2973,7 @@ function vodDeal(vod) {
         play_ordered_list = tab_list.map(it => vod_play_url[tab_index_dict[it]]);
     }
 
-    if (rule.tab_rename && typeof (rule.tab_rename) === 'object' & Object.keys(rule.tab_rename).length > 0) {
+    if (rule.tab_rename && typeof(rule.tab_rename) === 'object' & Object.keys(rule.tab_rename).length > 0) {
         tab_renamed_list = tab_list.map(it => rule.tab_rename[it] || it);
         tab_list = tab_renamed_list;
     }
@@ -2906,12 +3008,11 @@ function playParse(playObj) {
     if (!/http/.test(MY_URL)) {
         try {
             MY_URL = base64Decode(MY_URL);
-        } catch (e) {
-        }
+        } catch (e) {}
     }
     MY_URL = decodeURIComponent(MY_URL);
-    var input = MY_URL;//注入给免嗅js
-    var flag = MY_FLAG;//注入播放线路名称给免嗅js
+    var input = MY_URL; //注入给免嗅js
+    var flag = MY_FLAG; //注入播放线路名称给免嗅js
     let common_play = {
         parse: SPECIAL_URL.test(input) || /^(push:)/.test(input) ? 0 : 1,
         url: input,
@@ -2922,7 +3023,7 @@ function playParse(playObj) {
     let lazy_play;
     if (!rule.play_parse || !rule.lazy) {
         lazy_play = common_play;
-    } else if (rule.play_parse && rule.lazy && typeof (rule.lazy) === 'string') {
+    } else if (rule.play_parse && rule.lazy && typeof(rule.lazy) === 'string') {
         try {
             let lazy_code = rule.lazy.trim();
             if (lazy_code.startsWith('js:')) {
@@ -2930,7 +3031,7 @@ function playParse(playObj) {
             }
             print('开始执行js免嗅=>' + lazy_code);
             eval(lazy_code);
-            lazy_play = typeof (input) === 'object' ? input : {
+            lazy_play = typeof(input) === 'object' ? input : {
                 parse: SPECIAL_URL.test(input) || /^(push:)/.test(input) ? 0 : 1,
                 jx: tellIsJx(input),
                 url: input
@@ -2948,7 +3049,7 @@ function playParse(playObj) {
         let web_url = lazy_play.url;
         for (let pjson of rule.play_json) {
             if (pjson.re && (pjson.re === '*' || web_url.match(new RegExp(pjson.re)))) {
-                if (pjson.json && typeof (pjson.json) === 'object') {
+                if (pjson.json && typeof(pjson.json) === 'object') {
                     let base_json = pjson.json;
                     // print('开始合并:');
                     // print(base_json);
@@ -3006,13 +3107,13 @@ function proxyParse(proxyObj) {
 function isVideoParse(isVideoObj) {
     var input = isVideoObj.url;
     if (!isVideoObj.t) { // t为假代表默认传的正则字符串
-        let re_matcher = new RegExp(isVideoObj.isVideo, 'i');  // /g匹配多个,/i不区分大小写,/m匹配多行
+        let re_matcher = new RegExp(isVideoObj.isVideo, 'i'); // /g匹配多个,/i不区分大小写,/m匹配多行
         return re_matcher.test(input);
     } else {
         // 执行js
         try {
             eval(isVideoObj.isVideo);
-            if (typeof (input) === 'boolean') {
+            if (typeof(input) === 'boolean') {
                 return input
             } else {
                 return false
@@ -3110,7 +3211,7 @@ function getOriginalJs(js_code) {
  * @param arg
  */
 function runMain(main_func_code, arg) {
-    let mainFunc = function () {
+    let mainFunc = function() {
         return ''
     };
     try {
@@ -3148,9 +3249,15 @@ function init(ext) {
         if (typeof ext == 'object') {
             rule = ext;
         } else if (typeof ext == 'string') {
-            if (ext.startsWith('http') || ext.startsWith('file://')) {
+            let is_file = ext.startsWith('file://');
+            if (ext.startsWith('http') || is_file) {
                 let query = getQuery(ext); // 获取链接传参
-                let js = request(ext, {'method': 'GET'});
+                if (is_file) {
+                    ext = ext.split('?')[0];
+                }
+                let js = request(ext, {
+                    'method': 'GET'
+                });
                 if (js) {
                     js = getOriginalJs(js);
                     // eval(js.replace('var rule', 'rule'));
@@ -3158,7 +3265,11 @@ function init(ext) {
                     eval("(function(){" + js.replace('var rule', 'rule') + "})()");
                 }
                 if (query.type === 'url' && query.params) { // 指定type是链接并且传了params支持简写如 ./xx.json
-                    rule.params = urljoin(ext, query.params);
+                    if (is_file && /^http/.test(query.params)) {
+                        rule.params = query.params;
+                    } else {
+                        rule.params = urljoin(ext, query.params);
+                    }
                 } else if (query.params) { // 没指定type直接视为字符串
                     rule.params = query.params;
                 }
@@ -3186,7 +3297,9 @@ function init(ext) {
         if (rule['模板'] === '自动') {
             try {
                 let host_headers = rule['headers'] || {};
-                let host_html = getCode(HOST, {headers: host_headers});
+                let host_html = getCode(HOST, {
+                    headers: host_headers
+                });
                 let match_muban = '';
                 let muban_keys = Object.keys(muban).filter(it => !/默认|短视2|采集1/.test(it));
                 for (let muban_key of muban_keys) {
@@ -3235,7 +3348,9 @@ function init(ext) {
         rule.detailUrl = rule.detailUrl || '';
         rule.searchUrl = rule.searchUrl || '';
         rule.homeUrl = rule.host && rule.homeUrl ? urljoin(rule.host, rule.homeUrl) : (rule.homeUrl || rule.host);
-        rule.homeUrl = cheerio.jinja2(rule.homeUrl, {rule: rule});
+        rule.homeUrl = cheerio.jinja2(rule.homeUrl, {
+            rule: rule
+        });
         rule.detailUrl = rule.host && rule.detailUrl ? urljoin(rule.host, rule.detailUrl) : rule.detailUrl;
         rule.二级访问前 = rule.二级访问前 || '';
         if (rule.url.includes('[') && rule.url.includes(']')) {
@@ -3276,7 +3391,7 @@ function init(ext) {
         rule.tab_order = rule.hasOwnProperty('tab_order') ? rule.tab_order : [];
         rule.tab_rename = rule.hasOwnProperty('tab_rename') ? rule.tab_rename : {};
 
-        if (rule.headers && typeof (rule.headers) === 'object') {
+        if (rule.headers && typeof(rule.headers) === 'object') {
             try {
                 let header_keys = Object.keys(rule.headers);
                 for (let k of header_keys) {
@@ -3303,11 +3418,16 @@ function init(ext) {
             } catch (e) {
                 console.log(`处理headers发生错误:${e.message}`);
             }
+        } else {
+            rule.headers = {}
         }
-        // print(rule.headers);
-        rule_fetch_params = {'headers': rule.headers || false, 'timeout': rule.timeout, 'encoding': rule.encoding};
-        oheaders = rule.headers || {};
-        RKEY = typeof (key) !== 'undefined' && key ? key : 'drpy_' + (rule.title || rule.host);
+        oheaders = deepCopy(rule.headers);
+        rule_fetch_params = {
+            'headers': rule.headers,
+            'timeout': rule.timeout,
+            'encoding': rule.encoding
+        };
+        RKEY = typeof(key) !== 'undefined' && key ? key : 'drpy_' + (rule.title || rule.host);
         pre(); // 预处理
         init_test();
     } catch (e) {
@@ -3328,7 +3448,7 @@ function home(filter, home_html, class_parse) {
     console.log("home");
     home_html = home_html || '';
     class_parse = class_parse || '';
-    if (typeof (rule.filter) === 'string' && rule.filter.trim().length > 0) {
+    if (typeof(rule.filter) === 'string' && rule.filter.trim().length > 0) {
         try {
             let filter_json = ungzip(rule.filter.trim());
             rule.filter = JSON.parse(filter_json);
@@ -3532,7 +3652,102 @@ function getRule(key) {
     return key ? rule[key] || '' : rule
 }
 
-function DRPY() {//导出函数
+/**
+ * 深拷贝一个对象
+ * @param _obj
+ * @returns {any}
+ */
+function deepCopy(_obj) {
+    return JSON.parse(JSON.stringify(_obj))
+}
+
+//正则matchAll
+function matchesAll(str, pattern, flatten) {
+    if (!pattern.global) {
+        pattern = new RegExp(pattern.source, "g" + (pattern.ignoreCase ? "i" : "") + (pattern.multiline ? "m" : ""));
+    }
+    var matches = [];
+    var match;
+    while ((match = pattern.exec(str)) !== null) {
+        matches.push(match);
+    }
+    return flatten ? matches.flat() : matches;
+}
+
+//文本扩展
+function stringUtils() {
+    Object.defineProperties(String.prototype, {
+        replaceX: {
+            value: function(regex, replacement) {
+                let matches = matchesAll(this, regex, true);
+                if (matches && matches.length > 1) {
+                    const hasCaptureGroup = /\$\d/.test(replacement);
+                    if (hasCaptureGroup) {
+                        return this.replace(regex, (m) => m.replace(regex, replacement));
+                    } else {
+                        return this.replace(regex, (m, p1) => m.replace(p1, replacement));
+                    }
+                }
+                return this.replace(regex, replacement);
+            },
+            configurable: true,
+            enumerable: false,
+            writable: true
+        },
+        parseX: {
+            get: function() {
+                try {
+                    //console.log(typeof this);
+                    return JSON.parse(this);
+                } catch (e) {
+                    console.log(e.message);
+                    return this.startsWith("[") ? [] : {};
+                }
+            },
+            configurable: true,
+            enumerable: false,
+        }
+    });
+}
+
+//正则裁切
+function cut(text, start, end, method, All) {
+    let result = "";
+    let c = (t, s, e) => {
+        let result = "";
+        let rs = [];
+        let results = [];
+        try {
+            let lr = new RegExp(String.raw`${s}`.toString());
+            let rr = new RegExp(String.raw`${e}`.toString());
+            const segments = t.split(lr);
+            if (segments.length < 2) return '';
+            let cutSegments = segments.slice(1).map(segment => {
+                let splitSegment = segment.split(rr);
+                //log(splitSegment)
+                return splitSegment.length < 2 ? undefined : splitSegment[0] + e;
+            }).filter(f => f);
+            //log(cutSegments.at(-1))
+            if (All) {
+                return `[${cutSegments.join(',')}]`;
+            } else {
+                return cutSegments[0];
+            }
+        } catch (e) {
+            console.log(`Error cutting text:${e.message}`);
+        }
+        return result;
+    }
+    result = c(text, start, end);
+    stringUtils();
+    if (method && typeof method === "function") {
+        result = method(result);
+    }
+    //console.log(result);
+    return result
+}
+
+function DRPY() { //导出函数
     return {
         runMain: runMain,
         getRule: getRule,
@@ -3554,8 +3769,8 @@ function DRPY() {//导出函数
  * 导出函数无法简写成下面的形式:
 
  export default {
-  ...DRPY,
-  DRPY
+ ...DRPY,
+ DRPY
  }
 
  */
