@@ -171,6 +171,96 @@
             "ext": "./zy_js/三六零.js"
         },
         {
+            "key": "魔力高清",
+            "name": "魔力｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/魔力高清.js"
+        },
+        {
+            "key": "瓜子",
+            "name": "瓜子｜影视",
+            "type": 3,
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "playerType": "1",
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/瓜子.js"
+        },
+        {
+            "key": "星辰[优]_js",
+            "name": "‍星辰｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/星辰[优].js"
+        },
+        {
+            "key": "可可影视[优]_js",
+            "name": "可可｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/可可影视[优].js"
+        },
+        {
+            "key": "hipy_js_北川影视",
+            "name": "北川｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/北川影视.js"
+        },
+        {
+            "key": "hipy_js_网飞猫[优]",
+            "name": "网飞猫｜影视",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/网飞猫[优].js"
+        },
+        {
+            "key": "NT动漫",
+            "name": "NT｜动漫",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/NT动漫.js"
+        },
+        {
+            "key": "动漫巴士",
+            "name": "巴士｜动漫",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/动漫巴士.js"
+        },
+        {
+            "key": "樱花动漫",
+            "name": "樱花｜动漫",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/樱花动漫.js"
+        },
+        {
+            "key": "大米动漫",
+            "name": "大米｜动漫",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/大米动漫.js"
+        },
+        {
             "key": "New6v",
             "name": "New6V｜磁力",
             "type": 3,
