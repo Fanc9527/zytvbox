@@ -2,15 +2,23 @@
     "urls": [
 	{
             "url": "https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zywh.json",
-            "name": "精选合集[自维]"
+            "name": "海阔聚影自用[自维]"
         },
         {
-            "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/文艺/api.json",
-            "name": "畅听合集[调用]"
+            "url": "https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/zytv.json",
+            "name": "影视壳自用[自维]"
         },
 	{
             "url": "https://github.ednovas.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json",
-            "name": "潇洒合集[调用]"
-        }
+            "name": "潇洒路线[调用]"
+        },
+	    {
+            "url": "http://www.饭太硬.com/tv/",
+            "name": "饭太硬[调用]"
+	    }
+	    {
+            "url": "http://tv.nxog.top/m/",
+            "name": "欧歌路线[调用]"
+	}
 ]
 }	
