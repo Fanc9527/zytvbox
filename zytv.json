@@ -3,169 +3,97 @@
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
         {
-            "key": "hipy_js_木偶哥哥[盘]",
-            "name": "木偶[网盘]",
+            "key": "本地",
+            "name": "本地｜视频",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
+            "api": "csp_LocalFile"
+        },
+        {
+            "key": "配置中心",
+            "name": "配置｜中心",
+            "type": 3,
+            "api": "csp_Config",
+            "searchable": 0,
+            "changeable": 0,
+            "indexs": 0,
+            "style": {
+                "type": "rect",
+                "ratio": 1.597
+            }
+        },
+        {
+            "key": "预告",
+            "name": "新片｜预告",
+            "type": 3,
+            "api": "csp_YGP",
+            "searchable": 0
+        },
+        {
+            "key": "玩偶弹幕",
+            "name": "玩偶哥哥｜4K弹幕",
+            "type": 3,
+            "api": "csp_Wogg",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/木偶哥哥[盘].js"
+            "ext": {
+                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+                "wogg": true,
+                "danmu": true
+            }
         },
         {
-            "key": "hipy_js_玩偶哥哥[盘]",
-            "name": "玩偶[网盘]",
+            "key": "夸克多多弹幕",
+            "name": "多多｜4K弹幕",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/玩偶哥哥[盘].js"
-        },
-        {
-            "key": "hipy_js_至臻[盘]",
-            "name": "至臻[网盘]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/至臻[盘].js"
-        },
-        {
-            "key": "魔力高清",
-            "name": "魔力[影视]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/魔力高清.js"
-        },
-        {
-            "key": "瓜子",
-            "name": "瓜子[影视]",
-            "type": 3,
-            "searchable": 1,
+            "api": "csp_Wobg",
             "quickSearch": 1,
             "changeable": 1,
-            "playerType": "1",
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/瓜子.js"
+            "filterable": 1,
+            "ext": {
+                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+                "site": "https://tv.yydsys.top",
+                "danmu": true
+            }
         },
         {
-            "key": "星辰[优]_js",
-            "name": "‍星辰[影视]",
+            "key": "夸克木偶弹幕",
+            "name": "木偶｜4K弹幕",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
+            "api": "csp_Wobg",
             "quickSearch": 1,
+            "changeable": 1,
             "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/星辰[优].js"
+            "ext": {
+                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+                "site": "http://mogg.top",
+                "danmu": true
+            }
         },
         {
-            "key": "素白白[优]_js",
-            "name": "素白白[影视]",
+            "key": "夸克至臻弹幕",
+            "name": "至臻｜4K弹幕",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
+            "api": "csp_Wobg",
             "quickSearch": 1,
+            "changeable": 1,
             "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/素白白[优].js"
-        },
-        {
-            "key": "可可影视[优]_js",
-            "name": "可可[影视]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/可可影视[优].js"
-        },
-        {
-            "key": "hipy_js_北川影视",
-            "name": "北川[影视]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/北川影视.js"
-        },
-        {
-            "key": "hipy_js_网飞猫[优]",
-            "name": "网飞猫[影视]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/网飞猫[优].js"
-        },
-        {
-            "key": "hipy_js_老白故事[听]",
-            "name": "老白[听书]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/老白故事[听].js"
-        },
-        {
-            "key": "hipy_js_六月听书[听]",
-            "name": "六月[听书]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/六月听书[听].js"
-        },
-        {
-            "key": "hipy_js_博看听书[听]",
-            "name": "博看[听书]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/博看听书[听].js"
-        },
-        {
-            "key": "hipy_js_番茄小说[书]",
-            "name": "番茄[小说]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/番茄小说[书].js"
-        },
-        {
-            "key": "hipy_js_7猫小说[书]",
-            "name": "7猫[小说]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/7猫小说[书].js"
+            "ext": {
+                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+                "site": "https://mihdr.top",
+                "danmu": true
+            }
         },
         {
             "key": "js_蓝莓短剧",
-            "name": "蓝莓[短剧]",
+            "name": "蓝莓｜短剧",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -175,7 +103,7 @@
         },
         {
             "key": "爱你短剧",
-            "name": "爱你[短剧]",
+            "name": "爱你｜短剧",
             "type": 3,
             "api": "csp_XYQHiker",
             "searchable": 1,
@@ -185,7 +113,7 @@
         },
         {
             "key": "js_星芽短剧",
-            "name": "星芽[短剧]",
+            "name": "星芽｜短剧",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
@@ -194,98 +122,91 @@
             "ext": "./zy_js/星芽短剧.js"
         },
         {
-            "key": "NT动漫",
-            "name": "NT[动漫]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/NT动漫.js"
-        },
-        {
-            "key": "动漫巴士",
-            "name": "巴士[动漫]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/动漫巴士.js"
-        },
-        {
-            "key": "樱花动漫",
-            "name": "樱花[动漫]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/樱花动漫.js"
-        },
-        {
-            "key": "大米动漫",
-            "name": "大米[动漫]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/大米动漫.js"
-        },
-        {
-            "key": "高清MP4",
-            "name": "高清MP4[磁力]",
-            "type": 3,
-            "api": "csp_XYQHiker",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "./zy_json/高清MP4.json"
-        },
-        {
-            "key": "磁力熊",
-            "name": "磁力熊[磁力]",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/磁力熊.js"
-        },
-        {
             "key": "腾讯视频",
-            "name": "腾讯[视频]",
+            "name": "腾讯｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/腾讯视频.js"
         },
         {
             "key": "优酷视频",
-            "name": "优酷[视频]",
+            "name": "优酷｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/优酷视频.js"
         },
         {
             "key": "芒果视频",
-            "name": "芒果[视频]",
+            "name": "芒果｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/芒果视频.js"
         },
         {
             "key": "搜狗视频",
-            "name": "搜狗[视频]",
+            "name": "搜狗｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/搜狗视频.js"
         },
         {
             "key": "哔哩视频",
-            "name": "哔哩[视频]",
+            "name": "哔哩｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/哔哩视频.js"
         },
         {
             "key": "爱奇艺",
-            "name": "爱奇艺[视频]",
+            "name": "爱奇艺｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/爱奇艺.js"
         },
         {
             "key": "三六零",
-            "name": "三六零[视频]",
+            "name": "三六零｜视频",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/三六零.js"
+        },
+        {
+            "key": "New6v",
+            "name": "New6V｜磁力",
+            "type": 3,
+            "api": "csp_New6v",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "https://www.xb6v.com"
+        },
+        {
+            "key": "Aid",
+            "name": "急救┃教学",
+            "type": 3,
+            "api": "csp_FirstAid",
+            "searchable": 0,
+            "quickSearch": 0,
+            "changeable": 0,
+            "style": {
+                "type": "rect",
+                "ratio": 3.8
+            }
+        },
+        {
+            "key": "push_agent",
+            "name": "手机｜推送",
+            "type": 3,
+            "api": "csp_Push",
+            "searchable": 0,
+            "filterable": 0,
+            "changeable": 0,
+            "ext": {
+                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+                "danmu": true
+            }
         }
     ],
     "parses": [
@@ -296,7 +217,7 @@
         },
         {
             "name": "推荐",
-            "type": 0,
+            "type": 1,
             "url": "https://jxjson.icu/neibu.php?url=",
             "ext": {
                 "flag": [
@@ -325,7 +246,7 @@
         },
         {
             "name": "臻享",
-            "type": "0",
+            "type": "1",
             "url": "http://43.248.100.147:6068/KEY/XGJ/root/key/70.php?url=",
             "ext": {
                 "flag": [
@@ -358,7 +279,7 @@
         },
         {
             "name": "BBA专线",
-            "type": "0",
+            "type": "1",
             "url": "http://43.248.100.147:6068/bba/bbajson.php?url=",
             "ext": {
                 "flag": [
