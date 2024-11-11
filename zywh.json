@@ -65,17 +65,6 @@
             "ext": "./zy_js/星辰[优].js"
         },
         {
-            "key": "素白白[优]_js",
-            "name": "素白白｜影视",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/素白白[优].js"
-        },
-        {
             "key": "可可影视[优]_js",
             "name": "可可｜影视",
             "type": 3,
@@ -222,14 +211,11 @@
             "ext": "./zy_js/大米动漫.js"
         },
         {
-            "key": "高清MP4",
-            "name": "高清MP4｜磁力",
+            "key": "路漫漫",
+            "name": "路漫漫｜动漫",
             "type": 3,
-            "api": "csp_XYQHiker",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "./zy_json/高清MP4.json"
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/路漫漫.js"
         },
         {
             "key": "磁力熊",

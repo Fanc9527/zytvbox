@@ -261,6 +261,13 @@
             "ext": "./zy_js/大米动漫.js"
         },
         {
+            "key": "路漫漫",
+            "name": "路漫漫｜动漫",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/路漫漫.js"
+        },
+        {
             "key": "New6v",
             "name": "New6V｜磁力",
             "type": 3,
