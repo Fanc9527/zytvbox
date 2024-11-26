@@ -3,15 +3,15 @@
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
         {
-            "key": "hipy_js_木偶哥哥[盘]",
-            "name": "木偶｜网盘",
+            "key": "hipy_js_蜡笔[盘]",
+            "name": "蜡笔｜网盘",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
             "order_num": 0,
-            "ext": "./zy_js/木偶哥哥[盘].js"
+            "ext": "./zy_js/蜡笔[盘].js"
         },
         {
             "key": "hipy_js_玩偶哥哥[盘]",
