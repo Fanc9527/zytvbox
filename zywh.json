@@ -559,16 +559,16 @@
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
         {
-            "name": "潇洒",
+            "name": "奇",
             "type": 0,
-            "url": "https://github.ednovas.xyz/https://github.com/PizazzGY/TVBox_warehouse/blob/main/live.txt",
+            "url": "https://github.ednovas.xyz/https://github.com/qist/tvbox/blob/master/tvboxtv.txt",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
         {
-            "name": "直播3",
+            "name": "0901",
             "type": 0,
-            "url": "https://tv.iill.top/m3u/Gather",
+            "url": "https://ghp.ci/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
             "playerType": 1,
             "epg": "https://epg.112114.eu.org/?ch={name}&date={date}"
         }
