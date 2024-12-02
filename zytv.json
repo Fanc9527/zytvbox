@@ -3,6 +3,13 @@
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
         {
+            "key": "预告",
+            "name": "新片｜预告",
+            "type": 3,
+            "api": "csp_YGP",
+            "searchable": 0
+        },
+        {
             "key": "本地",
             "name": "本地｜视频",
             "type": 3,
@@ -20,13 +27,6 @@
                 "type": "rect",
                 "ratio": 1.597
             }
-        },
-        {
-            "key": "预告",
-            "name": "新片｜预告",
-            "type": 3,
-            "api": "csp_YGP",
-            "searchable": 0
         },
         {
             "key": "玩偶弹幕",
@@ -56,22 +56,6 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "site": "https://tv.yydsys.top",
-                "danmu": true
-            }
-        },
-        {
-            "key": "夸克木偶弹幕",
-            "name": "木偶｜4K弹幕",
-            "type": 3,
-            "api": "csp_Wobg",
-            "quickSearch": 1,
-            "changeable": 1,
-            "filterable": 1,
-            "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://mogg.top",
                 "danmu": true
             }
         },
@@ -584,25 +568,18 @@
     ],
     "lives": [
         {
+            "name": "华南电信",
+            "type": 0,
+            "url": "./zy_m3u/hndxtv.m3u",
+            "playerType": 1,
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+        },
+        {
             "name": "典藏",
             "type": 0,
             "url": "https://github.ednovas.xyz/https://github.com/suxuang/myIPTV/blob/main/ipv6.m3u",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
-        },
-        {
-            "name": "潇洒",
-            "type": 0,
-            "url": "https://github.ednovas.xyz/https://github.com/PizazzGY/TVBox_warehouse/blob/main/live.txt",
-            "playerType": 1,
-            "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
-        },
-        {
-            "name": "直播3",
-            "type": 0,
-            "url": "https://tv.iill.top/m3u/Gather",
-            "playerType": 1,
-            "epg": "https://epg.112114.eu.org/?ch={name}&date={date}"
         }
     ],
     "flags": [

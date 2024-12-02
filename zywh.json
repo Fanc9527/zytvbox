@@ -559,18 +559,11 @@
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
         {
-            "name": "奇",
+            "name": "华南电信",
             "type": 0,
-            "url": "https://github.ednovas.xyz/https://github.com/qist/tvbox/blob/master/tvboxtv.txt",
+            "url": "./zy_m3u/hndxtv.m3u",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
-        },
-        {
-            "name": "0901",
-            "type": 0,
-            "url": "https://ghp.ci/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
-            "playerType": 1,
-            "epg": "https://epg.112114.eu.org/?ch={name}&date={date}"
         }
     ],
     "flags": [
