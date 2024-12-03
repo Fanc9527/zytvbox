@@ -508,6 +508,14 @@ http://14.216.225.227:2323/rtp/239.77.0.96:5146
 
 
 #电影轮播
+#EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",漫威电影
+http://120.77.28.4:8648/douyu.php?id=6140589
+#EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",豆瓣高分
+http://120.77.28.4:8648/douyu.php?id=8770422
+#EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",霍格沃茨
+http://120.77.28.4:8648/douyu.php?id=8814650
+
+
 #EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",周星驰电影
 http://rihou.cc:555/hy.php?id=11342412
 #EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",林正英电影
@@ -540,10 +548,7 @@ http://rihou.cc:555/hy.php?id=11352941
 http://rihou.cc:555/hy.php?id=11601986
 #EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",X战警电影
 http://jiaojirentv.top/2020/dy.php?id=9651304
-#EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",漫威电影
-http://120.77.28.4:8648/douyu.php?id=6140589
-#EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/电影.png" group-title="电影轮播",豆瓣高分
-http://120.77.28.4:8648/douyu.php?id=8770422
+
 
 #电视剧轮播
 #EXTINF:-1 tvg-logo="https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/img/延禧攻略.png" group-title="电视剧轮播",延禧攻略
