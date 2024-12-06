@@ -700,9 +700,9 @@
     ],
     "lives": [
         {
-            "name": "华南电信",
+            "name": "IPV4",
             "type": 0,
-            "url": "./zy_m3u/hndxtv.m3u",
+            "url": "https://live.zbds.top/tv/iptv4.txt",
             "playerType": 1,
             "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
         },
