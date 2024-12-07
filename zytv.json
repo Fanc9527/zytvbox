@@ -415,7 +415,7 @@
         },
         {
             "name": "线路1",
-            "type": 1,
+            "type": 0,
             "url": "https://jx.xmflv.com/?url=",
             "ext": {
                 "header": {
