@@ -121,7 +121,7 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "https://mihdr.top",
+                "site": "https://xiaomiai.site",
                 "danmu": true
             }
         },
@@ -173,6 +173,34 @@
                 "site": "https://wp.0v.fit",
                 "danmu": true
             }
+        },
+        {
+            "key": "腾讯弹幕",
+            "name": "腾讯｜弹幕",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/腾讯弹幕.js"
+        },
+        {
+            "key": "优酷弹幕",
+            "name": "优酷｜弹幕",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/优酷弹幕.js"
+        },
+        {
+            "key": "芒果弹幕",
+            "name": "芒果｜弹幕",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/芒果弹幕.js"
+        },
+        {
+            "key": "爱奇艺弹幕",
+            "name": "爱奇艺｜弹幕",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "ext": "./zy_js/爱奇艺弹幕.js"
         },
         {
             "key": "机器人弹幕",
@@ -236,55 +264,6 @@
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0
-        },
-        {
-            "key": "腾讯视频",
-            "name": "腾讯｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/腾讯视频.js"
-        },
-        {
-            "key": "优酷视频",
-            "name": "优酷｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/优酷视频.js"
-        },
-        {
-            "key": "芒果视频",
-            "name": "芒果｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/芒果视频.js"
-        },
-        {
-            "key": "搜狗视频",
-            "name": "搜狗｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/搜狗视频.js"
-        },
-        {
-            "key": "哔哩视频",
-            "name": "哔哩｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/哔哩视频.js"
-        },
-        {
-            "key": "爱奇艺",
-            "name": "爱奇艺｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/爱奇艺.js"
-        },
-        {
-            "key": "三六零",
-            "name": "三六零｜视频",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/三六零.js"
         },
         {
             "key": "魔力高清",
