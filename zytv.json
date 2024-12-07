@@ -237,16 +237,6 @@
             "ext": "./zy_js/蓝莓短剧.js"
         },
         {
-            "key": "爱你短剧",
-            "name": "爱你｜短剧",
-            "type": 3,
-            "api": "csp_XYQHiker",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "./zy_json/爱你短剧.json"
-        },
-        {
             "key": "js_星芽短剧",
             "name": "星芽｜短剧",
             "type": 3,
@@ -349,11 +339,11 @@
             "ext": "./zy_js/樱花动漫.js"
         },
         {
-            "key": "大米动漫",
-            "name": "大米｜动漫",
+            "key": "奇米动漫",
+            "name": "奇米｜动漫",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/大米动漫.js"
+            "ext": "./zy_js/奇米动漫.js"
         },
         {
             "key": "路漫漫",
@@ -371,6 +361,17 @@
             "quickSearch": 1,
             "filterable": 1,
             "ext": "https://www.xb6v.com"
+        },
+        {
+            "key": "hipy_js_4khdr",
+            "name": "4khdr｜磁力",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/4khdr.js"
         },
         {
             "key": "Aid",
@@ -403,9 +404,14 @@
     ],
     "parses": [
         {
-            "name": "聚合",
+            "name": "聚合1",
             "type": 3,
             "url": "Demo"
+        },
+        {
+            "name": "聚合0",
+            "type": 3,
+            "url": "Web"
         },
         {
             "name": "臻享",
