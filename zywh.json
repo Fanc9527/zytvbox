@@ -36,6 +36,39 @@
             "ext": "./zy_js/至臻[盘].js"
         },
         {
+            "key": "小米网盘",
+            "name": "小米｜网盘",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/小米网盘.js"
+        },
+        {
+            "key": "欧歌网盘",
+            "name": "欧歌｜网盘",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/欧歌网盘.js"
+        },
+        {
+            "key": "多多网盘",
+            "name": "多多｜网盘",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/多多网盘.js"
+        },
+        {
             "key": "魔力高清",
             "name": "魔力｜影视",
             "type": 3,
