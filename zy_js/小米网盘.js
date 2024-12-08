@@ -17,6 +17,7 @@ var rule = {
     cate_exclude: '网址|专题|全部影片|少儿',
     tab_rename: {
         'xiaoge': 'UC云盘',
+        '小米': 'UC云盘2',
     },
     搜索: '.module-search-item;.video-serial&&title;*;.video-serial&&Text;.video-serial&&href',
     一级: '.module-items .module-item;a&&title;img&&data-src;.module-item-text&&Text;a&&href',
