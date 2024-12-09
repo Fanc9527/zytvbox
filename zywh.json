@@ -68,6 +68,17 @@
             "order_num": 0,
             "ext": "./zy_js/多多网盘.js"
         },
+                {
+            "key": "木偶哥哥",
+            "name": "木偶｜网盘",
+            "type": 3,
+            "api": "./zy_libs/drpy2.min.js",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "order_num": 0,
+            "ext": "./zy_js/木偶哥哥[盘].js"
+        },
         {
             "key": "魔力高清",
             "name": "魔力｜影视",
