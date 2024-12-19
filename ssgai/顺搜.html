@@ -1,0 +1,2109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>顺搜_by顺承天意(2024-12-19)</title>
+<script type="text/javascript">
+let t_begin =new Date().getTime()
+</script>
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/zepto/1.2.0/zepto.min.js"></script> -->
+<!-- <script src="js/zepto.min.js"></script> -->
+<!-- <script src="js/zepto-module.js"></script> -->
+<script src="http://123.56.105.145/weisyr/js/zepto.min.js"></script>
+<script src="http://123.56.105.145/weisyr/js/zepto-module.js"></script>
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script> -->
+<style type="text/css">
+* {
+	text-size-adjust: none;
+	-webkit-user-select: none;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+	--background-color: white;
+	--font-color: black;
+	--part-background: rgba(255, 255, 255, .95);
+	--mask_toTop: linear-gradient(to top, white, transparent 100%);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+	--background-color: #1b1b1b;
+	--font-color: rgba(255, 255, 255,.6);
+	--part-background: rgba(22,22,22, .9);
+	--mask_toTop: linear-gradient(to top, #1b1b1b , transparent 100%);
+  }
+}
+body {
+	background-color: var(--background-color);
+	color: var(--font-color);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.switch, .CLOSE {
+	position: absolute;
+	z-index: 1;
+	background-color: transparent;
+	width: 100%;
+	bottom: 90px;
+	top: 0;
+	left: 0;
+}
+.CLOSE {
+	display: none;
+	z-index: 2;
+}
+li:active,
+#app_sel:active,
+#ONE_play:active,
+button:active,
+.function:active,
+.s1:active,
+#set_pic:active,
+#today:active,
+#input-clear:active {
+	animation: click 0.8s ease-in-out infinite;
+	/background-color: rgba(0, 0, 0, 0.3);
+}
+#set_pic:active {
+	border-radius: 8px;
+}
+#input-clear:active {
+	background-color: rgba(255, 0, 0, .5);
+	border-radius: 28px
+}
+@keyframes click {
+0% {transform: scale(0.85)}
+50% {transform: scale(1.1);}
+100% {transform: scale(0.85)}
+}
+@keyframes click_in {
+0% {transform: scale(0.0)}
+40% {transform: scale(1.05)}
+100% {transform: scale(1) }
+}
+@keyframes close {
+0%{transform:scale(1);} 
+100%{transform:scale(0);opacity:0}
+}
+@keyframes 功能开 {
+0% {width: 7px; height: 7px; opacity: 0.1;}
+100% {width: 60px; height: 7px; opacity: 0.9;}
+}
+@keyframes 功能关 {
+0% {width: 60px; height: 7px; opacity: 0.9;}
+100% {width: 7px; height: 7px; opacity: 0.1;}
+}
+@keyframes plus {
+0% {transform: scale(1);}
+100% {transform: scale(1.4);}
+}
+@keyframes reduce {
+0% {transform: scale(1.4);}
+100% {transform: scale(1);}
+}
+@keyframes 淡入 {
+0% {transform: scale(1); opacity: 0;}
+100% {transform: scale(1.05); opacity: 1;}
+}
+@keyframes 淡出 {
+0% {transform: scale(1.05); opacity: 1;}
+100% {transform: scale(1); opacity: 0;}
+}
+@keyframes 天气 {
+0% {transform: scale(1); opacity: 0;}
+20% {transform: scale(1.05); opacity: .5;}
+60% {transform: scale(1.05); opacity:,5;}
+100% {transform: scale(1); opacity: 0;}
+}
+@keyframes drop {
+0% {width: 55px; height: 55px;border-radius: 50%; left: 50%; margin-top: 90%;}
+70% {width: 55px; height: 45px;border-radius: 50%; left: 79%; margin-top: 0px;}
+100% {width: 55px; height: 55px;border-radius: 50%; left: 83%; margin-top: 10px;}
+}
+@keyframes drop_open {
+0% {left: 83%; margin-top: 0; width: 60px; height: 60px; border-radius: 50%; }
+40% {left: 0; margin-top: 10px; width: 100%; height: 75%; border-radius: 15px; }
+100% {right: 3%; margin-top: 10px; width: 94%; left:3%; bottom:40px;border-radius: 15px; }
+}
+@keyframes 天气_open {
+0% {opacity: 0; left: -50%; transform: scale(.2) translate3d(0, 0, 0);}
+40% {opacity: 1; left: 0; transform: scale(1.03);}
+100% {opacity: 1; left: 0; transform: scale(1);}
+}
+@keyframes 天气_close {
+0% {opacity: 1; left: 0; transform: scale(1);}
+100% {opacity: 0; left: -40%; transform: scale(.4);}
+}
+@keyframes slideDownReturn0 {
+0% {transform: translate3d(0, 100%, 0); opacity: 0;}
+100% {transform: translate3d(0, 0, 10px); opacity: 1;}
+}
+@keyframes slideDownReturn{0%{opacity:0;transform:scale(.2) translateY(300%);transform-origin:50% 100%}to{opacity:1;transform:scale(1) translate(0);transform-origin:50% 100%}}
+@keyframes spaceOutDown{0%{opacity:1;transform:scale(1) translate(0);transform-origin:50% 100%}to{opacity:0;transform:scale(.2) translateY(300%);transform-origin:50% 100%}}
+.Pic_card, .main {
+	top: 0;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	border-radius: 18px 18px 0 0;
+	position: absolute;
+	overflow: hidden;
+	z-index: 0;
+	text-align: center;
+	/box-shadow: rgb(0, 0, 0, 0.65) 0 20px 25px -10px;
+}
+#search_box {
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	width: 100%;
+	height: 70px;
+	margin:0 auto;
+	position: absolute;
+	opacity: 0.85;
+	z-index: 5;
+}
+#search_box form:hover {
+	transform: translate3d(0px, 10px, 100px);
+}
+#search_mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+.ONE_radio img,
+.IMG img {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+	position: absolute;
+}
+#search_box form {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 36%;
+	margin:0 auto;
+	transform: translate3d(0, 0, 0);
+	transition: width 0.25s ease-in-out, border-radius 0.25s ease-in-out, transform .6s;
+}
+input,button {
+	border:none;
+	outline:none;
+}
+input:focus::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.01);
+}
+.bar input {
+	margin: 0 auto;
+	border-radius: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	background-color: var(--part-background);
+	color: var(--font-color);
+	font-size: 90%;
+	width: 100%;
+	height:40px;
+	padding-left:10px;
+	padding-right:75px;
+	transition: width 0.25s ease-in-out, border-radius 0.25s ease-in-out, transform .6s;
+	/box-shadow: rgba(0, 0, 0, 0.1) 0 0px 5px 0 inset;
+}
+#open_set {
+	height: 100%;
+	width: 25%;
+	position:absolute;
+	/background-color: rgba(0, 0, 0, .5);
+}
+.bar button {
+	right: 2px;
+	height: 100%;
+	width: 40px;
+	position:absolute;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: transparent;
+}
+.bar button img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0 30px 30px 0;
+	opacity: 0.4;
+}		
+#input-clear {
+	right: 10%;
+	display: none;
+}
+#input-clear p{
+	position:flex;
+	margin:0 auto;
+	color: var(--font-color);
+	opacity: 0.2;
+	font-size: 18px;
+}
+.bar button,a,a:link,a:visited {
+	text-decoration: none;
+	-webkit-tap-highlight-color:transparent;
+}
+#suggestList {
+	margin:0;
+	top:3%;
+	position: absolute;
+	display: none;
+	z-index: 6;
+	left:5%;
+	border-radius: 10px;
+	background-color: var(--part-background);
+	box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px, rgba(0, 0, 0, 0.06) 0 1px 1px;
+	padding: 5px 15px 0 15px;
+}
+#suggestList li {
+	list-style-type: none;
+	font-size: 90%;
+	color: #717171;
+	margin-top:1vh;
+	height:11vh;
+	align-items: center;
+	display: flex;
+	border-bottom: 1px dashed rgba(0, 0, 0, .08);
+}
+#lishiList {
+	margin:0;
+	position: absolute;
+	overflow: hidden;
+	z-index: 3;
+	left:0;
+	right:0;
+	top: 0;
+	bottom: 88px;
+	padding: 5px 15px 0 15px;
+	display: none;
+	background-color: rgba(0, 0, 0, .0);
+}
+#lishiList li {
+	list-style-type: none;
+	pointer-events: auto;
+	float: left;
+	background-color: var(--part-background);
+	height: 36px;
+	color: #666;
+	font-size: 95%;
+	align-items: center;
+	display: flex;
+	margin-top:2px;
+	margin-left:1%;
+	padding: 0 8px;
+	border-radius: 11px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 2px, rgba(0, 0, 0, 0.14) 0px 1px 2px;
+}
+
+#lishiList li  p,
+#suggestList li p {
+	flex: 1;
+}
+#movieimg {
+	bottom: -1px;
+	right: -1px;
+	left: -1px;
+	top: -1px;
+	position: absolute;
+	z-index: 0;
+}
+#main_img,
+#mask_toTop {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+}
+#mask_toTop {
+	background: var(--mask_toTop);
+	z-index: 2;
+}
+#close_plus {
+	position: absolute;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, .0);
+	width: 100%;
+	height: 20px;
+	Right: 0;
+	bottom: 0%;
+}
+.biaodan {
+	position: absolute;
+	visibility:hidden;
+	z-index: 3;
+	background-color: var(--background-color);
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+}
+.form-box {
+	width:95%;
+	height: 95%;
+	margin:0 auto;
+	position:relative;
+	display: flex;
+	flex-direction: column;
+}
+.form-item {
+	display: flex;
+	flex: auto;
+	align-items: center;
+	margin-top: 1%;
+}
+label {
+	display: block;
+	position: absolute;
+	font-size: 90%;
+	height: 35px;
+	padding: 0 11px;
+	color: #fff;
+	border-radius: 5px 2px 2px 5px ;
+	line-height:35px;
+}
+#isAdult, #isAdult_3{
+	color: #3c9;
+}
+#isAdult_2, #isAdult_4 {
+	margin-left: 52%;
+	color: #3c9;
+}
+#isAdult_2 {
+	background-color: #f0f0f0;
+	border-radius: 10px;
+}
+label::after {
+	margin-right: 6px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.form-item select {
+	left: 2px;
+	height: 35px;
+	border-radius: 5px 2px 2px 5px ;
+	border: none;
+	outline: none;
+	appearance: none;
+	position:absolute;
+	width:50px;
+	color: rgba(0, 0, 0, .0);
+	background-color: transparent;
+}
+input.text-input {
+	display: block;
+	padding: 0 35px 0 10px;
+	border: 2px solid #ccc;
+	width: 100%;
+	height: 35px;
+	outline: none;
+	transition: all 300ms;
+	border-left-width: 55px;
+	border-radius:10px;
+}
+input.text-input::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.2);
+}
+input.text-input:valid {
+	border-color: #3c9;
+}
+input.text-input:invalid {
+	border-color: #B1B1B1;
+}	
+input[type=checkbox] {
+	position: relative;
+	left: 90px;
+	appearance: none;
+	transition: all 100ms ease;
+	border-radius: 31px;
+	width: 60px;
+	height: 30px;
+	background-color: #e9e9eb;
+	outline: none;
+	margin: 0;
+	display: inline-block;
+}
+#ckeckbox_2, #ckeckbox_4{
+	left: 60%;
+}
+input[type=checkbox]::before {
+	position: absolute;
+	content: "";
+	transition: all 300ms cubic-bezier(.45, 1, .4, 1);
+	border-radius: 31px;
+	width: 60px;
+	height: 30px;
+	background-color: #e9e9eb;
+}
+input[type=checkbox]::after {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	border-radius: 27px;
+	width: 22px;
+	height: 22px;
+	background-color: #fff;
+	box-shadow: 1px 1px 5px rgba(#000, .3);
+	content: "";
+	transition: all 300ms cubic-bezier(.4, .4, .25, 1.35);
+}
+input[type=checkbox]:checked {
+	background-color: #3c9;
+}
+input[type=checkbox]:checked::before {
+	transform: scale(0);
+}
+input[type=checkbox]:checked::after {
+	transform: translateX(30px);
+}
+button {
+	width: 48%;
+	height: 40px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	background-color: #63c3ff;
+	color: #fff;
+}
+button[id="quxiao"] {
+	background-color: #6fcc6f;
+}
+button:first-child {
+	margin-right: 4%;
+}
+.set button {
+	right: 20px;
+	height: 40px;
+	width:40px;
+	right: 0;
+	position:absolute;
+	background-color: transparent;
+	-webkit-tap-highlight-color:transparent
+}
+.input_clear p{
+	display:flex;
+	margin:0 auto;
+	color: rgba(0, 0, 0, .2);
+	font-size: 20px;
+	display: none;
+}
+.function {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	z-index: 4;
+	border-radius: 18px;
+	height: 80px;
+	bottom:45%;
+	Right: 5%;
+	left: 70%;
+	margin-top: 15px;
+}
+.calendar, .s2, #month, #today {
+	box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+}
+#open_function {
+	position: absolute;
+	z-index: 16;
+	bottom: 2px;
+	left: 0;
+	right:0;
+	width: 7px;
+	height: 7px;
+	margin:0 auto;
+	background-color: var(--background-color);
+	border-radius: 15px;
+	opacity: 0.2;
+	box-shadow: rgba(0, 0, 0, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(0, 0, 0, 0.35) 0 -2px 6px 0 inset;
+}
+.calendar {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	Right: 40%;
+	left: 5%;
+	margin-top: 15px;
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+#month,
+#today {
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	align-items: center;
+	display: flex;
+}
+#today {
+	left:0;
+	Right: 50%;
+	z-index: 3;
+	border-radius: 8px 0 0 8px;
+}
+#dayNumber {
+	font-size: 4em;
+	font-weight: 700;
+	color: #f4f4f4;
+	flex: 1;
+}
+#month {
+	left: 50%;
+	right:0;
+	background: url("img/frosted.png");
+	background-size: 55%;
+	opacity: .5;
+	color: black;
+}
+#month_1,#month_2 {
+	position: absolute;
+	width: 100%;
+	top:0;
+	height: 50%;
+	align-items: center;
+	display: flex;
+}
+#month_2 {
+	top: 50%;
+}
+#month_1  p {
+	margin-bottom: 5%;
+	font-size: 100%;
+	flex: 1;
+}
+#month_2  p {
+	margin-top: 5%;
+	letter-spacing: 5px;
+	margin-left: 4px;
+	font-size: 100%;
+	font-weight: 700;
+	flex: 1;
+}
+.ONE_card {
+	position: absolute;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+.ONE_radio {
+	position: absolute;
+	overflow: hidden;
+	bottom: 40px;
+	top: 4%;
+	left: 3%;
+	right: 3%;
+	border-radius: 15px;
+	display: none;
+	background-color: var(--background-color);
+	box-shadow: rgb(0, 0, 0, 0.65) 0 20px 25px -10px;
+	pointer-events: auto;
+}
+#ONE_mask {
+	position: absolute;
+	z-index: 1;
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	opacity: 0.8;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: radial-gradient(circle, rgba(0, 0, 0, .2) 10%, rgba(10, 10, 10, .0) 45%);
+}
+#ONE_mask:hover,.ONE_radio p, .bar button img, #lishiList, #weather_iframe{
+	pointer-events: none;
+}
+#ONE_play {
+	filter: brightness(0) invert(1);
+	position: absolute;
+	z-index: 2;
+	width: 22vh;
+	height: 22vh;
+	border-radius: 50%;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	　transform-origin: center;
+	opacity: 0.7;
+	animation: click 2s ease-in-out infinite;
+}
+#title_1, #title_2{
+	position: absolute;
+	font-size: 80%;
+	padding: 0 11px;
+	color: #fff;
+	display: none;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+#title_2 {
+	bottom: 0;
+	font-size: 120%;
+}
+.All_weather {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 92%;
+	height: 162px;
+	/background-color: rgba(255, 255, 255, 0.2);
+	margin-top: 20px;
+	margin-bottom: 90px;
+	pointer-events: none;
+	z-index: 1;
+}
+.weather, #weather_iframe {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#weather_info {
+	justify-content: space-between;
+	white-space: nowrap;
+	position: absolute;
+	align-items: center;
+	display: flex;
+	top: 20px;
+	left: 12px;
+}
+#weather_info a {
+	position: absolute;
+	display: inline-block;
+	left: 12px;
+	color: var(--font-color);
+	font-size: 100%;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
+#wv_1,#wv_2,#wv_3 {
+	position: absolute;
+	/background-color: rgba(255, 255, 255, 0.9);
+	pointer-events: auto;
+}
+#wv_1 {
+	top: 0;
+	height: 40px;
+	bottom: 0;
+	z-index: 1;
+	width: 120px;
+	right:0;
+}
+#wv_2 {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 150px;
+	height: 40px;
+}
+#wv_3 {
+	top: 45px;
+	left: 20px;
+	z-index: 3;
+	width: 80px;
+	height: 120px;
+}
+#gradienter {
+	width: 100%;
+	left: 0;
+	position: absolute;
+	opacity: .8;
+}
+</style>
+</head>
+<body>
+<div class="biaodan">
+	<form class="form-box" novalidate>
+		<div class="form-item set ">
+			<label>引 擎</label>
+			<input type="text"  list="ssList" id="sousuo" class="text-input" placeholder="点击“引擎”可选择最近小程序" required>
+			<select id="app_sel"></select>
+			<button class="input_clear sousuo_clear"><p>×</p></button>
+		</div>
+		<div class="form-item set">
+			<label id="set_pic">图 片</label>
+			<input type="text" class="text-input" id="tupian" placeholder="点击“图片”选择本地图（留空为默认）" required>
+			<button class="input_clear tupian_clear"><p>×</p></button>
+		</div>
+		
+		<div class="form-item">
+			<label id="isAdult">定 义 图</label>
+			<label id="isAdult_2">开轮播</label>
+			<input id="ckeckbox" type="checkbox">
+			<input id="ckeckbox_2" type="checkbox">
+		</div>
+		<div class="form-item set">
+			<label id="set_inject">注 入</label>
+			<input type="text" class="text-input" id="inject" placeholder="注入JS实现特定功能" required>
+			<button class="input_clear inject_clear"><p>×</p></button>
+		</div>
+		<div class="form-item">
+			<label id="isAdult_3">渐 变 层</label>
+			<label id="isAdult_4">边距圆角</label>
+			<input id="ckeckbox_3" type="checkbox">
+			<input id="ckeckbox_4" type="checkbox">
+		</div>
+		<div class="form-item close_set">
+			<button  id="quxiao">
+				<span>取 消</span>
+			</button>
+			<button type="submit" id="save">
+				<span>保 存</span>
+			</button>
+		</div>
+	</form>
+</div>
+<div class="Pic_card">
+<div class="main">
+	<div class="switch"></div>
+	<div class="CLOSE"></div>
+	<div id="movieimg">
+		<div id="main_img" class="IMG"><img class="pics_img one"></div>
+		<div id="mask_toTop"></div>
+		<div id="close_plus"></div>
+		<div id="open_function"></div>
+	</div>
+	<div class="calendar function">
+		<span id="today"><p id="dayNumber"></p></span>
+		<div id="month">
+			<span id="month_1"><p id="monthName"></p></span>
+			<span id="month_2"><p id="dayName"></p></span>
+		</div>
+	</div>
+	<div class="function s1" id="s1">
+		<canvas id="gradienter" width="640" height="560"></canvas>
+	</div>
+	<div class="function s2" id="s2"></div>
+	<div id="search_box">
+		<div id="search_mask"></div>
+		<form class="search bar">
+			<input type="text" autocomplete="off" list="inputList" class="input" id="search-input" placeholder="搜点好片 . . ." onkeydown="if(event.keyCode==13){up()}">
+			<div id="open_set"></div>
+			<button type="submit" id="search-ok"><img src="icon/scan.svg"/></button>
+			<button id="input-clear"><p>×</p></button>
+		</form>
+	</div>
+	<ul id="suggestList"></ul>
+	<ul id="lishiList"></ul>
+</div>
+</div>
+<input type="file" onchange="PreviewImage(this);" style="display: none;">
+<div class="ONE_card">
+<div class="ONE_radio">
+	<div id="ONE_mask"></div>
+	<img id="ONE_bg"/>
+	<img id="ONE_play" src="icon/radio_play.svg"/>
+	<p id="title_1"></p>
+	<p id="title_2"></p>
+</div>
+</div>
+<div id="weather_info"><a></a></div>
+<div class="All_weather">
+<div class="weather">
+	<div id='wv_1'></div>
+	<div id='wv_2'></div>
+	<div id='wv_3'></div>
+	<iframe id='weather_iframe' src="" frameborder="0"></iframe>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+/*new Hammer($(".switch")[0]).on("swipe",function(e){
+	Alert("新功能预留", "你触发了滑动")
+})*/
+eval(fy_bridge_app.getInternalJs());
+window.request = window.request00 || window.request;
+const bgColor = window.getComputedStyle(document.documentElement).getPropertyValue('--font-color').trim();
+let 程序名 = fba.getVar("小程序名");
+let nowdays = new Date();
+let Year = nowdays.getFullYear();
+let Month = nowdays.getMonth()+1;
+let Today = nowdays.getDate();
+if (Month< 10) Month="0"+Month
+if (Today< 10) Today="0"+Today
+let Festival = Month + "-" + Today;
+let nowMonth = Year + "-" + Month;
+var input_state = 0;
+var 轮播_state = 0;
+var i = 0;
+var timer;
+let name_load = '欢迎使用顺搜';
+let ln = 'hiker://files/rules/dzHouse/html/';
+let SS_Pictures = 'file:///storage/emulated/0/Android/data/com.example.hikerview/files/Documents/SS_Pictures/';
+let Path = 'file:///storage/emulated/0/Android/data/com.example.hikerview/files/Documents/cache/';
+let H5height = fba.getVar(程序名+'顺搜高度') || 'video';
+if (localStorage.getItem(程序名+"原始高度")!=H5height) {
+	localStorage.setItem(程序名+"原始高度", H5height);
+	localStorage.setItem(程序名+"顺搜高度", H5height);
+	H5height = H5height;
+} else {
+	H5height = localStorage.getItem(程序名+"顺搜高度") || H5height;
+}
+function 响应高度() {
+	let MaxH = window.screen.height-156;
+	let ShowH = document.documentElement.clientHeight;
+	if (MaxH> ShowH) {
+		fba.refreshX5Desc('list&&'+MaxH);
+		localStorage.setItem(程序名+"顺搜高度", MaxH);
+	} else {
+		fba.refreshX5Desc('list&&'+fba.getVar(程序名+'顺搜高度'));
+		localStorage.setItem(程序名+"顺搜高度", fba.getVar(程序名+'顺搜高度'));
+	}
+}
+var fetch_json = () => {
+	const response = request(ln + '顺搜_settings.json') || '{}';
+	return JSON.parse(response);
+};
+let Settings_json = fetch_json();
+function get_settings(key, value) {
+	let settings = fetch_json()
+	return settings[key] || value || "";
+}
+let set_settings = (key, value) =>{
+	let settings = request(ln + '顺搜_settings.json') || '{}';
+	settings = JSON.parse(settings);
+	settings[key] = value;
+	try {
+		fba.writeFile(ln + '顺搜_settings.json', JSON.stringify(settings));
+	} catch(e) {
+		writeFile(ln + '顺搜_settings.json', JSON.stringify(settings));
+	}
+}
+function Alert(title, text) {
+	if (typeof(text) != 'string') text=JSON.stringify(text)
+	$$$(text).x5LazyRule((title) => {
+		confirm({title: title,
+			content: input,
+		})
+	},title)
+}
+async function 选择() {
+	fba.clearVar("s_q");
+	fba.parseLazyRuleAsync($$$("#noLoading#").lazyRule(() => {
+		const hikerPop = $.require("http://123.56.105.145/weisyr/js/hikerPop.js");
+		hikerPop.selectCenter({
+			options: ["🔍顺搜", "🥑青豆"],
+			columns: 2,
+			title: "设置选择",
+			click(a) {
+				putVar("s_q", a);
+				//return "toast://你选了" + a;
+			},
+			longClick(a) {
+				return "toast://长按了" + a;
+			}
+		});
+	}), $$$.toString(() => {}));
+	let count=0;
+	var timing = setInterval(()=>{
+		count++;
+		if(count>500){
+			clearInterval(timing);
+		}
+		if (fba.getVar("s_q") === "🔍顺搜") {
+			load_set()
+			clearInterval(timing);
+			fba.clearVar("s_q");
+			let ShowH = document.documentElement.clientHeight;
+			if(ShowH<250) fba.refreshX5Desc('list&&'+260);
+		} else if (fba.getVar("s_q") === "🥑青豆") {
+			fba.open(JSON.stringify({title:"设置", url:"hiker://page/settingPage#noRefresh##noHistory##noRecordHistory#?rule=青豆"}))
+			clearInterval(timing);
+			fba.clearVar("s_q");
+		}
+	},10);
+}
+async function 直搜(input) {
+	fba.parseLazyRuleAsync($$$("#noLoading#").lazyRule((input) => {
+		showLoading(input);
+		var html = 'http://api.milorapart.top/test/search/video.php?name=' + input + '&id=';
+		var js = JSON.parse(request(html)).data;
+		var n = js.map(t => t.name);
+		hideLoading();
+		var hikerPop = $.require("http://123.56.105.145/weisyr/js/hikerPop.js");
+		hikerPop.selectCenter({
+			options: n,
+			columns: 1,
+			title: n[0]? '选择片名':'对应片名没有找到',
+			click(a) {
+				hikerPop.runOnNewThread(() => {//耗时操作
+					showLoading('列表解析中');
+					var index = js.findIndex(t => t.name == a);
+					var id = js[index].id;
+					let playList = [];
+					var json = JSON.parse(fetch(html + id)).data;
+					json.map(a => playList.push({
+						title: a.num,
+						url: a.url,
+					}));
+					hideLoading();
+					//return "toast://你选了" + a;
+					let spen = 3;
+					let names = playList.map(v => v.title);
+					let pop = hikerPop.selectBottomRes({
+						options: names,
+						columns: spen,
+						title: a,
+						noAutoDismiss: false,
+						click(s, i, manage) {
+							manage.list.forEach((v, ii) => (manage.list[ii] = i === ii ? "‘‘" + names[ii] + "’’" : names[ii]));
+							manage.change();
+							hikerPop.playVideos(playList, i);
+						},
+						menuClick(manage) {
+							hikerPop.selectCenter({
+								options: ["改变样式", "正反序", "🔝顶部", "🔚底部"],
+								columns: 2,
+								title: "请选择",
+								click(s, i) {
+									if (i === 0) {
+										spen = spen == 3 ? 1 : 3;
+										manage.changeColumns(spen);
+									} else if (i === 1) {
+										manage.list.reverse();
+										manage.change();
+									} else if (i === 2) {
+										manage.scrollToPosition(0, true);
+									} else if (i === 3) {
+										manage.scrollToPosition(manage.list.length - 1, true);
+									}
+								},
+							});
+						}
+					});
+				})
+			},
+			longClick(a) {
+				return "toast://长按了" + a;
+			}
+		});
+	},input), $$$.toString(() => {}));
+}
+function Prompt(key, value) {
+	$$$(value).x5LazyRule((Settings_json, set_settings,ln,key) => {
+		this.ln=ln;
+		let info = "取消";
+		let cancel = true;
+		if(key.indexOf("书签")>-1 && Settings_json[key]&&Settings_json[key]!=input) {
+			info = "恢复默认";
+			cancel = false
+		};
+		const hikerPop = $.require("http://123.56.105.145/weisyr/js/hikerPop.js");
+		hikerPop.inputAutoRow({
+			hint: Settings_json[key] || input,
+			title: key,
+			//okTitle: '确定',
+			cancelTitle: info,
+			hideCancel: cancel,
+			noAutoSoft: false, //自动打开输入法
+			confirm(text) {
+				if (text != null && text != '') {
+					if (key=="位置" || key.indexOf("书签")>-1 && text.indexOf(".")>-1) {
+						set_settings(key, text);
+						refreshPage(true);
+					}
+				}
+				return
+			},
+			cancel() {
+				if (key.indexOf("书签")>-1 && Settings_json[key]!=input) {
+					confirm({
+						title: "将“" +key+ "”恢复默认至",
+						content: input,
+						confirm: $.toString((set_settings, ln, key, input) => {
+							this.ln=ln;
+							set_settings(key, input);
+							refreshPage(true);
+						},set_settings, ln, key, input),
+						cancel: $.toString(() => {
+						})
+					});
+				}
+				return
+			}
+		});
+	},Settings_json, set_settings,ln,key)
+}
+let 推送图 = Settings_json["push_img"];
+let 定义图 = Settings_json[程序名+"自定义图片"];
+let 启用定义 = Settings_json[程序名+"启用定义图片"];
+let 启用轮播 = Settings_json[程序名+"启用轮播"];
+let 启用渐变 = Settings_json[程序名+"渐变"];
+let 边距圆角 = Settings_json[程序名+"边距圆角"];
+let 位置缓存 = Settings_json['位置'] || "北京";
+let PUSH_IMG = Path + 'PUSH_IMG.jpg';
+let 海报图 = Path + '顺搜_海报-'+程序名+ '.jpg';
+let 默认图 = Path + '顺搜_默认图.jpg';
+let 网图缓存 = Path + '顺搜_网图缓存.jpg';
+function default_img(SRC) {
+	fba.parseLazyRuleAsync($$$(SRC).lazyRule((默认图) => {
+		if (fileExist(默认图) == false) saveImage('https://ss2.meipian.me/users/74082931/bc70d98c5ff2262e7b324b7c7944e2e7.gif', 默认图);
+		if (fileExist(input) == false) return false;
+	},默认图),$$$.toString(()=>{
+		if (input=="false") {
+			$(".pics_img").attr('src', 默认图);
+			set_settings(程序名+"自定义图片", "");
+			$("#tupian").val("");
+			if (启用定义 == true) Alert('当前图片不存在', '已恢复初始图片')
+		}
+	}));
+}
+var Checked;
+function confirmAsync(title, tis, func) {
+	let varKey = Date.now() + "confirm";
+	fba.parseLazyRuleAsync($$$("#noLoading#").lazyRule((title, tis, varKey) => {
+		confirm({
+			title: title,
+			content: tis,
+			confirm: $.toString((varKey,tis) => {
+				putVar(varKey, "true");
+				//return 'toast://已删除'+tis;
+			}, varKey,tis),
+			cancel: $.toString((varKey) => {
+				putVar(varKey, "false");
+			}, varKey)
+		});
+	}, title, tis, varKey), $$$.toString(() => {}));
+	let count=0;
+	var timing = setInterval(()=>{
+		count++;
+		if(count>15){
+			clearInterval(timing);
+		}
+		if (fba.getVar(varKey) === "true") {
+			fba.clearVar(varKey);
+			Checked = true;
+			func();
+		} else {Checked = false}
+	},1000);
+}
+//上传图片
+const inputButton = document.querySelector("#set_pic");
+const inputFile = document.querySelector("input[type='file']");
+inputButton.onclick = (e) => {inputFile.click()};
+function PreviewImage(fileObj) {
+	let allowExtention = ".jpg,.jpeg,.bmp,.gif,.png,.webp";
+	let extention = fileObj.value.substring(fileObj.value.lastIndexOf(".") + 1).toLowerCase();
+	if (allowExtention.indexOf(extention) > -1) {
+		let reader = new FileReader();
+		reader.readAsDataURL(fileObj.files[0]);
+		reader.onload = function (e) {
+			let pic_name = fileObj.files[0].name;
+			$("#tupian").val("轮播库_"+pic_name);
+			let base64Url = e.target.result;
+			let img= new Image();
+			img.src=base64Url;
+			img.onload = function () {
+				if (this.height > 5000 || (fileObj.files[0].size/1024 > 10240)) {
+					dealImage(base64Url, 2160, function(base64){
+						fba.saveImage(base64, SS_Pictures + pic_name);
+					})
+					fba.log("高度: " + this.height + " 已压缩 "+pic_name)
+				} else {
+					fba.saveImage(base64Url, SS_Pictures + pic_name);
+				}
+				轮播图组("增加", pic_name)
+			}
+		}
+	} else {
+		Alert("温馨提示","仅支持位图文件");
+		fileObj.value = "";
+	}
+}
+//压缩图片
+async function dealImage(base64, w, callback) {
+	var newImage = new Image();
+	var quality = 0.3;
+	newImage.src = base64;
+	newImage.setAttribute("crossOrigin", 'Anonymous');
+	var imgWidth, imgHeight;
+	newImage.onload = function () {
+		imgWidth = this.width;
+		imgHeight = this.height;
+		var canvas = document.createElement("canvas");
+		var ctx = canvas.getContext("2d");
+		if (Math.max(imgWidth, imgHeight) > w) {
+			if (imgWidth > imgHeight) {
+				canvas.width = w;
+				canvas.height = w * imgHeight / imgWidth;
+			} else {
+				canvas.height = w;
+				canvas.width = w * imgWidth / imgHeight;
+			}
+		} else {
+			canvas.width = imgWidth;
+			canvas.height = imgHeight;
+			quality = 0.5;
+		}
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
+		var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		for(var i = 0; i < imageData.data.length; i += 4) {
+			if(imageData.data[i + 3] == 0) {
+				imageData.data[i] = 255;
+				imageData.data[i + 1] = 255;
+				imageData.data[i + 2] = 255;
+				imageData.data[i + 3] = 255;
+			}
+		}
+		ctx.putImageData(imageData, 0, 0);
+		var base64 = canvas.toDataURL("image/jpg", quality);
+		callback(base64);
+	}
+}
+var pictures = request(ln + '顺搜_轮播图.json') || "[]";
+	pictures = JSON.parse(pictures)
+function 轮播() {
+	clearInterval(timer);
+	if ($(".two").length==0) $('<img class="pics_img two">').appendTo("#main_img");
+	pictures = pictures.sort(() => Math.random() - 0.5);
+	let img_url = pictures[i];
+	$(".pics_img").attr('src', SS_Pictures +img_url);
+	localStorage.setItem("大图地址", img_url);
+	$(".two").css({"animation":"淡入 0.9s linear forwards"});
+	$(".one").css("opacity", "0");
+	let flag = true;
+	function sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	}
+	timer = setInterval(async ()=>{
+		if(++i>=pictures.length){
+			i=0;
+		}
+		let [a,b] = flag?[".two",".one" ]:[".one",".two" ];
+		$(a).css({"animation":"淡出 0.9s linear forwards"})
+		img_url = pictures[i];
+		$(b).attr('src', SS_Pictures + img_url);
+		localStorage.setItem("大图地址", img_url);
+		$(b).css({"animation":"淡入 0.9s linear forwards"});
+		await sleep(900);
+		if(b===".two"){
+			$(a).attr('src', SS_Pictures + img_url);
+		}
+		flag=!flag;
+	}, 3000);
+}
+function 轮播图组(way, input) {
+	let ccc = pictures.indexOf(input);
+	if (way == "增加") {
+		if(ccc >-1) pictures.splice(ccc,1);
+		pictures.push(input);
+		$(".pics_img").attr('src', SS_Pictures + input);
+		fba.writeFile(ln + '顺搜_轮播图.json', JSON.stringify(pictures))
+	} else if (way=="删除") {
+		clearInterval(timer);
+		confirmAsync("删除轮播图", input, () => {
+			pictures.splice(ccc,1)
+			fba.parseLazyRule($$$(input).lazyRule((SS_Pictures) => {
+				deleteFile(SS_Pictures + input);
+			},SS_Pictures))
+			重启轮播()
+			if (pictures.length < 2) {
+				Alert("轮播库只剩下一张","已关闭轮播功能")
+				clearInterval(timer)
+				$('.pics_img').remove();
+				$('<img class="pics_img one">').appendTo("#main_img");
+				$(".one").attr('src', 默认图);
+				set_settings(程序名+"启用轮播",  false);
+			}
+			if (get_settings(程序名+"自定义图片") == input) set_settings(程序名+"自定义图片", "")
+			fba.writeFile(ln + '顺搜_轮播图.json', JSON.stringify(pictures))
+		});
+	} else {
+		轮播();
+	}
+	auto_match()
+}
+function 重启轮播() {
+	if (启用轮播 == true) {
+		i=0;
+		$(".pics_img").css({"animation":"淡出 0.4s linear forwards"});
+		setTimeout(function() {
+			if (启用定义 == true) {
+				重定向(定义图)
+			} else {
+				pictures = pictures.sort(() => Math.random() - 0.5);
+				轮播()
+			}
+		}, 400);
+	}
+}
+//自动匹配图库并压缩
+async function auto_match() {
+	fba.parseLazyRuleAsync($$$(pictures).lazyRule((ln,SS_Pictures) => {
+		let file = $.require("http://123.56.105.145/weisyr/js/file.js")
+		let folder = file.getFolder("/storage/emulated/0/Android/data/com.example.hikerview/files/Documents/SS_Pictures/")
+		let file_name = []
+		let To_base64 = []
+		let allowExtention = ".jpg,.jpeg,.bmp,.gif,.png,.webp";
+		folder.forEach(function (item, index) {
+			let name = item['name'];
+			let extention = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
+			if (allowExtention.indexOf(extention) > -1) file_name.push(name);
+			if (file.getPicInfo(item['path']).outHeight > 5000 || (item['size']/1024 > 30240)) To_base64.push(name);
+			if (item['size']/1024 < 2 && allowExtention.indexOf(extention) > -1) deleteFile(SS_Pictures + item['name']);
+		});
+		let j0 = JSON.stringify(input).length
+		let j1 = JSON.stringify(file_name.join(',')).length
+		if(j0!=j1) {
+			writeFile(ln + '顺搜_轮播图.json', JSON.stringify(file_name));
+		}
+		return {"file_name": file_name, "deal_img": To_base64}
+	},ln,SS_Pictures),$$$.toString(()=>{
+		pictures = JSON.parse(input).file_name;
+		let deal_img = JSON.parse(input).deal_img;
+		for(let i= 0; i< deal_img.length; i++) {
+			dealImage(SS_Pictures+deal_img[i], 2160, function(base64){
+				fba.saveImage(base64, SS_Pictures + deal_img[i]);
+				fba.log("后台已压缩: "+deal_img[i]);
+			})
+		}
+	}));
+}
+function 加载图片(SRC) {
+	clearInterval(timer);
+	if (pictures.length < 2) {
+		启用轮播 = false;
+		set_settings(程序名+"启用轮播",  false);
+	}
+	if (启用轮播 == false ) {
+		timer = undefined;
+		$('.pics_img').remove();
+		$('<img class="pics_img one">').appendTo("#main_img");
+	}
+	if (推送图 && !fba.getVar('X5加载')) {
+		fba.log("接收推送海报")
+		$(".one").attr('src', PUSH_IMG + '?t=' + new Date());
+	}  else if (启用轮播==true && 启用定义 == false ) {
+		轮播图组(0, 0)
+	} else if (启用定义 == true) {
+		if (SRC.indexOf("轮播库_") == 0) {
+			SRC = SS_Pictures + SRC.replace("轮播库_", "")
+			$(".one").attr('src', SRC);
+			default_img(SRC)
+		} else if (SRC.indexOf("file:") == 0) {
+			$(".one").attr('src', SRC);
+			default_img(SRC)
+		} else if (SRC.indexOf("http") == 0) {
+			let img = 网图缓存;
+			if(!request(img)) img=默认图;
+			$(".one").attr('src', img + '?t=' + new Date());
+			$(".one").css({"animation":"淡入 0.9s linear forwards"});
+			重定向(SRC)
+		} else {
+			$(".one").attr('src', 默认图);
+			default_img(默认图)
+		}
+	} else {
+		$(".one").attr('src', 海报图 + '?t=' + new Date());
+		default_img(海报图)
+	}
+}
+function 重定向(SRC) {
+	clearInterval(timer);
+	function createIp() {
+		a = Math.round(Math.random() * 250) + 1,
+		b = Math.round(Math.random() * 250) + 1,
+		c = Math.round(Math.random() * 240) + 1,
+		d = Math.round(Math.random() * 240) + 1;
+		return [a, b, c, d].join('.');
+	}
+	let ip = createIp();
+	let headers = { 'Accept': 'image/avif,image/webp,image/png,text/html,image/svg+xml,image/*,*/*;q=0.8', 'Referer': '', 'Sec-Fetch-Dest': 'image', 'User-Agent': 'MOBILE_UA', 'x-forwarded-for': ip, 'WL-Proxy-Client-IP': ip };
+	requestAsync(SRC, {headers: headers, withHeaders: true, redirect: false, withStatusCode: true }, function (SRC, code) {
+		let codeJson = JSON.parse(code);
+		let cod = codeJson.statusCode;
+		if (cod == 302 || cod == 301) {
+			let body = codeJson.body;
+			let headers = codeJson.headers;
+			let img_url = headers.location.length > 0 ? headers.location.join(''): "";
+			if(img_url.indexOf(SRC) == 0) {
+				return 重定向(img_url)
+			} else {
+				if (img_url.indexOf("http") == 0) {
+					img_url = img_url
+				} else {
+					img_url = "https:"+img_url
+				}
+				let newImg = new Image();
+				newImg.src = img_url;
+				if ($(".two").length==0) $('<img class="pics_img two">').appendTo("#main_img");
+				if(!newImg.onload && i==0) {
+					let img = 网图缓存
+					if(!request(img)) img=默认图;
+					$(".one").attr('src', img + '?t=' + new Date());
+					$(".one").css({"animation":"淡入 0.9s linear forwards"});
+				}
+				newImg.onload = () => {
+					function picIn() {
+						$(".one").css({"animation":"淡出 0.9s linear forwards"});
+						$(".two").attr('src', newImg.src);
+						$(".two").css({"animation":"淡入 0.9s linear forwards"});
+						setTimeout(function() {
+							$(".one").attr('src', newImg.src);
+							$(".one").css("opacity", "0");
+						}, 900);
+					}
+					if(启用轮播!=true) {
+						picIn()
+					} else {
+						if(i%2==0) {
+							picIn()
+						} else {
+							$(".two").css({"animation":"淡出 0.9s linear forwards"});
+							$(".one").attr('src', newImg.src);
+							$(".one").css({"animation":"淡入 0.9s linear forwards"});
+						}
+						timer = setInterval(function() {
+							i++
+							重定向(SRC)
+						}, 3000);
+					}
+					fba.saveImage(newImg.src, 网图缓存);
+				}
+			}
+		} else if (cod== "" || cod == 502 || cod == 404 || cod == -1) {
+			$(".pics_img").attr('src', 默认图);
+		} else {
+			$(".pics_img").attr('src', SRC);
+			fba.saveImage(SRC, 网图缓存);
+		}
+	});
+}
+加载图片(定义图)
+async function 热片推荐() {
+	function 缓存热片() {
+		fba.parseLazyRuleAsync($$$().lazyRule((ln) => {
+			let list = pdfa(request("http://maoyan.dianping.com/#movie/classic"), 'body&&.top-rated-item');
+			let D = []
+			for (let i = 0; i < list.length; i++) {
+				D.push(pdfh(list[i], '.name&&Text'))
+			}
+			writeFile(ln+'顺搜_Hot-Movie.json',JSON.stringify(D));
+		},ln),$$$.toString(()=>{
+			localStorage.setItem("星期", nowdays.getDay());
+		}));
+	}
+	let input_load = request(ln+'顺搜_Hot-Movie.json');
+	function getOne(items) { return items[Math.floor(Math.random() * items.length)]};
+	if (localStorage.getItem('星期') == 2 || !input_load || input_load == "[]") 缓存热片();
+	name_load = getOne(JSON.parse(input_load)) || "无法获取热片";
+	name_load = " " /*临时*/
+	$(".input").attr("placeholder", ' ' + name_load);
+}
+热片推荐()
+var 搜索建议 =(value) =>{
+	requestAsync('https://pbaccess.video.qq.com/trpc.videosearch.smartboxServer.HttpRountRecall/Smartbox',{
+		headers: {
+			"referer": "https://v.qq.com/",
+		},
+		method: 'post',
+		body: {
+			"query": value,
+			"appID": "3172",
+			"appKey": "lGhFIPeD3HsO9xEp",
+			"pageNum": 0,
+			"pageSize": 10
+		},
+	},value,(value, html)=>{
+		var result = JSON.parse(html);
+		var temp = result.data.smartboxItemList.filter(x => x.basicDoc.docname != '');
+		let pm=[]
+		temp.forEach(function (item, index) {
+			pm.push(item['basicDoc']['docname'].substring(0, 23));
+			pm=pm.slice(0,5)
+		})
+		let list = "";
+		for (let i = pm.length - 1; i >= 0; i--) {
+			list += "<li><p>"+pm[i]+"</p></li>";
+		}
+		$("ul#suggestList").html(list);
+		$("#suggestList").show();
+		if (pm.length < 1) $("#suggestList").hide();
+		var d =temp.find((e) => (e.videoInfo.imgUrl));
+		if (d) {
+			var word=d.basicDoc.docname;
+			var img=d.videoInfo.imgUrl.replace('332','1080');
+			function fadeImage(e) {
+				$(".one").css({"animation":"淡出 0.3s linear forwards"})
+				setTimeout(function() {
+					$(".one").attr("src", e);
+					$(".one").css({"animation":"淡入 0.3s linear forwards"})
+				}, 300);
+			}
+			if(img != localStorage.getItem(程序名)) fadeImage(img);
+			//fadeImage(img);
+			localStorage.setItem(程序名, img);
+			fba.saveImage(img, 'hiker://files/cache/' +'顺搜_海报-'+程序名+ '.jpg');
+			localStorage.setItem(程序名+'片名', word);
+		}
+	});
+}
+$("#search-input").bind("keyup",function(event) {
+	if(event.keyCode == 38 || event.keyCode == 40) return false;
+	let value = $("#search-input").val();
+	$('.two').remove();
+	clearInterval(timer);
+	轮播_state = 1;
+	搜索建议(value);
+	$("#input-clear").show();
+	$("#lishiList ").hide();
+	$("#search-ok img").attr("src", 'icon/search.svg');
+})
+$('#search-input').on('focus', function() {
+	$(this).closest('form').css({'width': '90%'});
+	$(this).css({'border-radius': '10px'});
+});
+$("#suggestList").delegate('li', 'click', function (e) {
+	let target = e.target || e.srcElement;
+	$("#search-input")[0].value = target.innerHTML;
+	$("#suggestList").hide();
+	$('#search-ok').click();
+})
+function 搜索(e){
+	let load_search = get_settings(程序名+"自定义搜索") || 程序名;
+	if (load_search == "我的主页") load_search = "聚影";
+	if (load_search == "聚阅√") {
+		fba.open(JSON.stringify({title:"聚阅", url:"hiker://page/sousuopage#noRefresh##noHistory##noRecordHistory#?rule=聚阅√&keyword="+e+"&type=影视", extra:{newWindow: true, windowId: " "}}))
+	} else if (load_search.indexOf("云盘君") != -1) {
+		let P;
+		if (load_search.indexOf("简") != -1) {
+			P = ""
+		} else {
+			P = "p"
+		}
+		try {
+			fba.open(JSON.stringify({title: load_search, url:"hiker://page/sou" + P + "#noRefresh##noHistory##noRecordHistory#?rule=" +load_search, extra:{newWindow: true, windowId: " ", pageTitle: "搜索" + e, searchTerms: e, key: e}}))
+		} catch(e) {
+			window.location.href='hiker://search?s='+ e +'&rule='+ load_search +"&simple=false";
+		}
+	} else {
+		window.location.href='hiker://search?s='+ e +'&rule='+ load_search +"&simple=false";
+	}
+}
+function 搜索记录 (way, input) {
+	let lishi_0 = request(ln+'顺搜_History.json') || "[]";
+	lishi = JSON.parse(lishi_0);
+	let ccc = lishi.indexOf(input);
+	if (way == "增加") {
+		if(ccc >-1) lishi.splice(ccc,1);
+		lishi.push(input);
+	} else if (way=="删除") {
+		confirmAsync("将删除词条", input, () => {
+			lishi.splice(ccc,1)
+			Refresh_lishi()
+		});
+	}
+	function Refresh_lishi() {
+		function cleanString(str) {
+			return str.replace(/<\/?p>/g, '').trim();
+		}
+		lishi=lishi.slice(-28).map(cleanString).filter(str => str);
+		let History ="";
+		for (let i = lishi.length - 1; i >= 0; i--) {
+			History += "<li><p>"+lishi[i].substring(0, 18).replace(/<\/?p>/g, '')+"</p></li>";
+		}
+		$("#lishiList").html(History);
+		let lishi_1=JSON.stringify(lishi);
+		if(lishi_1!=lishi_0) fba.writeFile(ln+'顺搜_History.json',lishi_1);
+	}
+	Refresh_lishi()
+}
+$("div").delegate('.switch', 'singleTap doubleTap longTap', function (e) {
+	//大图事件
+	if(e.type=="longTap") {
+		navigator.vibrate([5]);
+		let img = localStorage.getItem("大图地址");
+		if (启用轮播 == true && 启用定义 == false) {
+			轮播图组("删除", img)
+		} else if(定义图.indexOf("http") == 0 && 启用定义 == true) {
+			clearInterval(timer);
+			img = $(".pics_img").attr('src');
+			img = img.substring(img.lastIndexOf("/")+1);
+			confirmAsync("添加到轮播库", img, () => {
+				fba.saveImage(网图缓存 + '?t=' + new Date(), SS_Pictures + img);
+				重启轮播()
+			});
+		} else {
+			let cname = localStorage.getItem(程序名+'片名');
+			if (cname && 启用轮播==false && 启用定义 == false ) 搜索(cname)
+		}
+	} else if (e.type=="singleTap") {
+		var picurl = $('#main_img img').attr('src');
+		if (启用定义 == false && 启用轮播 == true) picurl = SS_Pictures + localStorage.getItem("大图地址");
+		if (启用定义 == true && 定义图.indexOf("http") == 0) picurl = 网图缓存 + '?t=' + new Date();
+		fba.showPic(picurl)
+	} else if (e.type=="doubleTap") {
+		响应高度()
+	}
+})
+$("#lishiList").delegate('li', 'singleTap doubleTap longTap', function (e) {
+	let input = e.target || e.srcElement;
+	input = input.innerHTML.replace(/<\/?p>/g, '');
+	navigator.vibrate([2]);
+	if (e.type=="singleTap") {
+		$("#search-input")[0].value = input;
+		$("#input-clear").show();
+		$("#search-ok img").attr("src", 'http://123.56.105.145/weisyr/icon/search.svg');
+	} else if(e.type=="longTap") {
+		搜索记录 ("删除", input)
+	} else {
+		搜索(input)
+		搜索记录 ("增加", input)
+		CLOSE($(this).attr('id'))
+	}
+})
+$("#search-ok").click(function () {
+	var input = document.getElementById("search-input").value || name_load;
+	if (input==name_load) {
+		fba.parseLazyRule($$$().lazyRule(() => {
+			startQRScanPage()
+		}))
+	} else {
+		搜索(input)
+		搜索记录 ("增加", input)
+		CLOSE($(this).attr('id'))
+	}
+})
+$("#search-ok").longTap(function () {
+	navigator.vibrate([5]);
+	var input = document.getElementById("search-input").value;
+	if(!input) {
+		搜索(name_load)
+		搜索记录 ("增加", name_load)
+	} else {
+		直搜(input);
+	}
+})
+$("#input-clear").longTap(function(){
+	navigator.vibrate([5]);
+	confirmAsync("清空记录", "将删除所有搜索记录", () => {
+		fba.writeFile(ln+'顺搜_History.json',"");
+		CLOSE($(this).attr('id'))
+	});
+})
+function OPEN(id) {
+	if ($('#lishiList, .function').is(':hidden')) {
+		$('.IMG').css({"animation":"plus .2s linear forwards"})
+		setTimeout(function() {
+			$('#main_img img').css({"filter": "blur(5px)"});
+		}, 200);
+		$("#suggestList, #open_set,.weather,#weather_info").hide();
+	}
+	input_state=1
+	$(".CLOSE").show();
+	if(id=="search-input") {
+		let hs = Math.trunc(($(".main").height()-94)/38);
+		$("#lishiList").css("height", hs*38+1);
+		搜索记录 (0, 0)
+		$('#lishiList').css({"display":"block","animation":"click_in .5s linear"});
+		$('.function').css({"animation":"spaceOutDown .3s linear"});
+		$('#search_box').css({"opacity":".9"})
+		setTimeout(function () {
+			$(".function").hide();
+		},300)
+		if ($('.function').is(':visible')) {
+			$('#open_function').css({"animation":"功能关 .3s linear forwards"});
+		}
+	} else if (id=="close_plus" || "open_function") {
+		$('#lishiList').css({"animation":"close .3s linear"});
+		setTimeout(function () {
+			$('#lishiList').hide();
+		},300)
+		if ($('.function').is(':hidden')) {
+			navigator.vibrate([5]);
+			eval(request(ln + 'plug/level.js'));
+			日历()
+			$('.function').css({"display":"block","animation":"slideDownReturn .4s ease"});
+			$('#open_function').css({"animation":"功能开 .3s linear forwards"});
+		} else {
+			$('.function').css({"animation":"spaceOutDown .3s linear"});
+			setTimeout(function () {
+				$(".function").hide();
+			},300)
+			if (!$("#search-input").val()) {
+				$("#open_set").fadeIn("200");
+			}
+			if(get_settings(程序名+"天气")!=true) {
+				$("#weather_info").css({"display": "block","animation":"天气 2s linear forwards"});
+			} else {
+				$('#weather_info').css({"display":"none"})
+				setTimeout(function () {
+					$(".weather").show(600);
+				},200)
+			}
+			$('.IMG').css({"animation":"reduce .25s linear "});
+			$('#main_img img').css({"filter": "blur(0)"});
+			$('#open_function').css({"animation":"功能关 .3s linear forwards"});
+		}
+	}
+}
+function CLOSE(id) {
+	if (id=="input-clear") {
+		$("#search-input").val("");
+		$("#input-clear").hide();
+		$("#search-ok img").attr("src", 'http://123.56.105.145/weisyr/icon/scan.svg');
+	}
+	$(".CLOSE").hide();
+	$('#search_box').css({"opacity":"0.85"})
+	if(get_settings(程序名+"天气")!=true) {
+		$("#weather_info").css({"display": "block","animation":"天气 2s linear forwards"});
+	} else {
+		$('#weather_info').css({"display":"none"})
+		setTimeout(function () {
+			$(".weather").show(600);
+		},200)
+	}
+	if (input_state==1) {
+		$('.IMG').css({"animation":"reduce .25s linear "});
+		$('#main_img img').css({"filter": "blur(0)"});
+		$('#open_function').css({"animation":"功能关 .3s linear forwards"});
+	}
+	$('#suggestList, #lishiList, .function').css({"animation":"close .3s ease-out"});
+	setTimeout(function () {
+		$("#suggestList, #lishiList, .function").hide();
+	},300)
+	if (input_state==1 && 轮播_state==1) 重启轮播()
+	if (id=="search_mask" && input_state==0) {
+		oneRadio_load();
+		$(".weather,#weather_info").hide();
+		$(".ONE_radio").fadeToggle("200")
+		$(".ONE_radio p").fadeIn("600");
+		if ($(".ONE_radio").height()> 150 ) {
+			$(".main").css({"animation":"close .3s linear forwards"});
+			$(".ONE_radio").css({"display":"block","animation":"slideDownReturn0 .2s linear forwards"});
+		}
+	}
+	if (!$("#search-input").val()) {
+		$('#search-input').css({"border-radius":"50px"});
+		$('#search_box form').css({'width': '36%'});
+		$("#open_set").show(800);
+	}
+	input_state=0
+	轮播_state=0
+}
+$("#search-input, #close_plus, #open_function").click(function() {
+	OPEN($(this).attr('id'))
+})
+$("#input-clear, #search_mask, .CLOSE").click(function() {
+	CLOSE($(this).attr('id'))
+})
+//设置
+$("#save").click(() =>{
+	navigator.vibrate([5]);
+	set_settings(程序名+"自定义搜索",  $("#sousuo").val());
+	let pic_val=$("#tupian").val();
+	set_settings(程序名+"自定义图片",  pic_val);
+	let inject_js = $("#inject").val();
+	set_settings(程序名+"注入JS",  inject_js);
+	启用定义 = $("input[type='checkbox']:eq(0)").is(":checked");
+	启用轮播 = $("input[type='checkbox']:eq(1)").is(":checked");
+	启用渐变 = $("input[type='checkbox']:eq(2)").is(":checked");
+	边距圆角 = $("input[type='checkbox']:eq(3)").is(":checked");
+	set_settings(程序名+"启用定义图片",  启用定义);
+	set_settings(程序名+"启用轮播",  启用轮播);
+	set_settings(程序名+"渐变",  启用渐变);
+	set_settings(程序名+"边距圆角",  边距圆角);
+	加载图片(pic_val);
+})
+function load_set() {
+	Settings_json = fetch_json();
+	fba.parseLazyRuleAsync($$$().lazyRule(() => {
+		let app_name = getLastRules(40).map(e=>{
+			return e.title
+		})
+		return app_name
+	}), $$$.toString(() => {
+		input=JSON.parse(input)
+		let s = document.getElementById("app_sel");
+		for (let i = 0 ;i < input.length; i++) {
+			let option = new Option(input[i]);
+			s.options[i] = option;
+		}
+		let mySel = Settings_json[程序名+"自定义搜索"]
+		if(mySel) $("#app_sel").val(mySel)
+		$('#app_sel').on('change', function(){
+			$("#sousuo").val($('#app_sel').val())
+			$(".sousuo_clear p").show();
+		});
+		auto_match()
+	}));
+	$('.biaodan').css({"visibility":"visible"});
+	$('.form-box').css({"animation":"click_in .5s ease forwards"});
+	$("#sousuo").val(Settings_json[程序名+"自定义搜索"]);
+	$("#tupian").val(Settings_json[程序名+"自定义图片"]);
+	$("#inject").val(Settings_json[程序名+"注入JS"]);
+	启用定义 = Settings_json[程序名+"启用定义图片"];
+	if (启用定义 ==true && $("#tupian").val().indexOf("http") == 0) {
+		$("#isAdult_2").html("网图轮播");
+		$("#isAdult_2").css("color", "#D06B6C")
+	} else {
+		$("#isAdult_2").html("本地轮播")
+		$("#isAdult_2").css("color", "#3c9")
+	}
+	$("input[type='checkbox']:eq(0)").prop('checked',启用定义)
+	$("input[type='checkbox']:eq(1)").prop('checked',Settings_json[程序名+"启用轮播"]);
+	启用渐变 = (Settings_json.hasOwnProperty(程序名 + "渐变") && typeof Settings_json[程序名 + "渐变"] === "boolean") ? Settings_json[程序名 + "渐变"] : true;
+	$("input[type='checkbox']:eq(2)").prop('checked',启用渐变);
+	$("input[type='checkbox']:eq(3)").prop('checked',Settings_json[程序名+"边距圆角"]);
+	let pic_list = request(ln + '顺搜_轮播图.json') || '[]';
+	if (pic_list=='[]') {
+		$("input[type='checkbox']:eq(1)").prop('checked',false)
+	}
+	if ($("#tupian").val()) $(".tupian_clear p").show();
+	if ($("#sousuo").val()) $(".sousuo_clear p").show();
+	if ($("#inject").val()) $(".inject_clear p").show();
+	if(document.documentElement.clientHeight<280) fba.refreshX5Desc('list&&'+280);
+}
+$("#open_set").click(function() {
+	navigator.vibrate([5]);
+	if(程序名=='青豆') {
+		选择()
+	} else {
+		load_set()
+	}
+})
+$("input[type='checkbox']:eq(0)").click(function() {
+	if ($(this).is(':checked') ==true && $("#tupian").val().indexOf("http") == 0) {
+		$("#isAdult_2").html("网图轮播")
+		$("#isAdult_2").css("color", "#D06B6C")
+	} else {
+		$("#isAdult_2").html("本地轮播")
+		$("#isAdult_2").css("color", "#3c9")
+	}
+	if($("#isAdult_2").html()=="本地轮播" && $(this).is(':checked') ==true) {
+	   $("#ckeckbox_2").prop('checked',false)
+	}
+})
+$("input[type='checkbox']:eq(1)").click(function() {
+	if (pictures.length < 2 && get_settings(程序名+"启用轮播") !=true) {
+		confirmAsync("图片少于2张", "是否添加", () => {
+			inputFile.click();
+		});
+		if (Checked != true) $(this).prop('checked',false)
+	}
+	if($("#isAdult_2").html()=="本地轮播" && $(this).is(':checked') ==true) {
+	   $("#ckeckbox").prop('checked',false)
+	}
+})
+function 设定样式() {
+	if(启用渐变==false) {
+		$("#mask_toTop").css("background", "transparent");
+	}
+	if(边距圆角==true) {
+		$(".main").css({"left":"3%", "right":"3%", "border-radius":"18px", "bottom": "30px", "box-shadow": "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"});
+	}
+}
+设定样式()
+$("input[type='checkbox']:eq(2)").click(function() {
+	if($(this).is(':checked') ==true) {
+		$("#mask_toTop").css("background", "var(--mask_toTop)");
+	} else {
+		$("#mask_toTop").css("background", "transparent");
+	}
+})
+$("input[type='checkbox']:eq(3)").click(function() {
+	if($(this).is(':checked') ==true) {
+		$(".main").css({"left":"3%", "right":"3%", "border-radius":"18px", "bottom": "30px", "box-shadow": "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"});
+	} else {
+		$(".main").css({"left":"0", "right":"0", "border-radius":"18px 18px 0 0", "bottom": "0", "box-shadow": "0"});
+	}
+})
+$("#sousuo").bind("keyup",function(event) {
+	$(".sousuo_clear p").show();
+})
+$("#inject").bind("keyup",function(event) {
+	$(".inject_clear p").show();
+})
+$("#tupian").bind("keyup",function(event) {
+	$(".tupian_clear p").show();
+	if (启用定义 == true && $("#tupian").val().indexOf("http") == 0) {
+		$("#isAdult_2").html("网图轮播");
+		$("#isAdult_2").css("color", "#D06B6C")
+	} else if($("#tupian").val().indexOf("http") < 0) {
+		$("#isAdult_2").html("本地轮播")
+		$("#isAdult_2").css("color", "#3c9")
+	}
+})
+$(".sousuo_clear").click(function(){
+	$("#sousuo").val("");
+	$(".sousuo_clear p").hide();
+})
+$(".inject_clear").click(function(){
+	$("#inject").val("");
+	$(".inject_clear p").hide();
+})
+$(".tupian_clear").click(function(){
+	$("#tupian").val("");
+	$(".tupian_clear p").hide();
+	$("#isAdult_2").html("本地轮播")
+	$("#isAdult_2").css("color", "#3c9")
+	$("#ckeckbox_2").prop('checked',false)
+})
+$(".close_set").click(function(){
+	$('.form-box').css({"animation":"close .3s ease forwards"});
+	if(get_settings(程序名+"天气")!=true) fba.refreshX5Desc('list&&'+H5height);
+	setTimeout(function () {
+		$('.biaodan').css({"visibility":"hidden"});
+	},150)
+})
+//附加功能
+function 日历() {
+	const lang = navigator.language;
+	let date = new Date();
+	let dayNumber = date.getDate();
+	let month = date.getMonth();
+	let dayName = date.toLocaleString(lang, { weekday: 'long' });
+	let monthName = date.toLocaleString(lang, { month: 'long' });
+	let year = date.getFullYear();
+	document.getElementById('monthName').innerHTML = year+"	"+monthName;
+	document.getElementById('dayName').innerHTML = dayName;
+	document.getElementById('dayNumber').innerHTML = dayNumber;
+	let colorStr = "";
+	let colorStr2 = "";
+	let randomArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+	for (let i = 0; i < 6; i++) {
+		colorStr += randomArr[Math.ceil(Math.random() * (14 - 0) + 0)];
+		colorStr2 += randomArr[Math.ceil(Math.random() * (8 - 0) + 0)];
+	}
+	$("#today").css({"background-color":'#'  + colorStr });
+	$("#s1").css({"background-color":'#'  + colorStr2 });
+}
+function open_x5(Url, col, title) {
+	let rule = `js:var d=[];d.push({desc:'auto&&float',col_type:'x5_webview_single',url:'${Url}',extra:{canBack:true}});setResult(d)`;
+	fba.open(JSON.stringify({title: title, url:col+"#noRefresh##noHistory##noRecordHistory#hiker://empty", findRule: rule, extra:{newWindow: true,windowId: title}}))
+}
+$("#dayNumber, #month, #s2").click(function () {
+	navigator.vibrate([5]);
+	if($(this).attr('id')=="dayNumber") open_x5(Settings_json['书签❶'] || 'https://m.rili.com.cn/', "#fullTheme#", ' ');
+	if($(this).attr('id')=="month") open_x5(Settings_json['书签❷'] || 'https://m.xingzuo.com/shierxingzuo/', '#fullTheme#', ' ');
+	if($(this).attr('id')=="s2") open_x5(Settings_json['书签❸'] || "https://t.xxgeek.com/tools/mmvod/m.php", "#gameTheme#", " ");
+})
+$("#dayNumber, #month, #s2").longTap(function () {
+	navigator.vibrate([5]);
+	if($(this).attr('id')=="dayNumber") Prompt("书签❶", "https://m.rili.com.cn/");
+	if($(this).attr('id')=="month") Prompt("书签❷", "https://m.xingzuo.com/shierxingzuo/");
+	if($(this).attr('id')=="s2") Prompt("书签❸", "https://t.xxgeek.com/tools/mmvod/m.php");
+})
+$("#isAdult_2").click(function () {
+	let rule = request(ln + 'plug/文件管理.js');
+	fba.open(JSON.stringify({title: '顺搜轮播库', url:"#noRefresh##noHistory##noRecordHistory#hiker://empty", findRule: rule, extra:{newWindow: true,windowId: '顺搜轮播库'}}))
+})
+var ONE_Play;
+async function ONE_RADIO(Days) {
+	requestAsync("http://v3.wufazhuce.com:8000/api/find/bymonth/8/"+ Days +"?channel=google&sign=6e8ba29ff9b4f73f5484b29da2851d7c&version=5.4.1&uuid=26cc04557a49e331fb8e967e4aee82661&platform=android",(key,html)=>{
+		//localStorage.setItem('ONE_RADIO', '0')
+		let result = JSON.parse(html).data[0]
+		ONE_Play = [{
+			title: result.title,
+			desc: result.share_list.wx.desc,
+			picUrl: result.cover,
+			url: "#isMusic=true#"+result.audio_url,
+			use: true
+		}]
+		if (localStorage.getItem('ONE_RADIO') != JSON.stringify(ONE_Play)) {
+			$(".ONE_radio").css({"display": "block", "animation":"drop .8s ease-in-out forwards"});
+		}
+		//fba.log(JSON.stringify(ONE_Play));
+		localStorage.setItem('ONE_RADIO', JSON.stringify(ONE_Play));
+		localStorage.setItem("日", Today);
+		oneRadio_load();
+	})
+}
+function oneRadio_load() {
+	if (!ONE_Play) ONE_Play=JSON.parse(localStorage.getItem('ONE_RADIO'))
+	$("#ONE_bg").attr('src', ONE_Play[0].picUrl);
+	$("#title_1").text(ONE_Play[0].desc);
+	$("#title_2").text(ONE_Play[0].title);
+}
+$("#ONE_play").click(function () {
+	if ($(".ONE_radio").width()< 150 ){
+		$(".ONE_radio").css({"animation":"drop_open .9s ease-in-out forwards"});
+		$(".ONE_radio p").fadeIn("900");
+		$(".weather,#weather_info").hide();
+		$(".main").css({"animation":"close .3s linear forwards"});
+	} else {
+		fba.playVideos(JSON.stringify(ONE_Play))
+	}
+})
+$("#ONE_bg").click(function () {
+	if ($(".ONE_radio").width()> 150 ){
+		$(".weather,#weather_info").hide();
+		$(".ONE_radio").css({"animation":"close .35s linear forwards"});
+		setTimeout(function () {
+			$(".ONE_radio").hide();
+		},300)
+		$(".main").css({"animation":"slideDownReturn0 .35s linear"});
+		if(get_settings(程序名+"天气")!=true) {
+			$("#weather_info").css({"display": "block","animation":"天气 2s linear forwards"});
+		} else {
+			$('#weather_info').css({"display":"none"})
+			setTimeout(function () {
+				$(".weather").show(800);
+			},400)
+		}
+		$('.clock-container').show(2000).css("opacity",.4);
+	}
+})
+var push_tips, push_img, push_url, push_rule;
+async function update(Up) {
+	if (request(ln + 'ssts.json') != Up) {
+		var x5 = request('http://123.56.105.145/weisyr/顺搜.html');
+		if (x5.indexOf("search") > 0) {
+			fba.writeFile(ln + '顺搜.html', x5)
+			fba.writeFile(ln + 'ssts.json',Up);
+			if (push_tips) {
+				Alert("顺搜更新提示", push_tips)
+			} else { Alert("顺搜更新完成", "祝君顺利") }
+		} else {
+			Alert("顺搜更新出错", "一切随缘")
+			fba.writeFile(ln + 'ssts.json',Up);
+		}
+	}
+}
+async function push(Day) {
+	if (Festival == Day) {
+		if (推送图 != push_img) {
+			fba.saveImage(push_img, PUSH_IMG);
+		}
+		set_settings("push_img", push_img);
+		if (push_url) $(".switch").click(function() {
+			//push_rule = `js:var d=[];d.push({desc:'auto&&float',col_type:'x5_webview_single',url:'${push_url}'});setResult(d)`;
+			fba.open(JSON.stringify({title:" ", url:"#fullTheme##noHistory#hiker://empty", findRule: push_rule}))
+		})
+	} else {
+		set_settings("push_img", "");
+	}
+}
+if (!fba.getVar('X5加载')) {
+	$('.pics_img').css({"animation":"淡入 0.9s linear forwards"});
+	requestAsync("http://123.56.105.145/weisyr/plug/ssts.js",(key,html)=>{eval(html);})
+	if (localStorage.getItem("日") != Today && nowdays.getHours() > 5 || !localStorage.getItem('ONE_RADIO')) ONE_RADIO(nowMonth);
+	fba.putVar('X5加载', '完成')
+}
+try{requestAsync(Settings_json[程序名+"注入JS"],(key,html)=>{eval(html);})} catch(e){fba.log("注入的JS有错")}
+
+fba.parseLazyRuleAsync($$$(位置缓存).lazyRule(() => {
+	try {
+		let city = JSON.parse(request('https://weatherapi.market.xiaomi.com/wtr-v3/location/city/search?locale=zh_cn&name='+input))[0];
+		if(city) {
+			let host = {locationKey: city.key, latitude: city.latitude, longitude: city.longitude}
+			function objToQueryString(obj) {
+				let str = [];
+				for (let p in obj) {
+					if (obj.hasOwnProperty(p)) {
+					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+					}
+				}
+				return str.join("&");
+			}
+			let weather_Json = JSON.parse(request("https://weatherapi.market.xiaomi.com/wtr-v3/weather/all?isLocated=true&days=1&appKey=weather20151024&sign=zUFJoAR2ZVrDy1vF3D07&alpha=false&isGlobal=false&locale=zh_cn&" + objToQueryString(host)))
+			let tem = weather_Json.current.temperature.value;
+			host.tem=tem+"℃";
+			try{
+				let detail = weather_Json.alerts[0].detail;
+				let alertId = weather_Json.alerts[0].type+weather_Json.alerts[0].level+'预警';
+				host.detail= detail;
+				host.alertId= alertId;
+			} catch(e){}
+			return host
+		} else {
+			return "warn"
+		}
+	} catch(e) {
+		return false
+	}
+}),$$$.toString(()=>{
+	if(input.indexOf("latitude") > -1) {
+		input= JSON.parse(input);
+		if(get_settings(程序名+"天气")!=true) {
+			$("#weather_info").css({"display": "block","animation":"天气 2s linear forwards"});
+		} else {
+			$('#weather_info').css({"display":"none"})
+		}
+		$('#weather_info a').text(位置缓存+' '+input.tem);
+		if(input.detail) fba.putVar('detail', input.detail);
+		if(input.alertId) fba.putVar('alertId', input.alertId);
+		let cityid = input.locationKey.replace('weathercn:','CN');
+		fba.putVar('cityid', cityid);
+		if(cityid != Settings_json["cityid"]) set_settings('cityid', cityid);
+	} else if(input=="warn"){
+		set_settings('位置', "北京");
+		$('#weather_info a').text("请输入正确的地市名");
+		Alert('天气位置不对', '请确保输入的地名正确')
+	} else {
+		fba.log('天气获取异常')
+	}
+	$('#weather_iframe').attr('src', 'https://widget.tianqiapi.com/?style=ts&skin=durian&color='+bgColor+'&city=' + 位置缓存 + '&column=3');
+	if(get_settings(程序名+"天气")==true) {
+		if(document.documentElement.clientHeight<290) fba.refreshX5Desc('list&&'+290);
+		$('.weather').show(2000);
+	} else {
+		$('.weather').css({"display":"none"})
+	}
+}))
+$("#weather_info").click(() => {
+	$("#weather_info").hide();
+	$('.weather').css({"display":"block","animation":"天气_open .45s linear"});
+	if(document.documentElement.clientHeight<290) fba.refreshX5Desc('list&&'+290);
+	set_settings(程序名+"天气", true)
+	if(fba.getVar('detail')) Alert('🚥 '+fba.getVar('alertId')+' 🚥',fba.getVar('detail'));
+	fba.clearVar("detail");
+	fba.clearVar("alertId");
+})
+$(".weather").on('click', "#wv_2", () => {
+	Prompt("位置", 位置缓存);
+})
+$(".weather").on('click', "#wv_3", () => {
+	open_x5("https://caiyunapp.com/wx_share/", '#fullTheme#', '天气雷达');
+})
+$(".weather").on('click', "#wv_1", () => {
+	$('.weather').css({"animation":"天气_close .2s linear forwards"});
+	setTimeout(function () {
+		$(".weather").hide();
+	},300);;
+	set_settings(程序名+"天气", false)
+	$("#weather_info").css({"display": "block","animation":"天气 2s linear forwards"});
+	fba.refreshX5Desc('list&&'+H5height);
+})
+async function file_load() {
+	fba.parseLazyRuleAsync($$$().lazyRule((ln) => {
+		let name = ['js/zepto.min.js','js/zepto-module.js','plug/level.js', 'plug/文件管理.js', 'img/frosted.png','icon/scan.svg','icon/search.svg','icon/radio_play.svg'];
+		let wn = 'http://123.56.105.145/weisyr/';
+		for (let n = 0; n < name.length; n++) {
+			let localfile = [ln + name[n]];
+			let webfile = [wn + name[n]];
+			for (let i in localfile) {
+				if (fileExist(localfile[i]) == false) downloadFile(webfile[i], localfile[i]);
+			}
+		};
+	},ln),$$$.toString(()=>{}));
+}
+file_load()
+fba.log("顺搜渲染耗时: " + (new Date().getTime() - t_begin)/1000+'秒');
+if(get_settings(程序名+"天气")!=true) fba.refreshX5Desc('list&&'+H5height);
+</script>
+</html>
