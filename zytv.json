@@ -126,22 +126,6 @@
             }
         },
         {
-            "key": "夸克土豆弹幕",
-            "name": "土豆｜4K弹幕",
-            "type": 3,
-            "api": "csp_Wobg",
-            "quickSearch": 1,
-            "changeable": 1,
-            "filterable": 1,
-            "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "https://dcyun.cc",
-                "danmu": true
-            }
-        },
-        {
             "key": "夸克木偶弹幕",
             "name": "木偶｜4K弹幕",
             "type": 3,
@@ -154,23 +138,6 @@
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
                 "site": "http://mogg.小胡.top",
-                "danmu": true
-            }
-        },
-        {
-            "key": "夸克六趣弹幕",
-            "name": "六趣｜4K弹幕",
-            "type": 3,
-            "api": "csp_Wobg",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "changeable": 1,
-            "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "https://wp.0v.fit",
                 "danmu": true
             }
         },
@@ -247,13 +214,14 @@
             "ext": "./zy_js/星芽短剧.js"
         },
         {
-            "key": "河马短剧",
-            "name": "河马｜短剧",
+            "key": "素白白",
+            "name": "素白白｜影视",
             "type": 3,
-            "api": "csp_AppHMDJ",
+            "api": "csp_Subaibai",
             "searchable": 1,
-            "quickSearch": 0,
-            "filterable": 0
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "http://subaibai.com"
         },
         {
             "key": "魔力高清",
@@ -285,17 +253,6 @@
             "ext": "./zy_js/星辰[优].js"
         },
         {
-            "key": "可可影视[优]_js",
-            "name": "可可｜影视",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/可可影视[优].js"
-        },
-        {
             "key": "hipy_js_北川影视",
             "name": "北川｜影视",
             "type": 3,
@@ -307,15 +264,11 @@
             "ext": "./zy_js/北川影视.js"
         },
         {
-            "key": "hipy_js_网飞猫[优]",
-            "name": "网飞猫｜影视",
+            "key": "永乐影视",
+            "name": "永乐｜影视",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/网飞猫[优].js"
+            "api": "csp_XBPQ",
+            "ext": "./zy_json/永乐影视.json"
         },
         {
             "key": "NT动漫",
@@ -353,6 +306,15 @@
             "ext": "./zy_js/路漫漫.js"
         },
         {
+            "key": "Mp4电影",
+            "name": "Mp4电影｜磁力",
+            "type": 3,
+            "api": "csp_Mp4Mov",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
+        },
+        {
             "key": "New6v",
             "name": "New6V｜磁力",
             "type": 3,
@@ -363,15 +325,13 @@
             "ext": "https://www.xb6v.com"
         },
         {
-            "key": "hipy_js_4khdr",
-            "name": "4khdr｜磁力",
+            "key": "IKTV",
+            "name": "KTV｜音乐",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
+            "api": "csp_WexIktv",
             "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/4khdr.js"
+            "changeable": 0,
+            "jar": "./zy_jar/wex.jar"
         },
         {
             "key": "Aid",
@@ -384,21 +344,6 @@
             "style": {
                 "type": "rect",
                 "ratio": 3.8
-            }
-        },
-        {
-            "key": "push_agent",
-            "name": "手机｜推送",
-            "type": 3,
-            "api": "csp_Push",
-            "searchable": 0,
-            "filterable": 0,
-            "changeable": 0,
-            "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "danmu": true
             }
         }
     ],

@@ -68,7 +68,7 @@
             "order_num": 0,
             "ext": "./zy_js/多多网盘.js"
         },
-                {
+        {
             "key": "木偶哥哥",
             "name": "木偶｜网盘",
             "type": 3,
@@ -109,17 +109,6 @@
             "ext": "./zy_js/星辰[优].js"
         },
         {
-            "key": "可可影视[优]_js",
-            "name": "可可｜影视",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/可可影视[优].js"
-        },
-        {
             "key": "hipy_js_北川影视",
             "name": "北川｜影视",
             "type": 3,
@@ -131,15 +120,11 @@
             "ext": "./zy_js/北川影视.js"
         },
         {
-            "key": "hipy_js_网飞猫[优]",
-            "name": "网飞猫｜影视",
+            "key": "永乐影视",
+            "name": "永乐｜影视",
             "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/网飞猫[优].js"
+            "api": "csp_XBPQ",
+            "ext": "./zy_json/永乐影视.json"
         },
         {
             "key": "hipy_js_老白故事[听]",
@@ -257,17 +242,6 @@
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/磁力熊.js"
-        },
-        {
-            "key": "hipy_js_4khdr",
-            "name": "4khdr｜磁力",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "order_num": 0,
-            "ext": "./zy_js/4khdr.js"
         },
         {
             "key": "腾讯视频",
