@@ -5,7 +5,7 @@ function 顺搜(height, arr) {
 		putVar(程序名+'顺搜高度', JSON.stringify(height));
 		var 本地 =getPath('hiker://files/rules/dzHouse/html/顺搜.html');
 		if (fileExist(本地) == false) {
-			var 远程x5 = request('http://123.56.105.145/weisyr/顺搜.html');
+			var 远程x5 = request('https://github.ednovas.xyz/https://github.com/Fanc9527/zytvbox/blob/main/ssgai/顺搜.html');
 			if (远程x5.indexOf("search") > 0) {
 				writeFile(本地, 远程x5);
 			} else {
