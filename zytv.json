@@ -90,7 +90,7 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://ucmi.fun",
+                "site": "http://milvdou.fun",
                 "danmu": true
             }
         },
@@ -143,22 +143,6 @@
             }
         },
         {
-            "key": "夸克木偶弹幕",
-            "name": "木偶｜4K弹幕",
-            "type": 3,
-            "api": "csp_Wobg",
-            "quickSearch": 1,
-            "changeable": 1,
-            "filterable": 1,
-            "ext": {
-                "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
-                "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
-                "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://www.mogg.top",
-                "danmu": true
-            }
-        },
-        {
             "key": "夸克六趣弹幕",
             "name": "六趣｜4K弹幕",
             "type": 3,
@@ -187,7 +171,7 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://45.207.212.215:12121",
+                "site": "http://103.45.162.207:20720",
                 "danmu": true
             }
         },
@@ -203,9 +187,18 @@
                 "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
                 "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
                 "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
-                "site": "http://txfyyds.top",
+                "site": "http://txfpan.top",
                 "danmu": true
             }
+        },
+        {
+            "key": "雷鲸",
+            "name": "雷鲸｜4K",
+            "type": 3,
+            "api": "csp_Wexleijing",
+            "searchable": 1,
+            "changeable": 1,
+            "jar": "./wex.jar"
         },
         {
             "key": "腾讯弹幕",
@@ -234,6 +227,37 @@
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/爱奇艺弹幕.js"
+        },
+        {
+            "key": "厂长弹幕",
+            "name": "厂长｜弹幕",
+            "type": 3,
+            "api": "csp_Czzy",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "danmu": true
+            }
+        },
+        {
+            "key": "农民影视",
+            "name": "农民｜影视",
+            "type": 3,
+            "api": "csp_Wwys",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "https://m.wwgz.cn"
+        },
+        {
+            "key": "低端影视",
+            "name": "低端｜影视",
+            "type": 3,
+            "api": "csp_Ddys",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
         },
         {
             "key": "机器人弹幕",
@@ -293,18 +317,8 @@
             "key": "素白白",
             "name": "素白白｜影视",
             "type": 3,
-            "api": "csp_Subaibai",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "http://subaibai.com"
-        },
-        {
-            "key": "魔力高清",
-            "name": "魔力｜影视",
-            "type": 3,
             "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/魔力高清.js"
+            "ext": "./zy_js/素白白.js"
         },
         {
             "key": "瓜子",
@@ -375,22 +389,6 @@
             "ext": "./zy_js/奇米动漫.js"
         },
         {
-            "key": "路漫漫",
-            "name": "路漫漫｜动漫",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/路漫漫.js"
-        },
-        {
-            "key": "Mp4电影",
-            "name": "Mp4电影｜磁力",
-            "type": 3,
-            "api": "csp_Mp4Mov",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
-        },
-        {
             "key": "New6v",
             "name": "New6V｜磁力",
             "type": 3,
@@ -415,63 +413,52 @@
         {
             "name": "线路1",
             "type": 0,
-            "url": "https://jx.xmflv.com/?url=",
-            "ext": {
-                "header": {
-                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"
-                }
-            }
+            "url": "https://www.8090g.cn/?url="
         },
         {
             "name": "线路2",
             "type": 0,
-            "url": "https://jx.quankan.app/?url=",
-            "ext": {
-                "header": {
-                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-                }
-            }
+            "url": "https://jx.m3u8.tv/jiexi/?url="
         },
         {
             "name": "线路3",
             "type": 0,
-            "url": "https://jx.yparse.com/index.php?url=",
-            "ext": {
-                "header": {
-                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"
-                }
-            }
+            "url": "https://www.ckplayer.vip/jiexi/?url="
         },
         {
             "name": "线路4",
             "type": 0,
-            "url": "https://jx.aidouer.net/?url=",
-            "ext": {
-                "header": {
-                    "user-agent": "Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36",
-                    "referer": "https://jiejie.uk/"
-                }
-            }
+            "url": "https://yparse.ik9.cc/index.php?url="
         },
         {
             "name": "线路5",
             "type": 0,
-            "url": "https://www.8090g.cn/?url="
+            "url": "https://bd.jx.cn/?url="
         },
         {
             "name": "线路6",
             "type": 0,
-            "url": "https://jx.yangtu.top?url="
+            "url": "https://jx.yparse.com/index.php?url="
         },
         {
             "name": "线路7",
             "type": 0,
-            "url": "https://jx.m3u8.tv/jiexi/?url="
+            "url": "https://jx.hls.one/?url="
         },
         {
             "name": "线路8",
             "type": 0,
-            "url": "https://www.ckplayer.vip/jiexi/?url="
+            "url": "https://pl.a6club.com/player/analysis.php?v="
+        },
+        {
+            "name": "线路9",
+            "type": 0,
+            "url": "https://jx.2s0.cn/player/?url="
+        },
+        {
+            "name": "线路10",
+            "type": 0,
+            "url": "https://jx.nnxv.cn/tv.php?url="
         }
     ],
     "rules": [
