@@ -1,5 +1,5 @@
 {
-    "spider": "./zy_jar/spider.jar",
+    "spider": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1741066475265/f0304.txt;md5;d7422c79ea5b4479c056b168cdaf95b0",
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
         {
@@ -172,13 +172,6 @@
             "ext": "./zy_js/北川影视.js"
         },
         {
-            "key": "永乐影视",
-            "name": "永乐｜影视",
-            "type": 3,
-            "api": "csp_XBPQ",
-            "ext": "./zy_json/永乐影视.json"
-        },
-        {
             "key": "NT动漫",
             "name": "NT｜动漫",
             "type": 3,
@@ -195,26 +188,98 @@
             "changeable": 1
         },
         {
-            "key": "动漫巴士",
-            "name": "巴士｜动漫（备用）",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/动漫巴士.js"
-        },
-        {
-            "key": "樱花动漫",
-            "name": "樱花｜动漫",
-            "type": 3,
-            "api": "./zy_libs/drpy2.min.js",
-            "ext": "./zy_js/樱花动漫.js"
-        },
-        {
             "key": "奇米动漫",
             "name": "奇米｜动漫",
             "type": 3,
             "api": "./zy_libs/drpy2.min.js",
             "ext": "./zy_js/奇米动漫.js"
         },
+        // ##小米接口##
+        {
+            "key": "悠悠",
+            "name": "悠悠┃1080P",
+            "type": 3,
+            "api": "csp_Muou",
+            "playerType": 2,
+            "quickSearch": 1,
+            "ext": "caHR0cDovL3UzYS50dHhnenMuY2585LyY5LyY5YWUfDQuMS44",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740965279595/0303.jar;md5;ec975f203099b42d6286751914e27fc9"
+        },
+        {
+            "key": "巧技",
+            "name": "巧记┃1080P",
+            "type": 3,
+            "api": "csp_qiao2",
+            "playerType": 2,
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740965279595/0303.jar;md5;ec975f203099b42d6286751914e27fc9",
+            "ext": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740038979341/cksp.txt"
+        },
+        {
+            "key": "天天",
+            "name": "天天┃1080P",
+            "type": 3,
+            "api": "csp_AppRJGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "sHR2rlsfjI4L3t4RXQMknxhunFUlA4159TKiKvIPpfcM1xianxebcSLajBbwFymqC+z9WoGzQYbh7FSvh8KdiC0BKF0CalaPaCEMOZm+ClGEeNzXAaR0FnrV04SiB2NK"
+        },
+        {
+            "key": "热热",
+            "name": "热热┃1080P",
+            "type": 3,
+            "api": "csp_AppRJGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "sHR2rlsfjI4L3t4RXQMkn9mmg6Ofmy66+wcs9waIyn4hKqT9jG9s4kO6qzcu2OSqWS1/T+wfkqe+UwoipekwvcM11PTDrQqKYI8lmMXUc1vBHxp/2uWIw5HUoscBNWEb"
+        },
+        {
+            "key": "追剧",
+            "name": "追剧┃1080P",
+            "type": 3,
+            "api": "csp_AppRJGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "sHR2rlsfjI4L3t4RXQMkn9NPgTvCXvJVoUvXJHT6PqBNTg88Q5I4mc95m2RizprWhdAIQNMU/HShly4WRNzUsfhvqzHXHhHD57G7QagNV0Cx+WDSBgm0uZMAbZVHmzjM"
+        },
+        {
+            "key": "csp_良人",
+            "name": "良人┃1080P",
+            "type": 3,
+            "searchable": 1,
+            "quickSearch": 1,
+            "api": "csp_AppGetV2Guard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "sHR2rlsfjI4L3t4RXQMkn0xaBCNcSQUCvczzn7zWpJd7PJ5uE10QNLrWWS17wAYgh1d6T+lyAGWYDDt/yJr/VNQuyK2VSIuevNakK2GvE1EQejlklHv7etmkohoSdYeXfClYcFjVBjQD/3ueLIRu5mRtC17xwZEKgga5OKghvkNOKFHeBC8zljBC+o7LY640uwI3xUCS6H6I1Xn+MXnhLIdXvzJq3jAPBvKIxWrDUVfkCH94kY9cJ8WJisUFWHbs"
+        },
+        {
+            "key": "电影",
+            "name": "电影┃1080P",
+            "type": 3,
+            "quickSearch": 0,
+            "api": "csp_AppGetV2Guard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "sHR2rlsfjI4L3t4RXQMkn9pXqDDJVVS6pwdk2S4nTvU6TUFngKGexyvHMXSXO57AN6M4LsBHwZ1tcHnPZ2gPH1m7qu7r1zc7CkawgqunMPxZznGnqtbiv5NVOliQUr2NK4Pee7PFE2+BCvbGUPd3IR9Hiub1wBkbrfqjptJFLEpVXeR1pgeGp6pPUjADtyQPuXHj4azaFzDrobUCcdcn7KM6ZC4rjkupd5HlbdqhOJTRBv917h5RUlXs1sgRU1+EWkMXuNopX+18VjWwSrFYPw=="
+        },
+        {
+            "key": "csp_Jpys",
+            "name": "金牌┃1080P",
+            "type": 3,
+            "api": "csp_JpysGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07"
+        },
+        {
+            "key": "csp_Wwys",
+            "name": "农民┃1080P",
+            "type": 3,
+            "api": "csp_WwysGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
+            "ext": "https://www.wwgz.cn"
+        },
+        {
+            "key": "csp_Lkdy",
+            "name": "来看┃1080P",
+            "type": 3,
+            "api": "csp_LkdyGuard",
+            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07"
+        },
+         // ##小米接口##
         {
             "key": "贱贱",
             "name": "荐片┃P2P",
