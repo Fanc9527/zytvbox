@@ -51,23 +51,32 @@
             "changeable": 1
         },
         {
+            "key": "厂长",
+            "name": "厂长┃不卡",
+            "type": 3,
+            "api": "csp_NewCzGuard",
+            "playerType": 2,
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "ext": "https://www.czzyvideo.com/"
+        },
+        {
+            "key": "奥特",
+            "name": "奥特┃多线",
+            "type": 3,
+            "api": "csp_AueteGuard",
+            "timeout": 15,
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "ext": "https://auete.com/"
+        },
+        {
             "key": "小苹果弹幕-欧哥",
             "name": "小苹果｜弹幕",
             "type": 3,
             "api": "csp_Xpg",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true
-            }
-        },
-        {
-            "key": "厂长弹幕-欧哥",
-            "name": "厂长｜弹幕",
-            "type": 3,
-            "api": "csp_Czzy",
             "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
             "searchable": 1,
             "quickSearch": 1,
@@ -141,17 +150,6 @@
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1
-        },
-        {
-            "key": "奥特",
-            "name": "奥特┃多线",
-            "type": 3,
-            "api": "csp_AueteGuard",
-            "timeout": 15,
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 1,
-            "ext": "https://auete.com/"
         },
         {
             "key": "瓜子",
@@ -241,17 +239,6 @@
             "ext": "./zy_js/星芽短剧.js"
         },
         {
-            "key": "河马短剧-欧哥",
-            "name": "河马｜短剧",
-            "type": 3,
-            "api": "csp_AppHMDJ",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
-            "searchable": 1,
-            "quickSearch": 0,
-            "filterable": 0,
-            "ext": "KhY021WelCEl+6MsvwnzaPussky/EAoc9z7C4keyHaEQ+sKbXhMKd83VjTL7Ls6+m7XDIcGdziOxPv79y/h4QCvmOEJmZ1VD6dopzAVxkFzEFw=="
-        },
-        {
             "key": "巧技-小米",
             "name": "巧记┃1080P",
             "type": 3,
@@ -326,6 +313,22 @@
             "changeable": 0,
             "ext": {
                 "json": "https://im.feelec.com.cn/res/file.html?id=2c9a91099293dce40194194e5a5f7474"
+            }
+        },
+        {
+            "key": "Biliych",
+            "name": "🅱哔哔演唱会┃弹幕",
+            "type": 3,
+            "api": "csp_BiliGuard",
+            "style": {
+                "type": "rect",
+                "ratio": 1.597
+            },
+            "searchable": 1,
+            "quickSearch": 0,
+            "changeable": 0,
+            "ext": {
+                "json": "https://im.feelec.com.cn/res/file.html?id=2c9a91099293dce40194194f4eb2747e"
             }
         },
         {
