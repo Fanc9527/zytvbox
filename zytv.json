@@ -1,5 +1,5 @@
 {
-    "spider": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1742238202186/f0318.txt;md5;dda5ab42b722f13761900308a6caff89",
+    "spider": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1743153331519/f0328a.txt;md5;6bbccb95ef9afb1efdfae22f52ca54ca",
     "wallpaper": "https://api.likepoems.com/img/bing",
     "sites": [
         {
@@ -73,83 +73,118 @@
             "ext": "https://auete.com/"
         },
         {
-            "key": "小苹果弹幕-欧哥",
-            "name": "小苹果｜弹幕",
+            "key": "苹果",
+            "name": "苹果┃不卡",
             "type": 3,
-            "api": "csp_Xpg",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "api": "csp_LiteAppleGuard",
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true
-            }
+            "changeable": 1
         },
         {
-            "key": "现代弹幕-欧哥",
-            "name": "现代｜弹幕",
+            "key": "热播",
+            "name": "热播┃多线",
             "type": 3,
-            "api": "csp_XianDai",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "api": "csp_AppTTGuard",
+            "playerType": 2,
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true
-            },
-            "timeout": 10
+            "changeable": 1,
+            "ext": "uqGL1bNENExT7/hGxpSE5qU="
         },
         {
-            "key": "热播弹幕-欧哥",
-            "name": "热播｜弹幕",
+            "key": "白白",
+            "name": "白白┃秒播",
             "type": 3,
-            "api": "csp_TianTian",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "api": "csp_SbaibaiGuard",
+            "playerType": 2,
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true,
-                "site": "0"
-            }
+            "changeable": 1
         },
         {
-            "key": "天天弹幕-欧哥",
+            "key": "天天影视-欧哥",
             "name": "天天｜弹幕",
             "type": 3,
-            "api": "csp_TianTian",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "api": "csp_AppRJ",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true,
-                "site": "1"
-            }
+            "filterable": 0,
+            "ext": "http://tt.ysdqjs.cn"
         },
         {
-            "key": "追剧仔弹幕-欧哥",
-            "name": "追剧｜弹幕",
+            "key": "浪酷影视-欧哥",
+            "name": "浪酷｜弹幕",
             "type": 3,
-            "api": "csp_Zjz",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "api": "csp_AppRJ",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 1,
-            "ext": {
-                "danmu": true
-            },
-            "timeout": 10
+            "filterable": 0,
+            "ext": "http://v.lkuys.cn"
+        },
+        {
+            "key": "耐看影视-欧哥",
+            "name": "耐看｜弹幕",
+            "type": 3,
+            "api": "csp_WebNK",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
+            "searchable": 0,
+            "changeable": 0,
+            "ext": "w7TCmsONw6LDrsKYwoXCosKcwqDCrcKawqDDosKnwqTCoMKjwrPCosKpw7DDscKqXsKewpvDncOpw57Cp8OnwphXXFDCoMOnw6PDqcKhbVBXwovlh77phZvmkJ/lkZzCpuWGn+S9h+WQp2rlv6roqLnotr7mvInnrZPCkFdcUMKgw5fDn8Ocw6zCrMKgwqR7w57DrMKhwrPCmlrCp8KlwqnDosKpwrDCr8KhwrA="
+        },
+        {
+            "key": "来看影视-欧哥",
+            "name": "来看｜弹幕",
+            "type": 3,
+            "api": "csp_WebLK",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
+            "searchable": 0,
+            "changeable": 0,
+            "ext": "w7TCmsONw6LDrsKYwoXCosKcwqDCrcKawqDDosKnwqTCoMKjwrPCosKpw6XDpcKpwp/ClF7DpsOYwqHCpcKaWsKkwpnCoMKgwq3CmsKgw5XlhrjphJjmj5XlkJPCpeWHn+S+keWRsMK05b6k6Ke26LW05ruA562Sw5DCocKlwppawpTClcKTw6vDrMOqw63DhcKYwqlXasKZwprDscOuw7PCnGZmZsKgw7A="
         },
         {
             "key": "真心-欧哥",
             "name": "真心｜影视",
             "type": 3,
             "api": "csp_WebGZ",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1
+        },
+        {
+            "key": "低端-欧哥",
+            "name": "低端｜影视",
+            "type": 3,
+            "api": "csp_Ddys",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1
+        },
+        {
+            "key": "金牌影视-欧哥",
+            "name": "金牌｜影视",
+            "type": 3,
+            "api": "csp_WebJP",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "w7TCmsONw6LDrsKYwoXCosKcwqDCrcKawqDDosKnwqTCoMKjwrPCosKpw7DDscKqXsKbwqPDp8Ohw6LDm8OkYcKTwp/CncKgwp/CmsKgw67CnMKgV2rCmcKaw5Xlh77phaLmj5jlkJNc5Yac5L6Q5ZGqwrTlv6roqYDotbfmu4DnrInCjcKgwp/CmsKgw57CmMKTwqLCqcOpw6fDhcOew7NaalBXw7DDqMOzw6LCsGlmV8Kt"
+        },
+        {
+            "key": "csp_XYQHiker_农民影视-欧哥",
+            "name": "农民｜影视",
+            "type": 3,
+            "api": "csp_XYQHiker",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "https://gh-proxy.com/https://raw.githubusercontent.com/ouhaibo1980/tvbox/refs/heads/master/json/nmys.json"
         },
         {
             "key": "瓜子",
@@ -212,7 +247,7 @@
             "name": "曼波｜动漫",
             "type": 3,
             "api": "csp_AppGetApp",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0,
@@ -239,46 +274,6 @@
             "ext": "./zy_js/星芽短剧.js"
         },
         {
-            "key": "巧技-小米",
-            "name": "巧记┃1080P",
-            "type": 3,
-            "api": "csp_qiao2",
-            "playerType": 2,
-            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740965279595/0303.jar;md5;ec975f203099b42d6286751914e27fc9",
-            "ext": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740038979341/cksp.txt"
-        },
-        {
-            "key": "电影-小米",
-            "name": "电影┃1080P",
-            "type": 3,
-            "quickSearch": 0,
-            "api": "csp_AppGetV2Guard",
-            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
-            "ext": "sHR2rlsfjI4L3t4RXQMkn9pXqDDJVVS6pwdk2S4nTvU6TUFngKGexyvHMXSXO57AN6M4LsBHwZ1tcHnPZ2gPH1m7qu7r1zc7CkawgqunMPxZznGnqtbiv5NVOliQUr2NK4Pee7PFE2+BCvbGUPd3IR9Hiub1wBkbrfqjptJFLEpVXeR1pgeGp6pPUjADtyQPuXHj4azaFzDrobUCcdcn7KM6ZC4rjkupd5HlbdqhOJTRBv917h5RUlXs1sgRU1+EWkMXuNopX+18VjWwSrFYPw=="
-        },
-        {
-            "key": "csp_Jpys-小米",
-            "name": "金牌┃1080P",
-            "type": 3,
-            "api": "csp_JpysGuard",
-            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07"
-        },
-        {
-            "key": "csp_Wwys-小米",
-            "name": "农民┃1080P",
-            "type": 3,
-            "api": "csp_WwysGuard",
-            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07",
-            "ext": "https://www.wwgz.cn"
-        },
-        {
-            "key": "csp_Lkdy-小米",
-            "name": "来看┃1080P",
-            "type": 3,
-            "api": "csp_LkdyGuard",
-            "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740980537081/03033.jar;md5;44f03af024f80966242625196374fc07"
-        },
-        {
             "key": "贱贱",
             "name": "荐片┃P2P",
             "type": 3,
@@ -293,7 +288,7 @@
             "name": "新6V┃磁力",
             "type": 3,
             "api": "csp_New6v",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
@@ -336,7 +331,7 @@
             "name": "西瓜｜视频",
             "type": 3,
             "api": "csp_AmuXiguaV2",
-            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;20b60f2d9fd4d52bb23d2548e72ce0f5",
+            "jar": "https://jar.u.xn--dkw.xn--6qq986b3xl/m/jar.php?id=ou&ou=%E5%85%AC%E4%BC%97%E5%8F%B7%E6%AC%A7%E6%AD%8Capp;md5;8c0c9408138262866c3946275dcb62c1",
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0,
