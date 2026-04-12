@@ -29,6 +29,14 @@
             "filterable": 1
         },
         {
+            "key": "FishPs",
+            "name": "鱼鱼｜盘搜",
+            "type": 3,
+            "api": "csp_FishPs",
+            "searchable": 1,
+            "filterable": 0
+        },
+        {
             "key": "bili",
             "name": "笔触｜琉璃",
             "type": 3,
