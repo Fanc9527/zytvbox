@@ -93,56 +93,66 @@
             }
         },
         {
-            "key": "晚吟",
-            "name": "晚吟｜APP",
+            "key": "三秋影视",
+            "name": "三秋｜APP",
             "type": 3,
-            "api": "csp_AppGet",
-            "searchable": 1,
-            "changeable": 1,
-            "ext": "AbJhoE7SW3YVasqvc+pa+G72k+T3ir+2g1NBGIr+WR241wHaXGkPxuTLLy/TnbCftRxStwIpuUfPUpBcYPV+K2fsqe0kFfcGsbLIlXYQBHlHKm77Wg95LgvthL3VdHlpTUAGhCRuKuxGxVbRa1xSwGKcNPw2vOF7dCBBcULoQo9PMTTlPX67HJl7U9L7SErLLQIoKQ6HQPrL6OMRrrbzSZI="
+            "api": "csp_App3Q",
+            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726"
         },
         {
-            "key": "厌离",
-            "name": "厌离｜APP",
+            "key": "云播",
+            "name": "云播｜APP",
             "type": 3,
-            "api": "csp_AppGet",
-            "searchable": 1,
-            "changeable": 1,
-            "ext": "AQ8xy13uUB+vU0X5VQoLoHQ0PbaWVadAyXpMKT4lGXmz4P8/XgMiirPtAaVdXwlAm5uF7AEvL3DXQh1rGvz8VkkK/iJRxAipX1t/HMeh8FiNDuXLu5Z6IRNARKpTACYVrIClJSw/mWpypTq/VHPWokB3OA8LPPKPaOao8P8nVbJ8xyA50XNWEVFnl2cVRf3xMlAzAZVOwhnDWXYRcDjo8oE="
-        },
-        {
-            "key": "思追",
-            "name": "思追丨APP",
-            "type": 3,
-            "api": "csp_AppQi",
-            "searchable": 1,
-            "changeable": 1,
-            "ext": "AXWocdyEmc02GdKtON+2yd7P2uD1HWlKHM3YrD9Uifedy+6SbcdH8TVHuIRauOiqPVbRbMFR8Pec58VZE3Z182Bh381NrWL9RD0qVgcQR0AKrR0e41KThsNXB7mMj4lVtZy1DNhIQTp0KBzRf8x1OnL+i2ZPU3OPmqm8XQOMUg8JRiieP7GhmTsHf/I8WjViOEx4ZO7JzvZ+pEk/3/hiuVq1pL02U+mY66zkA0Qv43GZ"
-        },
-        {
-            "key": "琼林",
-            "name": "琼林｜APP",
-            "type": 3,
-            "api": "csp_AppQi",
-            "ext": "AW8zc43nkd9VeK5DW/DjDZZyQ8CitfFSJkst0xRXhXKcj6hD8v1lusJ6ESqiEdq4U9Sr7SwyYTtqa4cJasPcQfIJNNXAbtzzK1SRuX5y5rV0MoS7+vWxG8iPCQvXee+amQTW4IiuoWX3HVnOSd+ViPayPdXO+rvvR+ymyTYToZAW8UikQ/chpFk3HKJ+bLBq/FejMjlZvZdbCyM/3ZYxY9E="
-        },
-        {
-            "key": "忘机",
-            "name": "忘机｜APP",
-            "type": 3,
-            "api": "csp_AppQi",
-            "changeable": "1",
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "AVXYDOeB/e2Zo9SElMnckVbtaTsb8ch9KCrhVx810+mfwrY1WkTsLDW4MFebXHk1rTmSEbbkpwAjfY05iNJUmCGDO8MEzTxRt1ZGwEbD9xasdNga71gnFVOR6tNbSL/Yel9RRuQp3jKScnBjH7XqGfBjy6H3T3U8UuzbuVHwNOXYoWlYYw3eb7z0/Z+GotNka0HTGycPyX6fSxaLTLzy9z/iezcYLAJIVkSPqCAHQy1igFHgQqhqoJeHsv/rBAZWiQ=="
-        },
-        {
-            "key": "麒麟",
-            "name": "麒麟｜APP",
-            "type": 3,
-            "changeable": 0,
             "api": "csp_AppFox",
-            "ext": "Ac9bpM2BcSDtRFXJIKv7cKam+MagzI4MRN9VkD0cdbZYR2sdZMY+KrFlbb/4YNndRu8tZ6ryTJc7jJekLp6O4gnnRwzqwP3+4rp/r5A5u/Qt"
+            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": {
+                "host": "http://app.hktvyb.cc"
+            }
+        },
+        {
+            "key": "映画",
+            "name": "映画｜APP",
+            "type": 3,
+            "api": "csp_AppGet",
+            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": {
+                "url": "https://cms140.yhg.one/",
+                "dataKey": "bM7iC9eA3oZ1nB7z",
+                "dataIv": "bM7iC9eA3oZ1nB7z"
+            }
+        },
+        {
+            "key": "星空",
+            "name": "星空｜APP",
+            "type": 3,
+            "api": "csp_AppGet",
+            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": {
+                "url": "http://xk7.xkgzs.xyz",
+                "dataKey": "107jkcdncofcdkjk",
+                "dataIv": "107jkcdncofcdkjk"
+            }
+        },
+        {
+            "key": "秒看",
+            "name": "秒看｜APP",
+            "type": 3,
+            "api": "csp_AppGet",
+            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": {
+                "site": "https://mk1080.top/get.txt",
+                "dataKey": "c60d88b2eep53za8",
+                "dataIv": "c60d88b2eep53za8",
+                "token": "4181e508e7a17657d6a6246e70b1b13553e5ae9d8d287dc47000fb2df638dffa"
+            }
         },
         {
             "key": "景天",
@@ -290,31 +300,31 @@
         },
         {
             "key": "tenteng",
-            "name": "腾|自定",
+            "name": "腾|官",
             "type": 3,
-            "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
-            "ext": "http://103.45.162.207:25252/仅供测试/lib/腾腾.js"
+            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
+            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/TXSP.js"
         },
         {
             "key": "youyou",
-            "name": "优|自定",
+            "name": "优|官",
             "type": 3,
-            "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
-            "ext": "http://103.45.162.207:25252/仅供测试/lib/优优.js"
+            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
+            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/YKSP.js"
         },
         {
             "key": "qiqi",
-            "name": "奇|自定",
+            "name": "奇|官",
             "type": 3,
-            "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
-            "ext": "http://103.45.162.207:25252/仅供测试/lib/奇奇.js"
+            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
+            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/AQY.js"
         },
         {
             "key": "mangmang",
-            "name": "芒|自定",
+            "name": "芒|官",
             "type": 3,
-            "api": "http://103.45.162.207:25252/仅供测试/lib/drpy2.min.js",
-            "ext": "http://103.45.162.207:25252/仅供测试/lib/茫茫.js"
+            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
+            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/MGSP.js"
         },
         {
             "key": "Jianpian",
