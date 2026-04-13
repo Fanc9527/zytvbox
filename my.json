@@ -221,6 +221,140 @@
             }
         },
         {
+            "key": "FishLabi",
+            "name": "蜡笔｜4K",
+            "type": 3,
+            "api": "csp_FishCloud",
+            "searchable": 1,
+            "ext": {
+                "site": [
+                    "https://feimao666.fun",
+                    "http://xiaocge.fun",
+                    "http://feimo.fun",
+                    "https://feimao666.fun",
+                    "http://fmao.site",
+                    "http://fmao.shop",
+                    "http://xiaocgege.shop"
+                ]
+            }
+        },
+        {
+            "key": "FishZhizhen",
+            "name": "至臻｜4K",
+            "type": 3,
+            "api": "csp_FishCloud",
+            "searchable": 1,
+            "ext": {
+                "site": [
+                    "https://mihdr.top",
+                    "https://www.mihdr.top",
+                    "https://www.miqk.cc",
+                    "https://zhizhenpan.com/",
+                    "https://zhizhen8.click",
+                    "https://www.zhizhen8.click"
+                ]
+            }
+        },
+        {
+            "key": "FishDuoduo",
+            "name": "多多｜4K",
+            "type": 3,
+            "api": "csp_FishCloud",
+            "searchable": 1,
+            "ext": {
+                "site": [
+                    "https://tv.yydsys.top",
+                    "https://tv.yydsys.cc",
+                    "https://tv.214521.xyz"
+                ]
+            }
+        },
+        {
+            "key": "FishErxiao",
+            "name": "二小｜4K",
+            "type": 3,
+            "api": "csp_FishCloud",
+            "searchable": 1,
+            "ext": {
+                "site": [
+                    "https://www.erixaopan.fun",
+                    "https://www.wexwp.cc",
+                    "https://wexwp.cc",
+                    "https://2xiaopan.top",
+                    "https://www.2xiaopan.top"
+                ]
+            }
+        },
+        {
+            "key": "FishHuban",
+            "name": "虎斑｜4K",
+            "type": 3,
+            "api": "csp_FishCloud",
+            "searchable": 1,
+            "ext": {
+                "site": [
+                    "http://103.45.162.207:20720"
+                ]
+            }
+        },
+        {
+            "key": "夸父",
+            "name": "夸父｜4K",
+            "type": 3,
+            "api": "csp_FishKF",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1,
+            "style": {
+                "type": "list",
+                "ratio": 1.433
+            },
+            "ext": {
+                "site": [
+                    "https://www.kfjwzz.com"
+                ],
+                "cookie": ""
+            }
+        },
+        {
+            "key": "ShuangXing",
+            "name": "双星｜4K",
+            "type": 3,
+            "api": "csp_ShuangXing",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "style": {
+                "type": "list",
+                "ratio": 1.433
+            }
+        },
+        {
+            "key": "DianYingYunJi",
+            "name": "云集｜4K",
+            "type": 3,
+            "api": "csp_DianYingYunJi",
+            "searchable": 1,
+            "changeable": 1
+        },
+        {
+            "key": "YunPanBa",
+            "name": "盘吧｜4K",
+            "type": 3,
+            "api": "csp_YunPanBa",
+            "searchable": 1,
+            "ext": "https://yunpan6.com/"
+        },
+        {
+            "key": "YsSo",
+            "name": "奕搜｜4K",
+            "type": 3,
+            "api": "csp_YsSo",
+            "searchable": 1,
+            "ext": "https://ysso.cc"
+        },
+        {
             "key": "CupFox",
             "name": "茶杯狐｜影视",
             "type": 3,
