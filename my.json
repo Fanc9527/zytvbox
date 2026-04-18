@@ -48,6 +48,13 @@
             }
         },
         {
+            "key": "ALLLive",
+            "name": "星河｜共影",
+            "type": 3,
+            "api": "csp_ALLLive",
+            "searchable": 1
+        },
+        {
             "key": "Zwqf",
             "name": "醉挽｜清风",
             "type": 3,
@@ -123,20 +130,6 @@
                 "url": "https://cms140.yhg.one/",
                 "dataKey": "bM7iC9eA3oZ1nB7z",
                 "dataIv": "bM7iC9eA3oZ1nB7z"
-            }
-        },
-        {
-            "key": "星空",
-            "name": "星空｜APP",
-            "type": 3,
-            "api": "csp_AppGet",
-            "jar": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20260413/JtGd/0X0/04131602.png;md5;96fb7f4628a2c269bcd060f3bcecf726",
-            "searchable": 1,
-            "changeable": 1,
-            "ext": {
-                "url": "http://xk7.xkgzs.xyz",
-                "dataKey": "107jkcdncofcdkjk",
-                "dataIv": "107jkcdncofcdkjk"
             }
         },
         {
