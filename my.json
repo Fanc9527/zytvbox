@@ -7,7 +7,7 @@
             "key": "Douban",
             "name": "豆瓣｜推荐",
             "type": 3,
-            "api": "csp_Douban",
+            "api": "csp_DoubanFishGuard",
             "indexs": 1,
             "searchable": 0,
             "filterable": 1,
@@ -17,22 +17,29 @@
             "key": "FishConfig",
             "name": "设置｜中心",
             "type": 3,
-            "api": "csp_FishConfig"
+            "api": "csp_FishConfigFishGuard"
         },
         {
             "key": "YGP",
             "name": "新片｜预告",
             "type": 3,
-            "api": "csp_YGP",
+            "api": "csp_YGPFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1
         },
         {
+            "key": "ALLLive",
+            "name": "星河｜共影",
+            "type": 3,
+            "api": "csp_ALLLiveFishGuard",
+            "searchable": 1
+        },
+        {
             "key": "FishPs",
             "name": "鱼鱼｜盘搜",
             "type": 3,
-            "api": "csp_FishPs",
+            "api": "csp_FishPsFishGuard",
             "searchable": 1,
             "filterable": 0
         },
@@ -40,7 +47,7 @@
             "key": "bili",
             "name": "笔触｜琉璃",
             "type": 3,
-            "api": "csp_Bili",
+            "api": "csp_BiliFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "ext": {
@@ -48,36 +55,25 @@
             }
         },
         {
-            "key": "ALLLive",
-            "name": "星河｜共影",
-            "type": 3,
-            "api": "csp_ALLLive",
-            "searchable": 1
-        },
-        {
-            "key": "Zwqf",
-            "name": "醉挽｜清风",
-            "type": 3,
-            "api": "csp_Zwqf",
-            "searchable": 1,
-            "ext": {
-                "url": "http://我不是.摸鱼儿.com/api/feng/moyu.php",
-                "token": "moyu996"
-            }
-        },
-        {
             "key": "zhiqiu",
             "name": "听风｜知秋",
             "type": 3,
-            "api": "csp_zhiqiu",
+            "api": "csp_zhiqiuFishGuard",
             "searchable": 1,
             "ext": "https://fishapi.wya6.com/fish/zhiqiu.php"
+        },
+        {
+            "key": "fishhxq",
+            "name": "韩圈｜影视",
+            "type": 3,
+            "api": "csp_FishHxqFishGuard",
+            "ext": "https://fishapi.wya6.com/fish/fishhxq.php"
         },
         {
             "key": "Kan360",
             "name": "流离｜寒鸦",
             "type": 3,
-            "api": "csp_Kan360",
+            "api": "csp_Kan360FishGuard",
             "searchable": 1,
             "filterable": 1,
             "ext": {
@@ -91,7 +87,7 @@
             "key": "Rebo",
             "name": "热播｜APP",
             "type": 3,
-            "api": "csp_AppRJ",
+            "api": "csp_AppRJFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 0,
@@ -148,26 +144,10 @@
             }
         },
         {
-            "key": "景天",
-            "name": "景天|4K弹幕",
-            "type": 3,
-            "api": "csp_HBcms10Dou",
-            "jar": "http://103.45.162.207:25252/仅供测试/custom_spider.jar;md5;120e148ffba423c7056197a0d7ca486a",
-            "ext": "https://zy.jinchancaiji.com/api.php/provide/vod/from/qq/"
-        },
-        {
-            "key": "茂茂",
-            "name": "茂茂|4K弹幕",
-            "type": 3,
-            "api": "csp_HBcms10Dou",
-            "jar": "http://103.45.162.207:25252/仅供测试/custom_spider.jar;md5;120e148ffba423c7056197a0d7ca486a",
-            "ext": "https://zy.jinchancaiji.com/api.php/provide/vod/from/mgtv/"
-        },
-        {
             "key": "Libvio",
             "name": "立播｜4K",
             "type": 3,
-            "api": "csp_Libvio",
+            "api": "csp_LibvioFishGuard",
             "searchable": 1,
             "changeable": 1,
             "ext": {
@@ -199,16 +179,17 @@
             "key": "Wogg",
             "name": "玩偶｜4K",
             "type": 3,
-            "api": "csp_Wogg",
+            "api": "csp_WoggFishGuard",
             "searchable": 1,
             "changeable": 1,
             "filterable": 1,
             "ext": {
                 "site": [
-                    "https://www.wogg.one",
-                    "https://wogg.333232.xyz",
                     "https://wogg.xxooo.cf",
-                    "https://woggpan.888484.xyz"
+                    "https://woggpan.888484.xyz",
+                    "https://wogg.333232.xyz",
+                    "http://woggpan.xxooo.cf",
+                    "https://www.wogg.one"
                 ],
                 "filter": "https://tc-new.z.wiki/autoupload/iYHTWVx6T8RrCmqdGD6MOdiO_OyvX7mIgxFBfDMDErs/20260320/oOf4/wogg.json"
             }
@@ -217,7 +198,7 @@
             "key": "FishLabi",
             "name": "蜡笔｜4K",
             "type": 3,
-            "api": "csp_FishCloud",
+            "api": "csp_FishCloudFishGuard",
             "searchable": 1,
             "ext": {
                 "site": [
@@ -235,7 +216,7 @@
             "key": "FishZhizhen",
             "name": "至臻｜4K",
             "type": 3,
-            "api": "csp_FishCloud",
+            "api": "csp_FishCloudFishGuard",
             "searchable": 1,
             "ext": {
                 "site": [
@@ -252,7 +233,7 @@
             "key": "FishDuoduo",
             "name": "多多｜4K",
             "type": 3,
-            "api": "csp_FishCloud",
+            "api": "csp_FishCloudFishGuard",
             "searchable": 1,
             "ext": {
                 "site": [
@@ -266,7 +247,7 @@
             "key": "FishErxiao",
             "name": "二小｜4K",
             "type": 3,
-            "api": "csp_FishCloud",
+            "api": "csp_FishCloudFishGuard",
             "searchable": 1,
             "ext": {
                 "site": [
@@ -282,7 +263,7 @@
             "key": "FishHuban",
             "name": "虎斑｜4K",
             "type": 3,
-            "api": "csp_FishCloud",
+            "api": "csp_FishCloudFishGuard",
             "searchable": 1,
             "ext": {
                 "site": [
@@ -294,7 +275,7 @@
             "key": "夸父",
             "name": "夸父｜4K",
             "type": 3,
-            "api": "csp_FishKF",
+            "api": "csp_FishKFFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
@@ -314,7 +295,7 @@
             "key": "ShuangXing",
             "name": "双星｜4K",
             "type": 3,
-            "api": "csp_ShuangXing",
+            "api": "csp_ShuangXingFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "changeable": 1,
@@ -327,7 +308,7 @@
             "key": "DianYingYunJi",
             "name": "云集｜4K",
             "type": 3,
-            "api": "csp_DianYingYunJi",
+            "api": "csp_DianYingYunJiFishGuard",
             "searchable": 1,
             "changeable": 1
         },
@@ -335,7 +316,7 @@
             "key": "YunPanBa",
             "name": "盘吧｜4K",
             "type": 3,
-            "api": "csp_YunPanBa",
+            "api": "csp_YunPanBaFishGuard",
             "searchable": 1,
             "ext": "https://yunpan6.com/"
         },
@@ -343,32 +324,32 @@
             "key": "YsSo",
             "name": "奕搜｜4K",
             "type": 3,
-            "api": "csp_YsSo",
+            "api": "csp_YsSoFishGuard",
             "searchable": 1,
             "ext": "https://ysso.cc"
         },
         {
-            "key": "CupFox",
-            "name": "茶杯狐｜影视",
+            "key": "SeedHub",
+            "name": "SeedHub｜4K",
             "type": 3,
-            "api": "csp_CupFox",
-            "searchable": 1,
-            "changeable": 1
+            "api": "csp_SeedHubFishGuard",
+            "searchable": 1
         },
         {
-            "key": "RenRen",
-            "name": "人人｜影视",
+            "key": "CZ",
+            "name": "厂长｜影视",
             "type": 3,
-            "api": "csp_RenRen",
+            "api": "csp_CZFishGuard",
             "searchable": 1,
             "quickSearch": 1,
-            "filterable": 0
+            "filterable": 0,
+            "ext": "https://www.czzymovie.com"
         },
         {
             "key": "wencai",
             "name": "文才｜影视",
             "type": 3,
-            "api": "csp_WenCai",
+            "api": "csp_WenCaiFishGuard",
             "searchable": 1,
             "ext": "https://www.tjrongze.com,https://y2s52n7.com,https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.jiabaide.cn"
         },
@@ -376,14 +357,14 @@
             "key": "Guazi",
             "name": "瓜子｜影视",
             "type": 3,
-            "api": "csp_Guazi",
+            "api": "csp_GuaziFishGuard",
             "searchable": 1
         },
         {
             "key": "Zxzj",
             "name": "在线｜影视",
             "type": 3,
-            "api": "csp_Zxzj",
+            "api": "csp_ZxzjFishGuard",
             "searchable": 1,
             "ext": "https://www.zxzjhd.com"
         },
@@ -391,7 +372,7 @@
             "key": "Hema",
             "name": "河马｜短剧",
             "type": 3,
-            "api": "csp_Hema",
+            "api": "csp_HemaFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "类型": "短剧",
@@ -401,7 +382,7 @@
             "key": "FishDuanju",
             "name": "超级｜短剧",
             "type": 3,
-            "api": "csp_FishDuanju",
+            "api": "csp_FishDuanjuFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "类型": "短剧",
@@ -411,7 +392,7 @@
             "key": "HHkk",
             "name": "好看｜短剧",
             "type": 3,
-            "api": "csp_HHkk",
+            "api": "csp_HHkkFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "类型": "短剧",
@@ -422,42 +403,45 @@
             "name": "番薯丨动漫",
             "type": 3,
             "quickSearch": 1,
-            "api": "csp_AppGet",
-            "ext": "N5u2FS3i/elUFAoSVYBzne8+r0r/kX1E+KdfHQ6FVY6/wHmWZoFfjCv2f3YfjfSbJm0/trORuqYE1PzwW9Z2IT6SnMHG1Beaes3+9Ad9p9Dy7MPFARRTA33haDFOP4SZtpBkd4utjKPyprZNVKMxvA=="
+            "api": "csp_AppGetFishGuard",
+            "ext": "AYCBc+fWtk3Ww5c5E60Bo/WU/T4E6CeEycr4XI4G5qlbHuIqnYVSkEL3SU7CelK5Try8WfXhaNH+v57CAk7j2WsarjlyXV8uztVoM5+2qHrAlnCAla8ODUNhdN9dxGa8uKfX0x1ICKB+3HQfIKV9BRVGyFNO/xqOPnpLDK0+jGr/"
         },
         {
-            "key": "tenteng",
-            "name": "腾|官",
+            "key": "XiFan",
+            "name": "稀饭｜动漫",
             "type": 3,
-            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
-            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/TXSP.js"
+            "api": "csp_XiFanFishGuard",
+            "searchable": 1,
+            "quickSearch": 1,
+            "ext": {
+                "SiteUrl": "https://dm.xifanacg.com"
+            }
         },
         {
-            "key": "youyou",
-            "name": "优|官",
+            "key": "Manbo",
+            "name": "曼波｜动漫",
             "type": 3,
-            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
-            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/YKSP.js"
+            "api": "csp_AppGetFishGuard",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "AUzH3yIWvgQkyhQw17uONTsfuN8PupZ/LJdr5C31Y/CWlzSNmarYI5kaJYN5c0p6+Oq0tXuTutQo9MHHytxulL5kmapDuAK5+2NTlpsUgBnr0tOamm69Fwb+jFDQ7VW46qf5EFY+Ea3PHzkpfeObKPM="
         },
         {
-            "key": "qiqi",
-            "name": "奇|官",
+            "key": "Gugu",
+            "name": "咕咕｜动漫",
             "type": 3,
-            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
-            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/AQY.js"
-        },
-        {
-            "key": "mangmang",
-            "name": "芒|官",
-            "type": 3,
-            "api": "https://pan.vma.cc/pan/down.php/ec67b9045d393737f073d2c9365533f0.js",
-            "ext": "https://git.yylx.win/raw.githubusercontent.com/PizazzGY/NewTVBox/main/movie/js/MGSP.js"
+            "api": "csp_AppGetFishGuard",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "ARKK6LQnl4dB2QciLugEzZ8QD2WdbeK23tPAre1QOEbbL5BfB8cV39JNfSd2+Xhcqr/z+V5To0krLYHUX7NtRtwYBC44/9ayncZMomdbv4ZCBNOUsBEedUQx7SWf1J0pE0BsLG9QlR8tURwRwx/sqT0="
         },
         {
             "key": "Jianpian",
             "name": "荐片｜磁力",
             "type": 3,
-            "api": "csp_Jianpian",
+            "api": "csp_JianpianFishGuard",
             "searchable": 1,
             "filterable": 1
         },
@@ -465,7 +449,7 @@
             "key": "Xb6v",
             "name": "6 V｜磁力",
             "type": 3,
-            "api": "csp_Xb6v",
+            "api": "csp_Xb6vFishGuard",
             "searchable": 1,
             "filterable": 1
         },
@@ -473,7 +457,7 @@
             "key": "ChuXin",
             "name": "初心｜音乐",
             "type": 3,
-            "api": "csp_ChuXin",
+            "api": "csp_ChuXinFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 0
@@ -482,7 +466,7 @@
             "key": "aiting",
             "name": "爱听｜音乐",
             "type": 3,
-            "api": "csp_AiTingMusic",
+            "api": "csp_AiTingMusicFishGuard",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 0
@@ -491,7 +475,7 @@
             "key": "Music24bit",
             "name": "无损｜音乐",
             "type": 3,
-            "api": "csp_Music24bit",
+            "api": "csp_Music24bitFishGuard",
             "searchable": 1,
             "changeable": 1,
             "ext": {
@@ -508,7 +492,7 @@
             "key": "TingBookJinXia",
             "name": "堇夏｜有声",
             "type": 3,
-            "api": "csp_TingBookJinXia",
+            "api": "csp_TingBookJinXiaFishGuard",
             "searchable": 1,
             "filterable": 1,
             "indexs": 0,
@@ -521,7 +505,7 @@
             "key": "Local",
             "name": "文件｜浏览",
             "type": 3,
-            "api": "csp_Local",
+            "api": "csp_LocalFishGuard",
             "searchable": 0,
             "changeable": 0,
             "indexs": 0,
@@ -533,19 +517,19 @@
             "key": "Market",
             "name": "网盘｜市场",
             "type": 3,
-            "api": "csp_Market",
+            "api": "csp_MarketFishGuard",
             "searchable": 0,
             "indexs": 0,
             "style": {
                 "type": "list"
             },
-            "ext": "KeJpmGBHNDNtao15t//le78AVNnA15NohxNlQzOy74KP4rP9PzNe6/JMxl2ealSMH+DMy3pMWGdoIgfZhbU6Gnwr6RCt2yx5qzhbchh4Dkea8uxJiFKZrXXX+78cGsE5xVesK28LUCDPGza58+ymXCFyviXGbf7VroGuGiCSI3O9U0RJIcWVbQWDQ2lWduKWYyFrlmEPQu3ePYFHUX8EGXDXMr15WH88JVlN7vnLqUhJv4qheq3TMcdceNQZ4e96eiWjAtdlSkOId644S2gQbHPsE1m68RxAx95ZTlMf0sGMFzsDp6MA9eQrbRP3sPWfW4I2nNxjTga+BbnLe5ES7TrsDfzJ7wCqjDAzW2LoHxxvnlJ7qrc+pWpKJARiszk+7dVLhNqhfjWY/i/GftEZiA71wbT4wul4QoPCmVrIYyaFWFxUaVHUVGrqEmw++js/87Xb8sawjnFXROsI6qK0+wRmiiGJ37nw0Dsyuxn7jUMYOpzEQFTlxq8Y3JcBGK8lGIcTrx0OTGwFH8Rhdsur4gdF4fxHM9BvKI5LFAO5wNSpAY429fskzXx97IsdI7HIeSQ+YY5Yir2ZnVeDDBK8qA=="
+            "ext": "AWmNzXUj5sW3E9cmHg7HzJYgcAvvRz30uYzOo5s+V+dNu26wvhfMrZXAaq9RcngbFaXU6gtq9etJ6nql9shxXjY567AyaX/mLQYkQNARHNfUnsxZ3sLFpUWallggHoCuAf0dAiLFsgi3T9KAB9sPHpuYrBF26N3YZX6a62CsVtBgqMXEP0Apg8s12I6R7dUOT0F6+Cr0+P3JmOcA98Ir/RkGi0AaWDwQSPtVOarYdbvhy1WzXn//N9hGjuXYhRnJgOmBiWPZAacCyxbFHLV0G/vjjbEXMK7fLa1KLdJ9RWWz9/Z0UevEdx2CEqTKsJFjD7WOxrsubZps5ylQj3ZQqBF0m9A8wBDhz2oksq5VrXsUolAHAKrNaz0t8K13IRbkxA3fYUH6v2YTzcz5HYrAz7McDNJyDfXLIw3bVwH+FU97"
         },
         {
             "key": "push_agent",
             "name": "推送｜接收",
             "type": 3,
-            "api": "csp_Push",
+            "api": "csp_PushFishGuard",
             "searchable": 0,
             "changeable": 0,
             "indexs": 0,
@@ -555,7 +539,7 @@
             "key": "Fishdrive",
             "name": "摸鱼｜媒体库",
             "type": 3,
-            "api": "csp_FishDrive",
+            "api": "csp_FishDriveFishGuard",
             "indexs": 0,
             "searchable": 1,
             "filterable": 1,
@@ -565,7 +549,7 @@
             "key": "Wallpaper",
             "name": "摸鱼｜壁纸库",
             "type": 3,
-            "api": "csp_Wallpaper",
+            "api": "csp_WallpaperFishGuard",
             "searchable": 0,
             "indexs": 0,
             "quickSearch": 0,
